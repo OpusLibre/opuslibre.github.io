@@ -38,12 +38,14 @@ node scripts/upload-files.mjs      # fichiers générés → R2 (CLOUDFLARE_API_
 npx wrangler deploy                # Worker « musicalis » (compte grainedigitale)
 ```
 
+Un push sur `main` fait tout cela automatiquement (GitHub Actions : secret `CLOUDFLARE_API_TOKEN`, variable `CLOUDFLARE_ACCOUNT_ID`).
+
 Astro 7 demande Node ≥ 22.23 (la CI utilise Node 24).
 
 ## Reste à faire
 
 - Génération du PDF au build.
-- Déploiement automatique par GitHub Actions (jeton Cloudflare à poser dans les secrets du dépôt).
+
 - Fichiers `.mxl` compressés, empreinte de mesure des annotations, collections Astro typées (artistes, œuvres), i18n en/it/es, Pagefind.
 - Banque de sons hébergée sur R2 plutôt que chargée depuis tonejs.github.io.
 

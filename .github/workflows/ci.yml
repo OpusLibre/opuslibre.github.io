@@ -2,6 +2,9 @@ name: CI
 on:
   push:
   pull_request:
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: false
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -14,3 +17,16 @@ jobs:
       - run: npm ci
       # Validates every score (metadata, licence, annotation anchors), then builds the static site.
       - run: npm run build
+      # Deploys main only: generated score files to R2 (immutable keys, sent once), then the Worker.
+      - name: Upload score files to R2
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        run: node scripts/upload-files.mjs
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
+      - name: Deploy the Worker
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        run: npx wrangler deploy
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
