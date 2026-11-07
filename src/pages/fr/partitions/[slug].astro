@@ -1,0 +1,72 @@
+---
+import Base from "../../../layouts/Base.astro";
+import scores from "../../../generated/scores.json";
+
+export function getStaticPaths() {
+  return Object.entries(scores).map(([slug, score]) => ({ params: { slug }, props: { slug, score } }));
+}
+const { slug, score } = Astro.props;
+const meta = score.meta;
+const LEVELS: Record<string, string> = { original: "Version originale", avance: "Avancé", intermediaire: "Intermédiaire", debutant: "Débutant" };
+const piano = meta.formation === "piano" && score.staves === 2;
+---
+<Base title={meta.titre}>
+  <p class="fil"><a href="/fr/">Partitions</a> › {meta.titre}</p>
+  <h1>{meta.titre}</h1>
+  <p class="infos">{meta.formation === "piano" ? "Piano" : "Voix"} · {LEVELS[meta.niveau] ?? meta.niveau} · <span class="licence">Libre ({meta.licence}) : vous pouvez l’imprimer, la copier, la jouer en public.</span></p>
+
+  <section class="lecteur" aria-label="Lecteur" data-base={score.base} data-staves={score.staves}>
+    <div class="commandes">
+      <button type="button" data-play class="jouer" disabled>▶ Lecture</button>
+      <label>Tempo <input type="range" min="50" max="150" step="5" value="100" data-tempo aria-describedby="tempo-valeur" /> <output id="tempo-valeur" data-tempo-value>100 %</output></label>
+      {piano ? (
+        <fieldset class="mains"><legend>Mains</legend>
+          <label><input type="radio" name="mains" value="both" checked /> Les deux</label>
+          <label><input type="radio" name="mains" value="right" /> Main droite</label>
+          <label><input type="radio" name="mains" value="left" /> Main gauche</label>
+        </fieldset>
+      ) : null}
+      {score.annotations > 0 ? <label class="calque"><input type="checkbox" data-layer="doigte" checked /> Doigté pour petites mains</label> : null}
+    </div>
+    <p class="etat" data-status role="status">Chargement de la partition…</p>
+    <div class="partition" data-score aria-label="Partition"></div>
+    <aside class="notes-lecture" data-notes hidden></aside>
+  </section>
+
+  <section class="telechargements" aria-label="Téléchargements">
+    <h2>Télécharger</h2>
+    <ul>
+      <li><a href={`${score.base}score.musicxml`}>MusicXML</a> — à ouvrir et modifier dans MuseScore, Dorico, Finale ou Sibelius</li>
+      <li><a href={`${score.base}score.mid`}>MIDI</a> — pour écouter</li>
+    </ul>
+    <p class="source">Source : {meta.source} · Transcription : {meta.transcripteur}</p>
+  </section>
+</Base>
+<script>
+  import { mountViewer } from "../../../scripts/score-viewer";
+  const root = document.querySelector<HTMLElement>(".lecteur");
+  if (root) mountViewer(root);
+</script>
+<style>
+  .fil { font: 0.85rem system-ui, sans-serif; color: var(--doux); }
+  h1 { font-size: 2rem; margin: 0.2rem 0; }
+  .infos { font: 0.95rem system-ui, sans-serif; color: var(--doux); }
+  .licence { color: var(--accent); }
+  .lecteur { margin-top: 1.2rem; background: var(--carte); border: 1px solid var(--trait); border-radius: 0.7rem; padding: 1rem; }
+  .commandes { display: flex; flex-wrap: wrap; gap: 0.8rem 1.4rem; align-items: center; font: 0.9rem system-ui, sans-serif; }
+  .jouer { font: 600 1rem system-ui, sans-serif; padding: 0.55rem 1.1rem; border-radius: 999px; border: 0; background: var(--accent); color: #fff; cursor: pointer; min-width: 8rem; }
+  .jouer:disabled { opacity: 0.5; cursor: wait; }
+  .mains { border: 0; display: flex; gap: 0.8rem; padding: 0; margin: 0; align-items: center; }
+  .mains legend { float: left; margin-right: 0.6rem; font-weight: 600; }
+  .etat { font: 0.8rem system-ui, sans-serif; color: var(--doux); min-height: 1.2em; }
+  .partition { overflow-x: auto; }
+  .partition :global(svg) { width: 100%; height: auto; }
+  .partition :global(.note.joue) { fill: var(--jeu); }
+  .partition :global(.note.joue *) { fill: var(--jeu); stroke: var(--jeu); }
+  .partition :global(.note.vise) { fill: var(--accent); }
+  .partition :global(.doigte) { fill: var(--accent); font-family: system-ui, sans-serif; font-weight: 700; }
+  .notes-lecture { margin-top: 0.8rem; padding: 0.8rem 1rem; border-radius: 0.5rem; background: var(--accent-pale); font: 0.9rem system-ui, sans-serif; }
+  .telechargements { margin-top: 2rem; font-family: system-ui, sans-serif; }
+  .telechargements h2 { font-family: Georgia, serif; }
+  .source { color: var(--doux); font-size: 0.8rem; }
+</style>

@@ -1,0 +1,34 @@
+{
+  "au-clair-de-la-lune": {
+    "key": "f957f9a4bfa9e8f6",
+    "base": "/p/au-clair-de-la-lune/f957f9a4bfa9e8f6/",
+    "meta": {
+      "titre": "Au clair de la lune",
+      "oeuvre": "au-clair-de-la-lune",
+      "artiste": "traditionnel",
+      "niveau": "debutant",
+      "formation": "voix",
+      "source": "Air traditionnel français (XVIIIe siècle), domaine public",
+      "licence": "CC0-1.0",
+      "transcripteur": "Musicalis"
+    },
+    "staves": 1,
+    "annotations": 0
+  },
+  "bach-bwv-846-preludio": {
+    "key": "5bf70021fe691eec",
+    "base": "/p/bach-bwv-846-preludio/5bf70021fe691eec/",
+    "meta": {
+      "titre": "Prélude en ut majeur (mesures 1–8)",
+      "oeuvre": "bach-bwv-846-preludio-in-do-maggiore",
+      "artiste": "bach",
+      "niveau": "original",
+      "formation": "piano",
+      "source": "Bach-Gesellschaft Ausgabe, Band 14 (1866), scan IMSLP",
+      "licence": "CC0-1.0",
+      "transcripteur": "Musicalis"
+    },
+    "staves": 2,
+    "annotations": 7
+  }
+}

@@ -1,0 +1,33 @@
+---
+import Base from "../../layouts/Base.astro";
+import scores from "../../generated/scores.json";
+
+const LEVELS: Record<string, string> = { original: "Version originale", avance: "Avancé", intermediaire: "Intermédiaire", debutant: "Débutant" };
+const FORMATIONS: Record<string, string> = { piano: "Piano", voix: "Voix" };
+const list = Object.entries(scores).map(([slug, s]) => ({ slug, ...s.meta }));
+---
+<Base title="Partitions libres">
+  <h1>Partitions libres</h1>
+  <p class="chapeau">Prototype : la page partition avec rendu Verovio, lecture MIDI synchronisée, main droite ou gauche seule, et doigtés en surimpression.</p>
+  <ul class="cartes">
+    {list.map((p) => (
+      <li class="carte">
+        <a href={`/fr/partitions/${p.slug}/`}>
+          <strong>{p.titre}</strong>
+          <span>{FORMATIONS[p.formation] ?? p.formation} · {LEVELS[p.niveau] ?? p.niveau}</span>
+          <small>Libre ({p.licence})</small>
+        </a>
+      </li>
+    ))}
+  </ul>
+</Base>
+<style>
+  h1 { font-size: 2.2rem; margin: 0.5rem 0; }
+  .chapeau { color: var(--doux); font-family: system-ui, sans-serif; max-width: 44rem; }
+  .cartes { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+  .carte a { display: grid; gap: 0.3rem; padding: 1.1rem 1.2rem; background: var(--carte); border: 1px solid var(--trait); border-radius: 0.6rem; text-decoration: none; color: inherit; }
+  .carte a:hover { border-color: var(--accent); }
+  .carte strong { font-size: 1.15rem; }
+  .carte span, .carte small { font-family: system-ui, sans-serif; color: var(--doux); font-size: 0.85rem; }
+  .carte small { color: var(--accent); }
+</style>

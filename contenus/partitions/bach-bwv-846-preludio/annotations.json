@@ -1,0 +1,9 @@
+[
+  { "id": "doigte-m1-sol", "layer": "doigte", "level": "debutant", "anchor": { "measure": 1, "offset": "1/2", "staff": 1, "pitch": "G4" }, "text": "1", "title": { "fr": "Doigté pour petites mains" } },
+  { "id": "doigte-m1-do", "layer": "doigte", "level": "debutant", "anchor": { "measure": 1, "offset": "3/4", "staff": 1, "pitch": "C5" }, "text": "2" },
+  { "id": "doigte-m1-mi", "layer": "doigte", "level": "debutant", "anchor": { "measure": 1, "offset": "1", "staff": 1, "pitch": "E5" }, "text": "4" },
+  { "id": "doigte-m2-la", "layer": "doigte", "level": "debutant", "anchor": { "measure": 2, "offset": "1/2", "staff": 1, "pitch": "A4" }, "text": "1" },
+  { "id": "doigte-m2-re", "layer": "doigte", "level": "debutant", "anchor": { "measure": 2, "offset": "3/4", "staff": 1, "pitch": "D5" }, "text": "2" },
+  { "id": "doigte-m2-fa", "layer": "doigte", "level": "debutant", "anchor": { "measure": 2, "offset": "1", "staff": 1, "pitch": "F5" }, "text": "4" },
+  { "id": "lecture-m1", "layer": "lecture", "level": "debutant", "anchor": { "measure": 1, "offset": "0", "staff": 2 }, "text": "Chaque mesure = un accord brisé, joué deux fois.", "title": { "fr": "Motif" } }
+]

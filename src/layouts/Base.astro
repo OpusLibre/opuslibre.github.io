@@ -1,0 +1,50 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+}
+const { title, description = "Partitions libres, de la version originale aux versions débutant." } = Astro.props;
+---
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title} — Musicalis</title>
+    <meta name="description" content={description} />
+    <link rel="alternate" hreflang="fr" href={Astro.url.pathname} />
+  </head>
+  <body>
+    <header class="entete">
+      <a class="marque" href="/fr/">Musicalis</a>
+      <nav aria-label="Navigation principale"><a href="/fr/">Partitions</a></nav>
+    </header>
+    <main><slot /></main>
+    <footer class="pied">
+      <p>Toutes les partitions de Musicalis sont libres : vous pouvez les imprimer, les copier et les jouer en public. La licence est indiquée sur chaque page.</p>
+    </footer>
+  </body>
+</html>
+<style is:global>
+  :root {
+    --fond: #fbfaf7;
+    --carte: #ffffff;
+    --encre: #1c1b19;
+    --doux: #5f5b53;
+    --trait: #e4e0d6;
+    --accent: #8a3b12;
+    --accent-pale: #f6e7dc;
+    --jeu: #c2410c;
+    color-scheme: light;
+    font-family: Georgia, "Times New Roman", serif;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--fond); color: var(--encre); }
+  a { color: var(--accent); }
+  main { max-width: 72rem; margin: 0 auto; padding: 1.5rem 1rem 3rem; }
+  .entete { display: flex; justify-content: space-between; align-items: center; max-width: 72rem; margin: 0 auto; padding: 1rem; border-bottom: 1px solid var(--trait); }
+  .marque { font-size: 1.4rem; font-weight: 700; text-decoration: none; color: var(--encre); letter-spacing: 0.02em; }
+  .entete nav a { font-family: system-ui, sans-serif; font-size: 0.95rem; text-decoration: none; }
+  .pied { max-width: 72rem; margin: 0 auto; padding: 1.5rem 1rem; border-top: 1px solid var(--trait); color: var(--doux); font: 0.85rem/1.5 system-ui, sans-serif; }
+  :focus-visible { outline: 3px solid var(--jeu); outline-offset: 2px; }
+</style>
