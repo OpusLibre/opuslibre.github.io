@@ -1,0 +1,4553 @@
+{
+  "version": "2.21",
+  "children": [
+    {
+      "type": "frame",
+      "id": "UE3Jk",
+      "x": 0,
+      "y": 0,
+      "name": "1 Édition — Accueil",
+      "width": 1440,
+      "fill": "#FFFFFF",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "wTKmi",
+          "name": "En-tête",
+          "width": "fill_container",
+          "fill": "#FFFFFF",
+          "padding": [
+            22,
+            72
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "XKRmS",
+              "name": "Marque",
+              "fill": "#00000000",
+              "gap": 10,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "bWIfb",
+                  "name": "Logo",
+                  "width": 34,
+                  "height": 34,
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "logo-noir.png",
+                    "mode": "contain"
+                  }
+                },
+                {
+                  "type": "text",
+                  "id": "flqO4",
+                  "name": "Nom",
+                  "fill": "#111111",
+                  "content": "Musicalis",
+                  "fontFamily": "Libre Baskerville",
+                  "fontSize": 21,
+                  "fontWeight": "700"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "X4jusm",
+              "name": "Nav",
+              "fill": "#00000000",
+              "gap": 34,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "zJTV8",
+                  "name": "Compositeurs",
+                  "fill": "#111111",
+                  "content": "Compositeurs",
+                  "fontFamily": "Inter",
+                  "fontSize": 14
+                },
+                {
+                  "type": "text",
+                  "id": "ulZh1",
+                  "name": "Œuvres",
+                  "fill": "#111111",
+                  "content": "Œuvres",
+                  "fontFamily": "Inter",
+                  "fontSize": 14
+                },
+                {
+                  "type": "text",
+                  "id": "Cy0FK",
+                  "name": "Niveaux",
+                  "fill": "#111111",
+                  "content": "Niveaux",
+                  "fontFamily": "Inter",
+                  "fontSize": 14
+                },
+                {
+                  "type": "text",
+                  "id": "jDjYH",
+                  "name": "Instruments",
+                  "fill": "#111111",
+                  "content": "Instruments",
+                  "fontFamily": "Inter",
+                  "fontSize": 14
+                },
+                {
+                  "type": "text",
+                  "id": "Bse1p",
+                  "name": "Lang",
+                  "fill": "#6B6B6B",
+                  "content": "FR",
+                  "fontFamily": "Inter",
+                  "fontSize": 13,
+                  "fontWeight": "600"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "R3YWc",
+          "name": "Filet",
+          "width": "fill_container",
+          "height": 1,
+          "fill": "#111111",
+          "layout": "vertical"
+        },
+        {
+          "type": "frame",
+          "id": "vCiir",
+          "name": "Ouverture",
+          "width": "fill_container",
+          "fill": "#00000000",
+          "gap": 64,
+          "padding": [
+            72,
+            72,
+            56,
+            72
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "QhTp3",
+              "name": "Texte",
+              "width": 560,
+              "fill": "#00000000",
+              "layout": "vertical",
+              "gap": 22,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "S5Phk6",
+                  "name": "Sur",
+                  "fill": "#6B6B6B",
+                  "content": "BIBLIOTHÈQUE DE PARTITIONS LIBRES",
+                  "fontFamily": "Inter",
+                  "fontSize": 11,
+                  "fontWeight": "600",
+                  "letterSpacing": 2.5
+                },
+                {
+                  "type": "text",
+                  "id": "YJHKc",
+                  "name": "Titre",
+                  "fill": "#111111",
+                  "textGrowth": "fixed-width",
+                  "width": 560,
+                  "content": "L’œuvre originale, et chaque marche pour y arriver.",
+                  "lineHeight": 1.18,
+                  "fontFamily": "Libre Baskerville",
+                  "fontSize": 46
+                },
+                {
+                  "type": "text",
+                  "id": "ReVNj",
+                  "name": "Chapeau",
+                  "fill": "#6B6B6B",
+                  "textGrowth": "fixed-width",
+                  "width": 520,
+                  "content": "Partitions du domaine public, gravées avec soin, à lire, écouter et travailler du niveau débutant à la version de concert. Gratuites, imprimables, réutilisables.",
+                  "lineHeight": 1.6,
+                  "fontFamily": "Inter",
+                  "fontSize": 16
+                },
+                {
+                  "type": "frame",
+                  "id": "ejnOc",
+                  "name": "Recherche",
+                  "width": 520,
+                  "fill": "#00000000",
+                  "gap": 12,
+                  "padding": [
+                    14,
+                    0
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "wmBh5",
+                      "name": "Ph",
+                      "fill": "#6B6B6B",
+                      "content": "Rechercher un titre, un compositeur, BWV 846…",
+                      "fontFamily": "Inter",
+                      "fontSize": 15
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "fcLEw",
+                  "name": "Filet",
+                  "width": 520,
+                  "height": 1,
+                  "fill": "#111111",
+                  "layout": "vertical"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "orrRJ",
+              "name": "Pièce du jour",
+              "width": "fill_container",
+              "fill": "#00000000",
+              "layout": "vertical",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "fxnBX",
+                  "name": "L",
+                  "fill": "#6B6B6B",
+                  "content": "PIÈCE DU JOUR",
+                  "fontFamily": "Inter",
+                  "fontSize": 11,
+                  "fontWeight": "600",
+                  "letterSpacing": 2.5
+                },
+                {
+                  "type": "frame",
+                  "id": "uDhGp",
+                  "name": "Gravure",
+                  "width": 640,
+                  "height": 580,
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "score-home.png",
+                    "mode": "contain"
+                  }
+                },
+                {
+                  "type": "text",
+                  "id": "qxET9",
+                  "name": "Légende",
+                  "fill": "#111111",
+                  "content": "J. S. Bach — Prélude en ut majeur, BWV 846 · Original",
+                  "fontFamily": "Libre Baskerville",
+                  "fontSize": 14
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "NRxYA",
+          "name": "Bande",
+          "width": "fill_container",
+          "fill": "#00000000",
+          "padding": [
+            0,
+            72
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "LXqXv",
+              "name": "Débutant",
+              "width": "fill_container",
+              "fill": "#00000000",
+              "stroke": "#D9D9D6",
+              "strokeWidth": 1,
+              "layout": "vertical",
+              "gap": 4,
+              "padding": [
+                22,
+                0
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "IH1dB",
+                  "name": "N",
+                  "fill": "#111111",
+                  "content": "Débutant",
+                  "fontFamily": "Libre Baskerville",
+                  "fontSize": 20
+                },
+                {
+                  "type": "text",
+                  "id": "fr9wX",
+                  "name": "C",
+                  "fill": "#6B6B6B",
+                  "content": "38 partitions",
+                  "fontFamily": "Inter",
+                  "fontSize": 13
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "rOwwo",
+              "name": "Intermédiaire",
+              "width": "fill_container",
+              "fill": "#00000000",
+              "stroke": "#D9D9D6",
+              "strokeWidth": 1,
+              "layout": "vertical",
+              "gap": 4,
+              "padding": [
+                22,
+                0,
+                22,
+                24
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "GasHI",
+                  "name": "N",
+                  "fill": "#111111",
+                  "content": "Intermédiaire",
+                  "fontFamily": "Libre Baskerville",
+                  "fontSize": 20
+                },
+                {
+                  "type": "text",
+                  "id": "h6RsWI",
+                  "name": "C",
+                  "fill": "#6B6B6B",
+                  "content": "52 partitions",
+                  "fontFamily": "Inter",
+                  "fontSize": 13
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "ykRLP",
+              "name": "Avancé",
+              "width": "fill_container",
+              "fill": "#00000000",
+              "stroke": "#D9D9D6",
+              "strokeWidth": 1,
+              "layout": "vertical",
+              "gap": 4,
+              "padding": [
+                22,
+                0,
+                22,
+                24
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "SbyEr",
+                  "name": "N",
+                  "fill": "#111111",
+                  "content": "Avancé",
+                  "fontFamily": "Libre Baskerville",
+                  "fontSize": 20
+                },
+                {
+                  "type": "text",
+                  "id": "Ef6SI",
+                  "name": "C",
+                  "fill": "#6B6B6B",
+                  "content": "41 partitions",
+                  "fontFamily": "Inter",
+                  "fontSize": 13
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "cZK9q",
+              "name": "Original",
+              "width": "fill_container",
+              "fill": "#00000000",
+              "stroke": "#D9D9D6",
+              "strokeWidth": 1,
+              "layout": "vertical",
+              "gap": 4,
+              "padding": [
+                22,
+                0,
+                22,
+                24
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "u2HG5j",
+                  "name": "N",
+                  "fill": "#111111",
+                  "content": "Original",
+                  "fontFamily": "Libre Baskerville",
+                  "fontSize": 20
+                },
+                {
+                  "type": "text",
+                  "id": "Vot9l",
+                  "name": "C",
+                  "fill": "#6B6B6B",
+                  "content": "64 partitions",
+                  "fontFamily": "Inter",
+                  "fontSize": 13
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "eJi1F",
+          "name": "Ajouts",
+          "width": "fill_container",
+          "fill": "#00000000",
+          "layout": "vertical",
+          "gap": 18,
+          "padding": [
+            48,
+            72,
+            72,
+            72
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "C987Y",
+              "name": "T",
+              "fill": "#111111",
+              "content": "Derniers ajouts",
+              "fontFamily": "Libre Baskerville",
+              "fontSize": 26
+            },
+            {
+              "type": "frame",
+              "id": "y8E5Z0",
+              "name": "Table",
+              "width": "fill_container",
+              "fill": "#00000000",
+              "layout": "vertical",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "HcmZ8",
+                  "name": "Ligne",
+                  "width": "fill_container",
+                  "fill": "#00000000",
+                  "stroke": "#D9D9D6",
+                  "strokeWidth": 1,
+                  "padding": [
+                    16,
+                    0
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "TD7L3",
+                      "name": "T",
+                      "fill": "#111111",
+                      "textGrowth": "fixed-width",
+                      "width": 420,
+                      "content": "Prélude en ut majeur",
+                      "fontFamily": "Libre Baskerville",
+                      "fontSize": 17
+                    },
+                    {
+                      "type": "text",
+                      "id": "pX0a8",
+                      "name": "C",
+                      "fill": "#6B6B6B",
+                      "textGrowth": "fixed-width",
+                      "width": 240,
+                      "content": "J. S. Bach",
+                      "fontFamily": "Inter",
+                      "fontSize": 14
+                    },
+                    {
+                      "type": "text",
+                      "id": "U6LfS",
+                      "name": "Cat",
+                      "fill": "#6B6B6B",
+                      "textGrowth": "fixed-width",
+                      "width": 140,
+                      "content": "BWV 846",
+                      "fontFamily": "Inter",
+                      "fontSize": 14
+                    },
+                    {
+                      "type": "text",
+                      "id": "FX07g",
+                      "name": "F",
+                      "fill": "#6B6B6B",
+                      "textGrowth": "fixed-width",
+                      "width": 140,
+                      "content": "Piano",
+                      "fontFamily": "Inter",
+                      "fontSize": 14
+                    },
+                    {
+                      "type": "text",
+                      "id": "i3WFM",
+                      "name": "N",
+                      "fill": "#111111",
+                      "content": "Original",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "RAri2",
+                  "name": "Ligne",
+                  "width": "fill_container",
+                  "fill": "#00000000",
+                  "stroke": "#D9D9D6",
+                  "strokeWidth": 1,
+                  "padding": [
+                    16,
+                    0
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "JHM1D",
+                      "name": "T",
+                      "fill": "#111111",
+                      "textGrowth": "fixed-width",
+                      "width": 420,
+                      "content": "Gymnopédie n° 1",
+                      "fontFamily": "Libre Baskerville",
+                      "fontSize": 17
+                    },
+                    {
+                      "type": "text",
+                      "id": "ITggT",
+                      "name": "C",
+                      "fill": "#6B6B6B",
+                      "textGrowth": "fixed-width",
+                      "width": 240,
+                      "content": "E. Satie",
+                      "fontFamily": "Inter",
+                      "fontSize": 14
+                    },
+                    {
+                      "type": "text",
+                      "id": "P59DkB",
+                      "name": "Cat",
+                      "fill": "#6B6B6B",
+                      "textGrowth": "fixed-width",
+                      "width": 140,
+                      "content": "—",
+                      "fontFamily": "Inter",
+                      "fontSize": 14
+                    },
+                    {
+                      "type": "text",
+                      "id": "oZDiC",
+                      "name": "F",
+                      "fill": "#6B6B6B",
+                      "textGrowth": "fixed-width",
+                      "width": 140,
+                      "content": "Piano",
+                      "fontFamily": "Inter",
+                      "fontSize": 14
+                    },
+                    {
+                      "type": "text",
+                      "id": "o4C1Ts",
+                      "name": "N",
+                      "fill": "#111111",
+                      "content": "Intermédiaire",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "WdH5y",
+                  "name": "Ligne",
+                  "width": "fill_container",
+                  "fill": "#00000000",
+                  "stroke": "#D9D9D6",
+                  "strokeWidth": 1,
+                  "padding": [
+                    16,
+                    0
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "yE671",
+                      "name": "T",
+                      "fill": "#111111",
+                      "textGrowth": "fixed-width",
+                      "width": 420,
+                      "content": "Au clair de la lune",
+                      "fontFamily": "Libre Baskerville",
+                      "fontSize": 17
+                    },
+                    {
+                      "type": "text",
+                      "id": "i6YWvX",
+                      "name": "C",
+                      "fill": "#6B6B6B",
+                      "textGrowth": "fixed-width",
+                      "width": 240,
+                      "content": "Traditionnel",
+                      "fontFamily": "Inter",
+                      "fontSize": 14
+                    },
+                    {
+                      "type": "text",
+                      "id": "cw8eu",
+                      "name": "Cat",
+                      "fill": "#6B6B6B",
+                      "textGrowth": "fixed-width",
+                      "width": 140,
+                      "content": "—",
+                      "fontFamily": "Inter",
+                      "fontSize": 14
+                    },
+                    {
+                      "type": "text",
+                      "id": "KFObt",
+                      "name": "F",
+                      "fill": "#6B6B6B",
+                      "textGrowth": "fixed-width",
+                      "width": 140,
+                      "content": "Voix",
+                      "fontFamily": "Inter",
+                      "fontSize": 14
+                    },
+                    {
+                      "type": "text",
+                      "id": "DdPkS",
+                      "name": "N",
+                      "fill": "#111111",
+                      "content": "Débutant",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "jf9G1",
+                  "name": "Ligne",
+                  "width": "fill_container",
+                  "fill": "#00000000",
+                  "stroke": "#D9D9D6",
+                  "strokeWidth": 1,
+                  "padding": [
+                    16,
+                    0
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "FGEUQ",
+                      "name": "T",
+                      "fill": "#111111",
+                      "textGrowth": "fixed-width",
+                      "width": 420,
+                      "content": "Für Elise",
+                      "fontFamily": "Libre Baskerville",
+                      "fontSize": 17
+                    },
+                    {
+                      "type": "text",
+                      "id": "fXhus",
+                      "name": "C",
+                      "fill": "#6B6B6B",
+                      "textGrowth": "fixed-width",
+                      "width": 240,
+                      "content": "L. van Beethoven",
+                      "fontFamily": "Inter",
+                      "fontSize": 14
+                    },
+                    {
+                      "type": "text",
+                      "id": "datZh",
+                      "name": "Cat",
+                      "fill": "#6B6B6B",
+                      "textGrowth": "fixed-width",
+                      "width": 140,
+                      "content": "WoO 59",
+                      "fontFamily": "Inter",
+                      "fontSize": 14
+                    },
+                    {
+                      "type": "text",
+                      "id": "wZjWV",
+                      "name": "F",
+                      "fill": "#6B6B6B",
+                      "textGrowth": "fixed-width",
+                      "width": 140,
+                      "content": "Piano",
+                      "fontFamily": "Inter",
+                      "fontSize": 14
+                    },
+                    {
+                      "type": "text",
+                      "id": "ZTxlf",
+                      "name": "N",
+                      "fill": "#111111",
+                      "content": "Débutant",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "mmCIA",
+      "x": 0,
+      "y": 0,
+      "name": "1 Édition — Partition",
+      "width": 1440,
+      "fill": "#FFFFFF",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "CHoz3",
+          "name": "En-tête",
+          "width": "fill_container",
+          "fill": "#FFFFFF",
+          "padding": [
+            22,
+            72
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "gTIOM",
+              "name": "Marque",
+              "fill": "#00000000",
+              "gap": 10,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "w1m6G",
+                  "name": "Logo",
+                  "width": 34,
+                  "height": 34,
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "logo-noir.png",
+                    "mode": "contain"
+                  }
+                },
+                {
+                  "type": "text",
+                  "id": "ZrFEc",
+                  "name": "Nom",
+                  "fill": "#111111",
+                  "content": "Musicalis",
+                  "fontFamily": "Libre Baskerville",
+                  "fontSize": 21,
+                  "fontWeight": "700"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "AGsr7",
+              "name": "Nav",
+              "fill": "#00000000",
+              "gap": 34,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "mpVUI",
+                  "name": "Compositeurs",
+                  "fill": "#111111",
+                  "content": "Compositeurs",
+                  "fontFamily": "Inter",
+                  "fontSize": 14
+                },
+                {
+                  "type": "text",
+                  "id": "iekRm",
+                  "name": "Œuvres",
+                  "fill": "#111111",
+                  "content": "Œuvres",
+                  "fontFamily": "Inter",
+                  "fontSize": 14
+                },
+                {
+                  "type": "text",
+                  "id": "F9uOn",
+                  "name": "Niveaux",
+                  "fill": "#111111",
+                  "content": "Niveaux",
+                  "fontFamily": "Inter",
+                  "fontSize": 14
+                },
+                {
+                  "type": "text",
+                  "id": "wkaDd",
+                  "name": "Instruments",
+                  "fill": "#111111",
+                  "content": "Instruments",
+                  "fontFamily": "Inter",
+                  "fontSize": 14
+                },
+                {
+                  "type": "text",
+                  "id": "S0oQnC",
+                  "name": "Lang",
+                  "fill": "#6B6B6B",
+                  "content": "FR",
+                  "fontFamily": "Inter",
+                  "fontSize": 13,
+                  "fontWeight": "600"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "ejPRN",
+          "name": "Filet",
+          "width": "fill_container",
+          "height": 1,
+          "fill": "#111111",
+          "layout": "vertical"
+        },
+        {
+          "type": "frame",
+          "id": "o8XZ1T",
+          "name": "Contenu",
+          "width": "fill_container",
+          "fill": "#00000000",
+          "layout": "vertical",
+          "gap": 20,
+          "padding": [
+            36,
+            72,
+            64,
+            72
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "PEBXU",
+              "name": "Fil",
+              "fill": "#6B6B6B",
+              "content": "Compositeurs  /  Johann Sebastian Bach  /  Prélude en ut majeur",
+              "fontFamily": "Inter",
+              "fontSize": 12
+            },
+            {
+              "type": "frame",
+              "id": "E3Mhkd",
+              "name": "Titre",
+              "width": "fill_container",
+              "fill": "#00000000",
+              "justifyContent": "space_between",
+              "alignItems": "end",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "uVxBk",
+                  "name": "G",
+                  "fill": "#00000000",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "el0kt",
+                      "name": "T",
+                      "fill": "#111111",
+                      "content": "Prélude en ut majeur",
+                      "fontFamily": "Libre Baskerville",
+                      "fontSize": 42
+                    },
+                    {
+                      "type": "text",
+                      "id": "MBpYh",
+                      "name": "S",
+                      "fill": "#6B6B6B",
+                      "content": "Johann Sebastian Bach (1685–1750) · BWV 846 · Le Clavier bien tempéré, livre I",
+                      "fontFamily": "Inter",
+                      "fontSize": 14
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "fy238",
+                  "name": "Licence",
+                  "fill": "#00000000",
+                  "stroke": "#111111",
+                  "strokeWidth": 1,
+                  "gap": 6,
+                  "padding": [
+                    6,
+                    12
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "t7JFmS",
+                      "name": "L",
+                      "fill": "#111111",
+                      "content": "Libre · CC0",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "XoD7H",
+              "name": "Versions",
+              "width": "fill_container",
+              "fill": "#00000000",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "c6b9f6",
+                  "name": "Original",
+                  "fill": "#00000000",
+                  "stroke": "#111111",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "padding": [
+                    12,
+                    20
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "P8PG1",
+                      "name": "V",
+                      "fill": "#111111",
+                      "content": "Original",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "XYK7b",
+                  "name": "Avancé",
+                  "fill": "#00000000",
+                  "stroke": "#D9D9D6",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "padding": [
+                    12,
+                    20
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "SnInj",
+                      "name": "V",
+                      "fill": "#6B6B6B",
+                      "content": "Avancé",
+                      "fontFamily": "Inter",
+                      "fontSize": 14
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "anJ09",
+                  "name": "Intermédiaire",
+                  "fill": "#00000000",
+                  "stroke": "#D9D9D6",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "padding": [
+                    12,
+                    20
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "zqRjS",
+                      "name": "V",
+                      "fill": "#6B6B6B",
+                      "content": "Intermédiaire",
+                      "fontFamily": "Inter",
+                      "fontSize": 14
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "m8cDc",
+                  "name": "Débutant",
+                  "fill": "#00000000",
+                  "stroke": "#D9D9D6",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "padding": [
+                    12,
+                    20
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "xcJkO",
+                      "name": "V",
+                      "fill": "#6B6B6B",
+                      "content": "Débutant",
+                      "fontFamily": "Inter",
+                      "fontSize": 14
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "b3nJU",
+              "name": "Lecteur",
+              "width": "fill_container",
+              "fill": "#F4F4F2",
+              "gap": 26,
+              "padding": [
+                14,
+                18
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "J4PTy",
+                  "name": "Lire",
+                  "fill": "#111111",
+                  "gap": 8,
+                  "padding": [
+                    10,
+                    18
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "amomH",
+                      "name": "T",
+                      "fill": "#FFFFFF",
+                      "content": "▶  Écouter",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "W4647",
+                  "name": "Tempo",
+                  "fill": "#00000000",
+                  "layout": "vertical",
+                  "gap": 2,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "COG9o",
+                      "name": "K",
+                      "fill": "#6B6B6B",
+                      "content": "TEMPO",
+                      "fontFamily": "Inter",
+                      "fontSize": 10,
+                      "fontWeight": "600",
+                      "letterSpacing": 1.5
+                    },
+                    {
+                      "type": "text",
+                      "id": "glpnf",
+                      "name": "V",
+                      "fill": "#111111",
+                      "content": "100 %",
+                      "fontFamily": "Inter",
+                      "fontSize": 13
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "QOawi",
+                  "name": "Mains",
+                  "fill": "#00000000",
+                  "layout": "vertical",
+                  "gap": 2,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "puMXR",
+                      "name": "K",
+                      "fill": "#6B6B6B",
+                      "content": "MAINS",
+                      "fontFamily": "Inter",
+                      "fontSize": 10,
+                      "fontWeight": "600",
+                      "letterSpacing": 1.5
+                    },
+                    {
+                      "type": "text",
+                      "id": "rASDq",
+                      "name": "V",
+                      "fill": "#111111",
+                      "content": "Les deux · Droite · Gauche",
+                      "fontFamily": "Inter",
+                      "fontSize": 13
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "sV6sE",
+                  "name": "Boucle",
+                  "fill": "#00000000",
+                  "layout": "vertical",
+                  "gap": 2,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Xo245",
+                      "name": "K",
+                      "fill": "#6B6B6B",
+                      "content": "BOUCLE",
+                      "fontFamily": "Inter",
+                      "fontSize": 10,
+                      "fontWeight": "600",
+                      "letterSpacing": 1.5
+                    },
+                    {
+                      "type": "text",
+                      "id": "P9kX3",
+                      "name": "V",
+                      "fill": "#111111",
+                      "content": "Mesures 1–4",
+                      "fontFamily": "Inter",
+                      "fontSize": 13
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "YUjqJ",
+                  "name": "Métronome",
+                  "fill": "#00000000",
+                  "layout": "vertical",
+                  "gap": 2,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "FsZeM",
+                      "name": "K",
+                      "fill": "#6B6B6B",
+                      "content": "MÉTRONOME",
+                      "fontFamily": "Inter",
+                      "fontSize": 10,
+                      "fontWeight": "600",
+                      "letterSpacing": 1.5
+                    },
+                    {
+                      "type": "text",
+                      "id": "Qypaa",
+                      "name": "V",
+                      "fill": "#111111",
+                      "content": "Désactivé",
+                      "fontFamily": "Inter",
+                      "fontSize": 13
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Ktwoy",
+              "name": "Corps",
+              "width": "fill_container",
+              "fill": "#00000000",
+              "gap": 40,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "swo7A",
+                  "name": "Partition",
+                  "width": "fill_container",
+                  "fill": "#00000000",
+                  "layout": "vertical",
+                  "padding": [
+                    24,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "ixqjI",
+                      "name": "Gravure",
+                      "width": 900,
+                      "height": 440,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "score-desktop.png",
+                        "mode": "contain"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "VYsr3",
+                  "name": "Marge",
+                  "width": 300,
+                  "fill": "#00000000",
+                  "layout": "vertical",
+                  "gap": 26,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "tCsXS",
+                      "name": "Annotations",
+                      "fill": "#00000000",
+                      "layout": "vertical",
+                      "gap": 10,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "t7AVGb",
+                          "name": "T",
+                          "fill": "#6B6B6B",
+                          "content": "ANNOTATIONS",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "600",
+                          "letterSpacing": 2.5
+                        },
+                        {
+                          "type": "text",
+                          "id": "mw9Ni",
+                          "name": "■  Doigté pour petites mains",
+                          "fill": "#111111",
+                          "content": "■  Doigté pour petites mains",
+                          "fontFamily": "Inter",
+                          "fontSize": 14
+                        },
+                        {
+                          "type": "text",
+                          "id": "dDlUk",
+                          "name": "■  Lecture",
+                          "fill": "#111111",
+                          "content": "■  Lecture",
+                          "fontFamily": "Inter",
+                          "fontSize": 14
+                        },
+                        {
+                          "type": "text",
+                          "id": "rwilq",
+                          "name": "□  Analyse harmonique",
+                          "fill": "#111111",
+                          "content": "□  Analyse harmonique",
+                          "fontFamily": "Inter",
+                          "fontSize": 14
+                        },
+                        {
+                          "type": "text",
+                          "id": "G5p3EQ",
+                          "name": "□  Contexte historique",
+                          "fill": "#111111",
+                          "content": "□  Contexte historique",
+                          "fontFamily": "Inter",
+                          "fontSize": 14
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "eYMHx",
+                      "name": "Note",
+                      "fill": "#00000000",
+                      "stroke": "#111111",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "gap": 6,
+                      "padding": [
+                        0,
+                        0,
+                        0,
+                        14
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "Uy2Iz",
+                          "name": "T",
+                          "fill": "#111111",
+                          "content": "Mesure 1",
+                          "fontFamily": "Libre Baskerville",
+                          "fontSize": 15
+                        },
+                        {
+                          "type": "text",
+                          "id": "HHdLI",
+                          "name": "B",
+                          "fill": "#6B6B6B",
+                          "textGrowth": "fixed-width",
+                          "width": 270,
+                          "content": "Chaque mesure déploie un seul accord, deux fois. Gardez la main souple et régulière.",
+                          "lineHeight": 1.5,
+                          "fontFamily": "Inter",
+                          "fontSize": 13
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "A9bxx",
+                      "name": "Télécharger",
+                      "fill": "#00000000",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "XKBcB",
+                          "name": "T",
+                          "fill": "#6B6B6B",
+                          "content": "TÉLÉCHARGER",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "600",
+                          "letterSpacing": 2.5
+                        },
+                        {
+                          "type": "text",
+                          "id": "NLkLH",
+                          "name": "PDF — A4, pour jouer",
+                          "fill": "#111111",
+                          "content": "PDF — A4, pour jouer",
+                          "fontFamily": "Inter",
+                          "fontSize": 14
+                        },
+                        {
+                          "type": "text",
+                          "id": "bbnXS",
+                          "name": "MusicXML — pour modifier",
+                          "fill": "#111111",
+                          "content": "MusicXML — pour modifier",
+                          "fontFamily": "Inter",
+                          "fontSize": 14
+                        },
+                        {
+                          "type": "text",
+                          "id": "epwXS",
+                          "name": "MIDI — pour écouter",
+                          "fill": "#111111",
+                          "content": "MIDI — pour écouter",
+                          "fontFamily": "Inter",
+                          "fontSize": 14
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "JPENq",
+      "x": 0,
+      "y": 0,
+      "name": "1 Édition — Partition mobile",
+      "width": 390,
+      "fill": "#FFFFFF",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "uFaVM",
+          "name": "En-tête",
+          "width": "fill_container",
+          "fill": "#FFFFFF",
+          "padding": [
+            14,
+            16
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "e5ORy",
+              "name": "Marque",
+              "fill": "#00000000",
+              "gap": 10,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "vlT8t",
+                  "name": "Logo",
+                  "width": 28,
+                  "height": 28,
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "logo-noir.png",
+                    "mode": "contain"
+                  }
+                },
+                {
+                  "type": "text",
+                  "id": "AkufB",
+                  "name": "Nom",
+                  "fill": "#111111",
+                  "content": "Musicalis",
+                  "fontFamily": "Libre Baskerville",
+                  "fontSize": 18,
+                  "fontWeight": "700"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "i1vjl",
+              "name": "Menu",
+              "fill": "#111111",
+              "content": "Menu",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "600"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "O1aZY",
+          "name": "Filet",
+          "width": "fill_container",
+          "height": 1,
+          "fill": "#111111",
+          "layout": "vertical"
+        },
+        {
+          "type": "frame",
+          "id": "wDnXc",
+          "name": "Contenu",
+          "width": "fill_container",
+          "fill": "#00000000",
+          "layout": "vertical",
+          "gap": 12,
+          "padding": [
+            18,
+            16,
+            24,
+            16
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "FBhFw",
+              "name": "T",
+              "fill": "#111111",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Prélude en ut majeur",
+              "lineHeight": 1.2,
+              "fontFamily": "Libre Baskerville",
+              "fontSize": 28
+            },
+            {
+              "type": "text",
+              "id": "uIAVp",
+              "name": "S",
+              "fill": "#6B6B6B",
+              "content": "J. S. Bach · BWV 846 · Libre (CC0)",
+              "fontFamily": "Inter",
+              "fontSize": 13
+            },
+            {
+              "type": "frame",
+              "id": "cQK1U",
+              "name": "Versions",
+              "width": "fill_container",
+              "fill": "#00000000",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "FvJ3f",
+                  "name": "Original",
+                  "fill": "#00000000",
+                  "stroke": "#111111",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "padding": [
+                    9,
+                    10
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "fGoUs",
+                      "name": "V",
+                      "fill": "#111111",
+                      "content": "Original",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Ymtzz",
+                  "name": "Avancé",
+                  "fill": "#00000000",
+                  "stroke": "#D9D9D6",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "padding": [
+                    9,
+                    10
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Hwbep",
+                      "name": "V",
+                      "fill": "#6B6B6B",
+                      "content": "Avancé",
+                      "fontFamily": "Inter",
+                      "fontSize": 12
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "XMuuL",
+                  "name": "Interm.",
+                  "fill": "#00000000",
+                  "stroke": "#D9D9D6",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "padding": [
+                    9,
+                    10
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "fkmVK",
+                      "name": "V",
+                      "fill": "#6B6B6B",
+                      "content": "Interm.",
+                      "fontFamily": "Inter",
+                      "fontSize": 12
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "jqxGk",
+                  "name": "Débutant",
+                  "fill": "#00000000",
+                  "stroke": "#D9D9D6",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "padding": [
+                    9,
+                    10
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Pj5Zb",
+                      "name": "V",
+                      "fill": "#6B6B6B",
+                      "content": "Débutant",
+                      "fontFamily": "Inter",
+                      "fontSize": 12
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "w5WnJ5",
+              "name": "Gravure",
+              "width": 358,
+              "height": 560,
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "score-mobile.png",
+                "mode": "cover"
+              }
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "xOQZx",
+          "name": "Lecteur",
+          "width": "fill_container",
+          "fill": "#111111",
+          "padding": [
+            12,
+            16
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "jXCuR",
+              "name": "P",
+              "fill": "#FFFFFF",
+              "content": "▶  Écouter",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "600"
+            },
+            {
+              "type": "text",
+              "id": "XwGle",
+              "name": "T",
+              "fill": "#BBBBBB",
+              "content": "100 %  ·  Les deux mains",
+              "fontFamily": "Inter",
+              "fontSize": 12
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "Y5EX5",
+      "x": 0,
+      "y": 0,
+      "name": "2 Salle — Accueil",
+      "width": 1440,
+      "fill": "#FFFFFF",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "Ba7d5",
+          "name": "En-tête",
+          "width": "fill_container",
+          "fill": "#0A0A0A",
+          "padding": [
+            20,
+            56
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "Lpg02",
+              "name": "Marque",
+              "fill": "#00000000",
+              "gap": 10,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "VZLkI",
+                  "name": "Logo",
+                  "width": 32,
+                  "height": 32,
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "logo-blanc.png",
+                    "mode": "contain"
+                  }
+                },
+                {
+                  "type": "text",
+                  "id": "REDgl",
+                  "name": "Nom",
+                  "fill": "#FFFFFF",
+                  "content": "musicalis",
+                  "fontFamily": "Inter",
+                  "fontSize": 20,
+                  "fontWeight": "700",
+                  "letterSpacing": -0.6
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "xEuuc",
+              "name": "Nav",
+              "fill": "#00000000",
+              "gap": 30,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "uvt1U",
+                  "name": "Explorer",
+                  "fill": "#FFFFFF",
+                  "content": "Explorer",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "ZHo2O",
+                  "name": "Niveaux",
+                  "fill": "#FFFFFF",
+                  "content": "Niveaux",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "mdx7v",
+                  "name": "Instruments",
+                  "fill": "#FFFFFF",
+                  "content": "Instruments",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "yuhH3",
+                  "name": "Compositeurs",
+                  "fill": "#FFFFFF",
+                  "content": "Compositeurs",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "frame",
+                  "id": "VtFqB",
+                  "name": "Rech",
+                  "fill": "#00000000",
+                  "cornerRadius": 999,
+                  "stroke": "#444444",
+                  "strokeWidth": 1,
+                  "gap": 8,
+                  "padding": [
+                    8,
+                    14
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "InHuZ",
+                      "name": "P",
+                      "fill": "#9A9A9A",
+                      "content": "Rechercher",
+                      "fontFamily": "Inter",
+                      "fontSize": 13
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "wikw5",
+          "name": "Héros",
+          "width": "fill_container",
+          "fill": "#0A0A0A",
+          "layout": "vertical",
+          "gap": 26,
+          "padding": [
+            88,
+            56,
+            72,
+            56
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "EIBWH",
+              "name": "T",
+              "fill": "#FFFFFF",
+              "textGrowth": "fixed-width",
+              "width": 1100,
+              "content": "Toute la musique.\nÀ votre niveau.",
+              "lineHeight": 1,
+              "fontFamily": "Inter",
+              "fontSize": 84,
+              "fontWeight": "700",
+              "letterSpacing": -3
+            },
+            {
+              "type": "text",
+              "id": "NPHxx",
+              "name": "S",
+              "fill": "#BDBDBD",
+              "textGrowth": "fixed-width",
+              "width": 720,
+              "content": "Des partitions libres, de la version de concert à la version débutant. Écoutez, ralentissez, jouez main par main.",
+              "lineHeight": 1.5,
+              "fontFamily": "Inter",
+              "fontSize": 19
+            },
+            {
+              "type": "frame",
+              "id": "ZBBUM",
+              "name": "Boutons",
+              "fill": "#00000000",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "iqUHF",
+                  "name": "B1",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 999,
+                  "layout": "vertical",
+                  "padding": [
+                    14,
+                    24
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "GKGQ1",
+                      "name": "T",
+                      "fill": "#111111",
+                      "content": "Explorer les partitions",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "x0IGuT",
+                  "name": "B2",
+                  "fill": "#00000000",
+                  "cornerRadius": 999,
+                  "stroke": "#FFFFFF",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "padding": [
+                    14,
+                    24
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Cu43f",
+                      "name": "T",
+                      "fill": "#FFFFFF",
+                      "content": "Je débute",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Xaxpv",
+          "name": "Grille",
+          "width": "fill_container",
+          "fill": "#00000000",
+          "gap": 20,
+          "padding": 56,
+          "children": [
+            {
+              "type": "frame",
+              "id": "VKo9Z",
+              "name": "Piano",
+              "width": "fill_container",
+              "fill": "#00000000",
+              "layout": "vertical",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "nUhxa",
+                  "name": "Visuel",
+                  "width": 420,
+                  "height": 300,
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "score-home.png",
+                    "mode": "cover"
+                  }
+                },
+                {
+                  "type": "text",
+                  "id": "ssrqO",
+                  "name": "K",
+                  "fill": "#111111",
+                  "content": "Piano",
+                  "fontFamily": "Inter",
+                  "fontSize": 26,
+                  "fontWeight": "700",
+                  "letterSpacing": -0.8
+                },
+                {
+                  "type": "text",
+                  "id": "a6R8dK",
+                  "name": "S",
+                  "fill": "#7A7A7A",
+                  "content": "Bach · Prélude BWV 846",
+                  "fontFamily": "Inter",
+                  "fontSize": 14
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "s4JG1",
+              "name": "Voix",
+              "width": "fill_container",
+              "fill": "#00000000",
+              "layout": "vertical",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "gX6sl",
+                  "name": "Visuel",
+                  "width": "fill_container",
+                  "height": 300,
+                  "fill": "#F1F1EF",
+                  "layout": "vertical",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "t1jTnx",
+                      "name": "G",
+                      "fill": "#0A0A0A",
+                      "content": "♫",
+                      "fontFamily": "Inter",
+                      "fontSize": 96
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "h5L1Mo",
+                  "name": "K",
+                  "fill": "#111111",
+                  "content": "Voix",
+                  "fontFamily": "Inter",
+                  "fontSize": 26,
+                  "fontWeight": "700",
+                  "letterSpacing": -0.8
+                },
+                {
+                  "type": "text",
+                  "id": "C8Oyk",
+                  "name": "S",
+                  "fill": "#7A7A7A",
+                  "content": "Au clair de la lune",
+                  "fontFamily": "Inter",
+                  "fontSize": 14
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "lA19s",
+              "name": "Débuter",
+              "width": "fill_container",
+              "fill": "#00000000",
+              "layout": "vertical",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "CmMLh",
+                  "name": "Visuel",
+                  "width": "fill_container",
+                  "height": 300,
+                  "fill": "#0A0A0A",
+                  "layout": "vertical",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "O79GLt",
+                      "name": "G",
+                      "fill": "#FFFFFF",
+                      "content": "♪",
+                      "fontFamily": "Inter",
+                      "fontSize": 96
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "drOBC",
+                  "name": "K",
+                  "fill": "#111111",
+                  "content": "Débuter",
+                  "fontFamily": "Inter",
+                  "fontSize": 26,
+                  "fontWeight": "700",
+                  "letterSpacing": -0.8
+                },
+                {
+                  "type": "text",
+                  "id": "Xfg5T",
+                  "name": "S",
+                  "fill": "#7A7A7A",
+                  "content": "38 partitions faciles",
+                  "fontFamily": "Inter",
+                  "fontSize": 14
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "u2Bg14",
+      "x": 0,
+      "y": 0,
+      "name": "2 Salle — Partition",
+      "width": 1440,
+      "fill": "#FFFFFF",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "C4zJL",
+          "name": "En-tête",
+          "width": "fill_container",
+          "fill": "#0A0A0A",
+          "padding": [
+            20,
+            56
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "q31eg5",
+              "name": "Marque",
+              "fill": "#00000000",
+              "gap": 10,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "vz5ZI",
+                  "name": "Logo",
+                  "width": 32,
+                  "height": 32,
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "logo-blanc.png",
+                    "mode": "contain"
+                  }
+                },
+                {
+                  "type": "text",
+                  "id": "hLbVk",
+                  "name": "Nom",
+                  "fill": "#FFFFFF",
+                  "content": "musicalis",
+                  "fontFamily": "Inter",
+                  "fontSize": 20,
+                  "fontWeight": "700",
+                  "letterSpacing": -0.6
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "C2Pim",
+              "name": "Nav",
+              "fill": "#00000000",
+              "gap": 30,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "GJ76A",
+                  "name": "Explorer",
+                  "fill": "#FFFFFF",
+                  "content": "Explorer",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "Erxma",
+                  "name": "Niveaux",
+                  "fill": "#FFFFFF",
+                  "content": "Niveaux",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "N4dHaD",
+                  "name": "Instruments",
+                  "fill": "#FFFFFF",
+                  "content": "Instruments",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "j1Kpz1",
+                  "name": "Compositeurs",
+                  "fill": "#FFFFFF",
+                  "content": "Compositeurs",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "frame",
+                  "id": "uVegr",
+                  "name": "Rech",
+                  "fill": "#00000000",
+                  "cornerRadius": 999,
+                  "stroke": "#444444",
+                  "strokeWidth": 1,
+                  "gap": 8,
+                  "padding": [
+                    8,
+                    14
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "ZURNa",
+                      "name": "P",
+                      "fill": "#9A9A9A",
+                      "content": "Rechercher",
+                      "fontFamily": "Inter",
+                      "fontSize": 13
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "B6fwm8",
+          "name": "Bandeau",
+          "width": "fill_container",
+          "fill": "#0A0A0A",
+          "layout": "vertical",
+          "gap": 14,
+          "padding": [
+            44,
+            56,
+            30,
+            56
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "O3Ud1",
+              "name": "S",
+              "fill": "#9A9A9A",
+              "content": "J. S. BACH · BWV 846",
+              "fontFamily": "Inter",
+              "fontSize": 12,
+              "fontWeight": "600",
+              "letterSpacing": 2
+            },
+            {
+              "type": "text",
+              "id": "iDrD2",
+              "name": "T",
+              "fill": "#FFFFFF",
+              "content": "Prélude en ut majeur",
+              "fontFamily": "Inter",
+              "fontSize": 60,
+              "fontWeight": "700",
+              "letterSpacing": -2
+            },
+            {
+              "type": "frame",
+              "id": "XGpLv",
+              "name": "Versions",
+              "fill": "#00000000",
+              "gap": 8,
+              "padding": [
+                8,
+                0,
+                0,
+                0
+              ],
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "FrkMY",
+                  "name": "Original",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 999,
+                  "layout": "vertical",
+                  "padding": [
+                    8,
+                    16
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "zrbCp",
+                      "name": "V",
+                      "fill": "#0A0A0A",
+                      "content": "Original",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "ElMc4",
+                  "name": "Avancé",
+                  "fill": "#00000000",
+                  "cornerRadius": 999,
+                  "stroke": "#555555",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "padding": [
+                    8,
+                    16
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "ldn2Q",
+                      "name": "V",
+                      "fill": "#DDDDDD",
+                      "content": "Avancé",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "OOfB1",
+                  "name": "Intermédiaire",
+                  "fill": "#00000000",
+                  "cornerRadius": 999,
+                  "stroke": "#555555",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "padding": [
+                    8,
+                    16
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "pspu1",
+                      "name": "V",
+                      "fill": "#DDDDDD",
+                      "content": "Intermédiaire",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "sr7m5",
+                  "name": "Débutant",
+                  "fill": "#00000000",
+                  "cornerRadius": 999,
+                  "stroke": "#555555",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "padding": [
+                    8,
+                    16
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "MdJLC",
+                      "name": "V",
+                      "fill": "#DDDDDD",
+                      "content": "Débutant",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "J8XYew",
+          "name": "Lecteur",
+          "width": "fill_container",
+          "fill": "#161616",
+          "gap": 24,
+          "padding": [
+            14,
+            56
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "U1ifrr",
+              "name": "Lire",
+              "width": 44,
+              "height": 44,
+              "fill": "#FFFFFF",
+              "cornerRadius": 22,
+              "layout": "vertical",
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "oe6kA",
+                  "name": "T",
+                  "fill": "#111111",
+                  "content": "▶",
+                  "fontFamily": "Inter",
+                  "fontSize": 16
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "tVTyE",
+              "name": "Barre",
+              "width": 520,
+              "height": 3,
+              "fill": "#444444",
+              "cornerRadius": 2,
+              "layout": "vertical"
+            },
+            {
+              "type": "text",
+              "id": "v79K5d",
+              "name": "0:00 / 0:27",
+              "fill": "#CFCFCF",
+              "content": "0:00 / 0:27",
+              "fontFamily": "Inter",
+              "fontSize": 13
+            },
+            {
+              "type": "text",
+              "id": "zWXyP",
+              "name": "Tempo 100 %",
+              "fill": "#CFCFCF",
+              "content": "Tempo 100 %",
+              "fontFamily": "Inter",
+              "fontSize": 13
+            },
+            {
+              "type": "text",
+              "id": "dn9Lg",
+              "name": "Les deux mains",
+              "fill": "#CFCFCF",
+              "content": "Les deux mains",
+              "fontFamily": "Inter",
+              "fontSize": 13
+            },
+            {
+              "type": "text",
+              "id": "BmBbR",
+              "name": "Boucle",
+              "fill": "#CFCFCF",
+              "content": "Boucle",
+              "fontFamily": "Inter",
+              "fontSize": 13
+            },
+            {
+              "type": "text",
+              "id": "MbqnS",
+              "name": "Métronome",
+              "fill": "#CFCFCF",
+              "content": "Métronome",
+              "fontFamily": "Inter",
+              "fontSize": 13
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "rW7g1",
+          "name": "Corps",
+          "width": "fill_container",
+          "fill": "#00000000",
+          "gap": 32,
+          "padding": [
+            36,
+            56,
+            56,
+            56
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "KTGWT",
+              "name": "Gravure",
+              "width": 920,
+              "height": 450,
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "score-desktop.png",
+                "mode": "contain"
+              }
+            },
+            {
+              "type": "frame",
+              "id": "eX9YI",
+              "name": "Côté",
+              "width": "fill_container",
+              "fill": "#00000000",
+              "layout": "vertical",
+              "gap": 14,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "m7o6rn",
+                  "name": "Annotations",
+                  "width": "fill_container",
+                  "fill": "#F3F3F1",
+                  "cornerRadius": 14,
+                  "layout": "vertical",
+                  "gap": 4,
+                  "padding": [
+                    16,
+                    18
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "A243q",
+                      "name": "K",
+                      "fill": "#111111",
+                      "content": "Annotations",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "DPXlo",
+                      "name": "V",
+                      "fill": "#7A7A7A",
+                      "content": "Doigtés · Lecture · Analyse",
+                      "fontFamily": "Inter",
+                      "fontSize": 13
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Oh75g",
+                  "name": "Interprétations",
+                  "width": "fill_container",
+                  "fill": "#F3F3F1",
+                  "cornerRadius": 14,
+                  "layout": "vertical",
+                  "gap": 4,
+                  "padding": [
+                    16,
+                    18
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Yp1xr",
+                      "name": "K",
+                      "fill": "#111111",
+                      "content": "Interprétations",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "y0Mz7I",
+                      "name": "V",
+                      "fill": "#7A7A7A",
+                      "content": "3 vidéos",
+                      "fontFamily": "Inter",
+                      "fontSize": 13
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "y2E7nf",
+                  "name": "Télécharger",
+                  "width": "fill_container",
+                  "fill": "#F3F3F1",
+                  "cornerRadius": 14,
+                  "layout": "vertical",
+                  "gap": 4,
+                  "padding": [
+                    16,
+                    18
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "YHEsr",
+                      "name": "K",
+                      "fill": "#111111",
+                      "content": "Télécharger",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "B8oB9F",
+                      "name": "V",
+                      "fill": "#7A7A7A",
+                      "content": "PDF · MusicXML · MIDI",
+                      "fontFamily": "Inter",
+                      "fontSize": 13
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "wvY0L",
+                  "name": "Licence",
+                  "width": "fill_container",
+                  "fill": "#F3F3F1",
+                  "cornerRadius": 14,
+                  "layout": "vertical",
+                  "gap": 4,
+                  "padding": [
+                    16,
+                    18
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "bsqtx",
+                      "name": "K",
+                      "fill": "#111111",
+                      "content": "Licence",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "ttxSi",
+                      "name": "V",
+                      "fill": "#7A7A7A",
+                      "content": "Libre, CC0",
+                      "fontFamily": "Inter",
+                      "fontSize": 13
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "fqDcU",
+      "x": 0,
+      "y": 0,
+      "name": "2 Salle — Partition mobile",
+      "width": 390,
+      "fill": "#FFFFFF",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "ATZH9",
+          "name": "En-tête",
+          "width": "fill_container",
+          "fill": "#0A0A0A",
+          "padding": [
+            14,
+            16
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "gaulI",
+              "name": "Marque",
+              "fill": "#00000000",
+              "gap": 10,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "bA1Rq",
+                  "name": "Logo",
+                  "width": 28,
+                  "height": 28,
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "logo-blanc.png",
+                    "mode": "contain"
+                  }
+                },
+                {
+                  "type": "text",
+                  "id": "mVtzX",
+                  "name": "Nom",
+                  "fill": "#FFFFFF",
+                  "content": "musicalis",
+                  "fontFamily": "Inter",
+                  "fontSize": 18,
+                  "fontWeight": "700",
+                  "letterSpacing": -0.6
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "L3jaQ",
+              "name": "Menu",
+              "fill": "#FFFFFF",
+              "content": "☰",
+              "fontFamily": "Inter",
+              "fontSize": 20
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "P0zA5",
+          "name": "Bandeau",
+          "width": "fill_container",
+          "fill": "#0A0A0A",
+          "layout": "vertical",
+          "gap": 8,
+          "padding": [
+            22,
+            16
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "PAPio",
+              "name": "S",
+              "fill": "#9A9A9A",
+              "content": "J. S. BACH · BWV 846",
+              "fontFamily": "Inter",
+              "fontSize": 11,
+              "fontWeight": "600",
+              "letterSpacing": 2
+            },
+            {
+              "type": "text",
+              "id": "B149j",
+              "name": "T",
+              "fill": "#FFFFFF",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Prélude en ut majeur",
+              "lineHeight": 1.1,
+              "fontFamily": "Inter",
+              "fontSize": 32,
+              "fontWeight": "700",
+              "letterSpacing": -1
+            },
+            {
+              "type": "frame",
+              "id": "yi2zS",
+              "name": "Versions",
+              "fill": "#00000000",
+              "gap": 6,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "kUv0t",
+                  "name": "Original",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 999,
+                  "layout": "vertical",
+                  "padding": [
+                    6,
+                    12
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "WItft",
+                      "name": "V",
+                      "fill": "#0A0A0A",
+                      "content": "Original",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Uh2sN",
+                  "name": "Avancé",
+                  "fill": "#00000000",
+                  "cornerRadius": 999,
+                  "stroke": "#555555",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "padding": [
+                    6,
+                    12
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "JvSWq",
+                      "name": "V",
+                      "fill": "#DDDDDD",
+                      "content": "Avancé",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "R14P9R",
+                  "name": "Débutant",
+                  "fill": "#00000000",
+                  "cornerRadius": 999,
+                  "stroke": "#555555",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "padding": [
+                    6,
+                    12
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "KXk0p",
+                      "name": "V",
+                      "fill": "#DDDDDD",
+                      "content": "Débutant",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "JlOwL",
+          "name": "Gravure",
+          "width": "fill_container",
+          "fill": "#00000000",
+          "layout": "vertical",
+          "padding": [
+            14,
+            16
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "uAYTX",
+              "name": "G",
+              "width": 358,
+              "height": 520,
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "score-mobile.png",
+                "mode": "cover"
+              }
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "kKUvy",
+          "name": "Lecteur",
+          "width": "fill_container",
+          "fill": "#0A0A0A",
+          "gap": 14,
+          "padding": [
+            12,
+            16
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "O7uHX",
+              "name": "P",
+              "width": 40,
+              "height": 40,
+              "fill": "#FFFFFF",
+              "cornerRadius": 20,
+              "layout": "vertical",
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "e0HBNf",
+                  "name": "T",
+                  "fill": "#111111",
+                  "content": "▶",
+                  "fontFamily": "Inter",
+                  "fontSize": 14
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "Dw5Ie",
+              "name": "I",
+              "fill": "#CFCFCF",
+              "content": "Tempo 100 % · Les deux mains",
+              "fontFamily": "Inter",
+              "fontSize": 13
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "n30Dc",
+      "x": 0,
+      "y": 0,
+      "name": "3 Conservatoire — Accueil",
+      "width": 1440,
+      "fill": "#F6F5F2",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "et89j",
+          "name": "En-tête",
+          "width": "fill_container",
+          "fill": "#F6F5F2",
+          "padding": [
+            18,
+            64
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "HLurb",
+              "name": "Marque",
+              "fill": "#00000000",
+              "gap": 10,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "aZguK",
+                  "name": "Logo",
+                  "width": 34,
+                  "height": 34,
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "logo-noir.png",
+                    "mode": "contain"
+                  }
+                },
+                {
+                  "type": "text",
+                  "id": "W6NU0",
+                  "name": "Nom",
+                  "fill": "#111111",
+                  "content": "Musicalis",
+                  "fontFamily": "Cormorant Garamond",
+                  "fontSize": 26,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "CezUb",
+              "name": "Nav",
+              "fill": "#00000000",
+              "gap": 26,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "vBRBp",
+                  "name": "Explorer",
+                  "fill": "#1A1A1A",
+                  "content": "Explorer",
+                  "fontFamily": "Inter",
+                  "fontSize": 14
+                },
+                {
+                  "type": "text",
+                  "id": "wxQwZ",
+                  "name": "Par niveau",
+                  "fill": "#1A1A1A",
+                  "content": "Par niveau",
+                  "fontFamily": "Inter",
+                  "fontSize": 14
+                },
+                {
+                  "type": "text",
+                  "id": "XhTZX",
+                  "name": "Par instrument",
+                  "fill": "#1A1A1A",
+                  "content": "Par instrument",
+                  "fontFamily": "Inter",
+                  "fontSize": 14
+                },
+                {
+                  "type": "text",
+                  "id": "eLLl5",
+                  "name": "Compositeurs",
+                  "fill": "#1A1A1A",
+                  "content": "Compositeurs",
+                  "fontFamily": "Inter",
+                  "fontSize": 14
+                },
+                {
+                  "type": "frame",
+                  "id": "dNysZ",
+                  "name": "CTA",
+                  "fill": "#1A1A1A",
+                  "cornerRadius": 10,
+                  "layout": "vertical",
+                  "padding": [
+                    9,
+                    16
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "p9IZKa",
+                      "name": "T",
+                      "fill": "#FFFFFF",
+                      "content": "Commencer",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "tiwtu",
+          "name": "Héros",
+          "width": "fill_container",
+          "fill": "#00000000",
+          "layout": "vertical",
+          "gap": 20,
+          "padding": [
+            64,
+            64,
+            40,
+            64
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "fBHAt",
+              "name": "T",
+              "fill": "#111111",
+              "content": "Que voulez-vous jouer aujourd’hui ?",
+              "fontFamily": "Cormorant Garamond",
+              "fontSize": 64,
+              "fontWeight": "600"
+            },
+            {
+              "type": "text",
+              "id": "zaVNE",
+              "name": "S",
+              "fill": "#707070",
+              "content": "Choisissez votre instrument et votre niveau : on vous propose la bonne version de chaque œuvre.",
+              "fontFamily": "Inter",
+              "fontSize": 17
+            },
+            {
+              "type": "frame",
+              "id": "X4rTf",
+              "name": "Choix",
+              "fill": "#FFFFFF",
+              "cornerRadius": 16,
+              "stroke": "#E4E2DC",
+              "strokeWidth": 1,
+              "gap": 18,
+              "padding": [
+                10,
+                10,
+                10,
+                22
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "OFb3L",
+                  "name": "A",
+                  "fill": "#707070",
+                  "content": "Je joue du",
+                  "fontFamily": "Inter",
+                  "fontSize": 15
+                },
+                {
+                  "type": "frame",
+                  "id": "TvK0n",
+                  "name": "S1",
+                  "fill": "#F6F5F2",
+                  "cornerRadius": 10,
+                  "gap": 8,
+                  "padding": [
+                    10,
+                    14
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "bcoht",
+                      "name": "V",
+                      "fill": "#111111",
+                      "content": "Piano ▾",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "rFbhc",
+                  "name": "B",
+                  "fill": "#707070",
+                  "content": "niveau",
+                  "fontFamily": "Inter",
+                  "fontSize": 15
+                },
+                {
+                  "type": "frame",
+                  "id": "EtzGM",
+                  "name": "S2",
+                  "fill": "#F6F5F2",
+                  "cornerRadius": 10,
+                  "padding": [
+                    10,
+                    14
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Q8Nro",
+                      "name": "V",
+                      "fill": "#111111",
+                      "content": "Débutant ▾",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "n2HrH",
+                  "name": "Go",
+                  "fill": "#1A1A1A",
+                  "cornerRadius": 10,
+                  "layout": "vertical",
+                  "padding": [
+                    12,
+                    22
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Y9jZ9",
+                      "name": "T",
+                      "fill": "#FFFFFF",
+                      "content": "Voir les partitions",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Pofmm",
+          "name": "Échelle",
+          "width": "fill_container",
+          "fill": "#00000000",
+          "layout": "vertical",
+          "gap": 16,
+          "padding": [
+            40,
+            64,
+            24,
+            64
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "she7w",
+              "name": "T",
+              "fill": "#111111",
+              "content": "Une œuvre, quatre marches",
+              "fontFamily": "Cormorant Garamond",
+              "fontSize": 34,
+              "fontWeight": "600"
+            },
+            {
+              "type": "frame",
+              "id": "i4Bui",
+              "name": "Marches",
+              "width": "fill_container",
+              "fill": "#00000000",
+              "gap": 16,
+              "alignItems": "end",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "vNsRU",
+                  "name": "Débutant",
+                  "width": "fill_container",
+                  "height": 150,
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 16,
+                  "stroke": "#E4E2DC",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "gap": 6,
+                  "padding": 18,
+                  "justifyContent": "end",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "vorKN",
+                      "name": "N",
+                      "fill": "#1A1A1A",
+                      "content": "Débutant",
+                      "fontFamily": "Cormorant Garamond",
+                      "fontSize": 26,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "G3ylnl",
+                      "name": "D",
+                      "fill": "#707070",
+                      "content": "Accords plaqués, 16 mesures",
+                      "fontFamily": "Inter",
+                      "fontSize": 13
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "F7K7x",
+                  "name": "Intermédiaire",
+                  "width": "fill_container",
+                  "height": 190,
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 16,
+                  "stroke": "#E4E2DC",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "gap": 6,
+                  "padding": 18,
+                  "justifyContent": "end",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "AfovQ",
+                      "name": "N",
+                      "fill": "#1A1A1A",
+                      "content": "Intermédiaire",
+                      "fontFamily": "Cormorant Garamond",
+                      "fontSize": 26,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "kCRQT",
+                      "name": "D",
+                      "fill": "#707070",
+                      "content": "Main gauche tenue",
+                      "fontFamily": "Inter",
+                      "fontSize": 13
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "jLp3o",
+                  "name": "Avancé",
+                  "width": "fill_container",
+                  "height": 230,
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 16,
+                  "stroke": "#E4E2DC",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "gap": 6,
+                  "padding": 18,
+                  "justifyContent": "end",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "zkPdu",
+                      "name": "N",
+                      "fill": "#1A1A1A",
+                      "content": "Avancé",
+                      "fontFamily": "Cormorant Garamond",
+                      "fontSize": 26,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "IQS7a",
+                      "name": "D",
+                      "fill": "#707070",
+                      "content": "Texte complet, doigtés",
+                      "fontFamily": "Inter",
+                      "fontSize": 13
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "x0Cz93",
+                  "name": "Original",
+                  "width": "fill_container",
+                  "height": 270,
+                  "fill": "#1A1A1A",
+                  "cornerRadius": 16,
+                  "stroke": "#E4E2DC",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "gap": 6,
+                  "padding": 18,
+                  "justifyContent": "end",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "XKby6",
+                      "name": "N",
+                      "fill": "#FFFFFF",
+                      "content": "Original",
+                      "fontFamily": "Cormorant Garamond",
+                      "fontSize": 26,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "LTmLW",
+                      "name": "D",
+                      "fill": "#BBBBBB",
+                      "content": "Bach, 1722",
+                      "fontFamily": "Inter",
+                      "fontSize": 13
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "U1MvxX",
+          "name": "Cartes",
+          "width": "fill_container",
+          "fill": "#00000000",
+          "layout": "vertical",
+          "gap": 16,
+          "padding": [
+            24,
+            64,
+            64,
+            64
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "l7dv6",
+              "name": "T",
+              "fill": "#111111",
+              "content": "Pour commencer",
+              "fontFamily": "Cormorant Garamond",
+              "fontSize": 30,
+              "fontWeight": "600"
+            },
+            {
+              "type": "frame",
+              "id": "vqhHB",
+              "name": "Grille",
+              "width": "fill_container",
+              "fill": "#00000000",
+              "gap": 16,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "tVwat",
+                  "name": "Au clair de la lune",
+                  "clip": true,
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 16,
+                  "stroke": "#E4E2DC",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "rGj0f",
+                      "name": "Visuel",
+                      "width": "fill_container",
+                      "height": 170,
+                      "fill": "#EDEBE6",
+                      "layout": "vertical"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "OcmlJ",
+                      "name": "Texte",
+                      "fill": "#00000000",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "padding": [
+                        14,
+                        16
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "s8KZq",
+                          "name": "T",
+                          "fill": "#111111",
+                          "content": "Au clair de la lune",
+                          "fontFamily": "Cormorant Garamond",
+                          "fontSize": 22,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "WS3al",
+                          "name": "S",
+                          "fill": "#707070",
+                          "content": "Voix · Débutant",
+                          "fontFamily": "Inter",
+                          "fontSize": 13
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "nzxni",
+                  "name": "Prélude BWV 846",
+                  "clip": true,
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 16,
+                  "stroke": "#E4E2DC",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "jVcZk",
+                      "name": "Visuel",
+                      "width": 420,
+                      "height": 170,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "score-home.png",
+                        "mode": "cover"
+                      }
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Y9IFMn",
+                      "name": "Texte",
+                      "fill": "#00000000",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "padding": [
+                        14,
+                        16
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "eMwpY",
+                          "name": "T",
+                          "fill": "#111111",
+                          "content": "Prélude BWV 846",
+                          "fontFamily": "Cormorant Garamond",
+                          "fontSize": 22,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "bgOxp",
+                          "name": "S",
+                          "fill": "#707070",
+                          "content": "Piano · Débutant",
+                          "fontFamily": "Inter",
+                          "fontSize": 13
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "lGsUd",
+                  "name": "Gymnopédie n° 1",
+                  "clip": true,
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 16,
+                  "stroke": "#E4E2DC",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "V5L7sT",
+                      "name": "Visuel",
+                      "width": "fill_container",
+                      "height": 170,
+                      "fill": "#EDEBE6",
+                      "layout": "vertical"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "ILFfk",
+                      "name": "Texte",
+                      "fill": "#00000000",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "padding": [
+                        14,
+                        16
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "fPkWS",
+                          "name": "T",
+                          "fill": "#111111",
+                          "content": "Gymnopédie n° 1",
+                          "fontFamily": "Cormorant Garamond",
+                          "fontSize": 22,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "iZcno",
+                          "name": "S",
+                          "fill": "#707070",
+                          "content": "Piano · Intermédiaire",
+                          "fontFamily": "Inter",
+                          "fontSize": 13
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "xpKv4",
+      "x": 0,
+      "y": 0,
+      "name": "3 Conservatoire — Partition",
+      "width": 1440,
+      "fill": "#F6F5F2",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "jOW9p",
+          "name": "En-tête",
+          "width": "fill_container",
+          "fill": "#F6F5F2",
+          "padding": [
+            18,
+            64
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "hCeRZ",
+              "name": "Marque",
+              "fill": "#00000000",
+              "gap": 10,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "w4uWg",
+                  "name": "Logo",
+                  "width": 34,
+                  "height": 34,
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "logo-noir.png",
+                    "mode": "contain"
+                  }
+                },
+                {
+                  "type": "text",
+                  "id": "jdT4b",
+                  "name": "Nom",
+                  "fill": "#111111",
+                  "content": "Musicalis",
+                  "fontFamily": "Cormorant Garamond",
+                  "fontSize": 26,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "oTfBV",
+              "name": "Nav",
+              "fill": "#00000000",
+              "gap": 26,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "AeCjq",
+                  "name": "Explorer",
+                  "fill": "#1A1A1A",
+                  "content": "Explorer",
+                  "fontFamily": "Inter",
+                  "fontSize": 14
+                },
+                {
+                  "type": "text",
+                  "id": "W88lT",
+                  "name": "Par niveau",
+                  "fill": "#1A1A1A",
+                  "content": "Par niveau",
+                  "fontFamily": "Inter",
+                  "fontSize": 14
+                },
+                {
+                  "type": "text",
+                  "id": "I4yMbH",
+                  "name": "Par instrument",
+                  "fill": "#1A1A1A",
+                  "content": "Par instrument",
+                  "fontFamily": "Inter",
+                  "fontSize": 14
+                },
+                {
+                  "type": "text",
+                  "id": "aKdcb",
+                  "name": "Compositeurs",
+                  "fill": "#1A1A1A",
+                  "content": "Compositeurs",
+                  "fontFamily": "Inter",
+                  "fontSize": 14
+                },
+                {
+                  "type": "frame",
+                  "id": "pgEDt",
+                  "name": "CTA",
+                  "fill": "#1A1A1A",
+                  "cornerRadius": 10,
+                  "layout": "vertical",
+                  "padding": [
+                    9,
+                    16
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Dr0JU",
+                      "name": "T",
+                      "fill": "#FFFFFF",
+                      "content": "Commencer",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "sDj82",
+          "name": "Contenu",
+          "width": "fill_container",
+          "fill": "#00000000",
+          "layout": "vertical",
+          "gap": 18,
+          "padding": [
+            28,
+            64,
+            56,
+            64
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "XntpJ",
+              "name": "Titre",
+              "width": "fill_container",
+              "fill": "#00000000",
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "OO9qm",
+                  "name": "G",
+                  "fill": "#00000000",
+                  "layout": "vertical",
+                  "gap": 4,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "K5UDlk",
+                      "name": "T",
+                      "fill": "#111111",
+                      "content": "Prélude en ut majeur",
+                      "fontFamily": "Cormorant Garamond",
+                      "fontSize": 48,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "yJ76h",
+                      "name": "S",
+                      "fill": "#707070",
+                      "content": "J. S. Bach · BWV 846 · Piano · partition libre",
+                      "fontFamily": "Inter",
+                      "fontSize": 14
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "jvEI8",
+                  "name": "Niveaux",
+                  "fill": "#ECEAE4",
+                  "cornerRadius": 12,
+                  "gap": 4,
+                  "padding": 4,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "C9vFr",
+                      "name": "Débutant",
+                      "fill": "#00000000",
+                      "cornerRadius": 9,
+                      "layout": "vertical",
+                      "padding": [
+                        8,
+                        14
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "WTMKj",
+                          "name": "V",
+                          "fill": "#707070",
+                          "content": "Débutant",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "kkwRn",
+                      "name": "Interm.",
+                      "fill": "#00000000",
+                      "cornerRadius": 9,
+                      "layout": "vertical",
+                      "padding": [
+                        8,
+                        14
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "AhWf2",
+                          "name": "V",
+                          "fill": "#707070",
+                          "content": "Interm.",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "BDdjP",
+                      "name": "Avancé",
+                      "fill": "#00000000",
+                      "cornerRadius": 9,
+                      "layout": "vertical",
+                      "padding": [
+                        8,
+                        14
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "NQtUH",
+                          "name": "V",
+                          "fill": "#707070",
+                          "content": "Avancé",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "XtVbG",
+                      "name": "Original",
+                      "fill": "#FFFFFF",
+                      "cornerRadius": 9,
+                      "layout": "vertical",
+                      "padding": [
+                        8,
+                        14
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "F07GUo",
+                          "name": "V",
+                          "fill": "#1A1A1A",
+                          "content": "Original",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "HUOd6",
+              "name": "Corps",
+              "width": "fill_container",
+              "fill": "#00000000",
+              "gap": 20,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "Rl6M3",
+                  "name": "Partition",
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 18,
+                  "stroke": "#E4E2DC",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "gap": 16,
+                  "padding": [
+                    22,
+                    24
+                  ],
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "elY84",
+                      "name": "Lecteur",
+                      "width": "fill_container",
+                      "fill": "#F6F5F2",
+                      "cornerRadius": 12,
+                      "gap": 18,
+                      "padding": [
+                        10,
+                        12
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "DX83Z",
+                          "name": "Lire",
+                          "fill": "#1A1A1A",
+                          "cornerRadius": 10,
+                          "padding": [
+                            10,
+                            18
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "imctX",
+                              "name": "T",
+                              "fill": "#FFFFFF",
+                              "content": "▶  Lecture",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "GvQZy",
+                          "name": "Tempo 100 %",
+                          "fill": "#FFFFFF",
+                          "cornerRadius": 8,
+                          "stroke": "#E4E2DC",
+                          "strokeWidth": 1,
+                          "layout": "vertical",
+                          "padding": [
+                            7,
+                            12
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "JEPv1",
+                              "name": "T",
+                              "fill": "#111111",
+                              "content": "Tempo 100 %",
+                              "fontFamily": "Inter",
+                              "fontSize": 13
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "P0rjp",
+                          "name": "Les deux mains",
+                          "fill": "#FFFFFF",
+                          "cornerRadius": 8,
+                          "stroke": "#E4E2DC",
+                          "strokeWidth": 1,
+                          "layout": "vertical",
+                          "padding": [
+                            7,
+                            12
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "hST2J",
+                              "name": "T",
+                              "fill": "#111111",
+                              "content": "Les deux mains",
+                              "fontFamily": "Inter",
+                              "fontSize": 13
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "CzjrQ",
+                          "name": "Boucle m. 1–4",
+                          "fill": "#FFFFFF",
+                          "cornerRadius": 8,
+                          "stroke": "#E4E2DC",
+                          "strokeWidth": 1,
+                          "layout": "vertical",
+                          "padding": [
+                            7,
+                            12
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "clvUs",
+                              "name": "T",
+                              "fill": "#111111",
+                              "content": "Boucle m. 1–4",
+                              "fontFamily": "Inter",
+                              "fontSize": 13
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "wiqr1",
+                          "name": "Métronome",
+                          "fill": "#FFFFFF",
+                          "cornerRadius": 8,
+                          "stroke": "#E4E2DC",
+                          "strokeWidth": 1,
+                          "layout": "vertical",
+                          "padding": [
+                            7,
+                            12
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "ohhqU",
+                              "name": "T",
+                              "fill": "#111111",
+                              "content": "Métronome",
+                              "fontFamily": "Inter",
+                              "fontSize": 13
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "FG2B3",
+                      "name": "Gravure",
+                      "width": 880,
+                      "height": 430,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "score-desktop.png",
+                        "mode": "contain"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "yCHvE",
+                  "name": "Panneau",
+                  "width": 320,
+                  "fill": "#00000000",
+                  "layout": "vertical",
+                  "gap": 14,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "g0rqZt",
+                      "name": "Progression",
+                      "width": "fill_container",
+                      "fill": "#1A1A1A",
+                      "cornerRadius": 16,
+                      "layout": "vertical",
+                      "gap": 6,
+                      "padding": [
+                        16,
+                        18
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "h1khiu",
+                          "name": "T",
+                          "fill": "#FFFFFF",
+                          "content": "Votre travail",
+                          "fontFamily": "Cormorant Garamond",
+                          "fontSize": 22,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "jukrz",
+                          "name": "S",
+                          "fill": "#CFCFCF",
+                          "textGrowth": "fixed-width",
+                          "width": 280,
+                          "content": "Commencez par la main droite seule à 60 %, puis ajoutez la main gauche.",
+                          "lineHeight": 1.5,
+                          "fontFamily": "Inter",
+                          "fontSize": 13
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "WgDo9",
+                      "name": "Annotations",
+                      "width": "fill_container",
+                      "fill": "#FFFFFF",
+                      "cornerRadius": 16,
+                      "stroke": "#E4E2DC",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "gap": 4,
+                      "padding": [
+                        14,
+                        18
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "a7tw2D",
+                          "name": "K",
+                          "fill": "#111111",
+                          "content": "Annotations",
+                          "fontFamily": "Cormorant Garamond",
+                          "fontSize": 20,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "i17cU",
+                          "name": "V",
+                          "fill": "#707070",
+                          "content": "Doigtés · Lecture · Analyse",
+                          "fontFamily": "Inter",
+                          "fontSize": 13
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "uYGJI",
+                      "name": "Interprétations",
+                      "width": "fill_container",
+                      "fill": "#FFFFFF",
+                      "cornerRadius": 16,
+                      "stroke": "#E4E2DC",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "gap": 4,
+                      "padding": [
+                        14,
+                        18
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "hqte9",
+                          "name": "K",
+                          "fill": "#111111",
+                          "content": "Interprétations",
+                          "fontFamily": "Cormorant Garamond",
+                          "fontSize": 20,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "AsCcL",
+                          "name": "V",
+                          "fill": "#707070",
+                          "content": "3 vidéos",
+                          "fontFamily": "Inter",
+                          "fontSize": 13
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "cpYS6",
+                      "name": "Télécharger",
+                      "width": "fill_container",
+                      "fill": "#FFFFFF",
+                      "cornerRadius": 16,
+                      "stroke": "#E4E2DC",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "gap": 4,
+                      "padding": [
+                        14,
+                        18
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "ngzFa",
+                          "name": "K",
+                          "fill": "#111111",
+                          "content": "Télécharger",
+                          "fontFamily": "Cormorant Garamond",
+                          "fontSize": 20,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "rmniz",
+                          "name": "V",
+                          "fill": "#707070",
+                          "content": "PDF · MusicXML · MIDI",
+                          "fontFamily": "Inter",
+                          "fontSize": 13
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "KmDRX",
+      "x": 0,
+      "y": 0,
+      "name": "3 Conservatoire — Partition mobile",
+      "width": 390,
+      "fill": "#F6F5F2",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "ZHiKp",
+          "name": "En-tête",
+          "width": "fill_container",
+          "fill": "#F6F5F2",
+          "padding": [
+            14,
+            16
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "VV5Ws",
+              "name": "Marque",
+              "fill": "#00000000",
+              "gap": 10,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "qWPZh",
+                  "name": "Logo",
+                  "width": 28,
+                  "height": 28,
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "logo-noir.png",
+                    "mode": "contain"
+                  }
+                },
+                {
+                  "type": "text",
+                  "id": "OEpeC",
+                  "name": "Nom",
+                  "fill": "#111111",
+                  "content": "Musicalis",
+                  "fontFamily": "Cormorant Garamond",
+                  "fontSize": 22,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "I15SF",
+              "name": "Menu",
+              "fill": "#111111",
+              "content": "Menu",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "600"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "qxnfk",
+          "name": "Contenu",
+          "width": "fill_container",
+          "fill": "#00000000",
+          "layout": "vertical",
+          "gap": 12,
+          "padding": [
+            12,
+            14,
+            20,
+            14
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "StByc",
+              "name": "T",
+              "fill": "#111111",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Prélude en ut majeur",
+              "lineHeight": 1.1,
+              "fontFamily": "Cormorant Garamond",
+              "fontSize": 32,
+              "fontWeight": "600"
+            },
+            {
+              "type": "text",
+              "id": "QiteA",
+              "name": "S",
+              "fill": "#707070",
+              "content": "J. S. Bach · BWV 846",
+              "fontFamily": "Inter",
+              "fontSize": 13
+            },
+            {
+              "type": "frame",
+              "id": "Lze3F",
+              "name": "Niveaux",
+              "fill": "#ECEAE4",
+              "cornerRadius": 12,
+              "gap": 2,
+              "padding": 4,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "L6156",
+                  "name": "Débutant",
+                  "fill": "#00000000",
+                  "cornerRadius": 9,
+                  "layout": "vertical",
+                  "padding": [
+                    7,
+                    9
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "cvPUZ",
+                      "name": "V",
+                      "fill": "#707070",
+                      "content": "Débutant",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "yoDQs",
+                  "name": "Interm.",
+                  "fill": "#00000000",
+                  "cornerRadius": 9,
+                  "layout": "vertical",
+                  "padding": [
+                    7,
+                    9
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "jijDj",
+                      "name": "V",
+                      "fill": "#707070",
+                      "content": "Interm.",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "f6ryS",
+                  "name": "Avancé",
+                  "fill": "#00000000",
+                  "cornerRadius": 9,
+                  "layout": "vertical",
+                  "padding": [
+                    7,
+                    9
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "lClwF",
+                      "name": "V",
+                      "fill": "#707070",
+                      "content": "Avancé",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "m7uQd",
+                  "name": "Original",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 9,
+                  "layout": "vertical",
+                  "padding": [
+                    7,
+                    9
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "D3bzd",
+                      "name": "V",
+                      "fill": "#1A1A1A",
+                      "content": "Original",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "700"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "i9h4g",
+              "name": "Partition",
+              "width": "fill_container",
+              "fill": "#FFFFFF",
+              "cornerRadius": 16,
+              "stroke": "#E4E2DC",
+              "strokeWidth": 1,
+              "layout": "vertical",
+              "padding": [
+                10,
+                8
+              ],
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "E0aY5r",
+                  "name": "G",
+                  "width": 346,
+                  "height": 500,
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "score-mobile.png",
+                    "mode": "cover"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "m93Xig",
+          "name": "Lecteur",
+          "width": "fill_container",
+          "fill": "#FFFFFF",
+          "stroke": "#E4E2DC",
+          "strokeWidth": 1,
+          "gap": 10,
+          "padding": [
+            12,
+            14
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "I94qj",
+              "name": "P",
+              "fill": "#1A1A1A",
+              "cornerRadius": 10,
+              "layout": "vertical",
+              "padding": [
+                10,
+                16
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "EH6pB",
+                  "name": "T",
+                  "fill": "#FFFFFF",
+                  "content": "▶  Lecture",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "GOIqA",
+              "name": "H",
+              "fill": "#F6F5F2",
+              "cornerRadius": 8,
+              "layout": "vertical",
+              "padding": [
+                8,
+                10
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "pndRM",
+                  "name": "T",
+                  "fill": "#111111",
+                  "content": "Les deux mains",
+                  "fontFamily": "Inter",
+                  "fontSize": 12
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "v3WZ0S",
+              "name": "T2",
+              "fill": "#F6F5F2",
+              "cornerRadius": 8,
+              "layout": "vertical",
+              "padding": [
+                8,
+                10
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Hi8VV",
+                  "name": "T",
+                  "fill": "#111111",
+                  "content": "100 %",
+                  "fontFamily": "Inter",
+                  "fontSize": 12
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "fileToken": "69d34c0f-25bc-4cd6-96d7-0ad40c59f40a"
+}
