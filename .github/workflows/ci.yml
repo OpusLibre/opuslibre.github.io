@@ -17,6 +17,9 @@ jobs:
       - run: npm ci
       # Validates every score (metadata, licence, annotation anchors), then builds the static site.
       - run: npm run build
+      # Responsive and behaviour checks (390, 768, 1440 px) on the built site; a failure blocks the deployment.
+      - run: npx playwright install --with-deps chromium
+      - run: npx playwright test
       # Deploys main only: generated score files to R2 (immutable keys, sent once), then the Worker.
       - name: Upload score files to R2
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'

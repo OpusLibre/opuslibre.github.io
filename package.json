@@ -6,16 +6,20 @@
     "scores": "node scripts/build-scores.mjs",
     "build": "node scripts/build-scores.mjs && astro build",
     "dev": "astro dev",
-    "deploy": "wrangler deploy"
+    "deploy": "wrangler deploy",
+    "test": "playwright test"
   },
   "dependencies": {
     "@tonejs/midi": "^2.0.28",
     "astro": "^7.4.7",
+    "pdfkit": "^0.20.2",
+    "svg-to-pdfkit": "^0.1.8",
     "tone": "^15.1.22",
     "verovio": "^6.4.1"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^5.20261107.1",
+    "@playwright/test": "^1.49.1",
     "wrangler": "^4.158.0"
   }
 }

@@ -1,0 +1,4703 @@
+{
+  "version": "2.21",
+  "children": [
+    {
+      "type": "frame",
+      "id": "RhIsR",
+      "x": 0,
+      "y": 0,
+      "name": "Accueil",
+      "width": 1440,
+      "fill": "#FBFAF7",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "hf5lt",
+          "name": "En-tête",
+          "width": "fill_container",
+          "fill": "#00000000",
+          "stroke": "#E4E0D6",
+          "strokeWidth": 1,
+          "padding": [
+            18,
+            64
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "sewCm",
+              "name": "Marque",
+              "fill": "#1C1B19",
+              "content": "Musicalis",
+              "fontFamily": "Source Serif 4",
+              "fontSize": 24,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "wS9l4",
+              "name": "Navigation",
+              "fill": "#00000000",
+              "gap": 28,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "T6RBcr",
+                  "name": "Explorer",
+                  "fill": "#5F5B53",
+                  "content": "Explorer",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "deAZV",
+                  "name": "Niveaux",
+                  "fill": "#5F5B53",
+                  "content": "Niveaux",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "q0H6zL",
+                  "name": "Instruments",
+                  "fill": "#5F5B53",
+                  "content": "Instruments",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "l8fkzX",
+                  "name": "Compositeurs",
+                  "fill": "#5F5B53",
+                  "content": "Compositeurs",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "frame",
+                  "id": "e95fFV",
+                  "name": "Pastille FR ▾",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 999,
+                  "stroke": "#E4E0D6",
+                  "strokeWidth": 1,
+                  "padding": [
+                    5,
+                    11
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "stA9G",
+                      "name": "T",
+                      "fill": "#5F5B53",
+                      "content": "FR ▾",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "500"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "KgDfo",
+          "name": "Héros",
+          "width": "fill_container",
+          "fill": "#00000000",
+          "layout": "vertical",
+          "gap": 18,
+          "padding": [
+            72,
+            64,
+            48,
+            64
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "TV1FZ",
+              "name": "Titre",
+              "fill": "#1C1B19",
+              "content": "Partitions libres, de l’original aux versions débutant.",
+              "fontFamily": "Source Serif 4",
+              "fontSize": 52,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "vvoCO",
+              "name": "Chapeau",
+              "fill": "#5F5B53",
+              "content": "Lisez, écoutez et travaillez chaque œuvre au niveau qui vous convient. Tout est gratuit, imprimable et réutilisable.",
+              "fontFamily": "Inter",
+              "fontSize": 18
+            },
+            {
+              "type": "frame",
+              "id": "lZJ9P",
+              "name": "Recherche",
+              "width": 760,
+              "fill": "#FFFFFF",
+              "cornerRadius": 999,
+              "stroke": "#E4E0D6",
+              "strokeWidth": 1,
+              "gap": 10,
+              "padding": [
+                14,
+                18
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "KFbfV",
+                  "name": "Loupe",
+                  "fill": "#8F8A80",
+                  "content": "⌕",
+                  "fontFamily": "Inter",
+                  "fontSize": 18
+                },
+                {
+                  "type": "text",
+                  "id": "zPaa2",
+                  "name": "Ph",
+                  "fill": "#8F8A80",
+                  "content": "Titre, compositeur, BWV 846, op. 28 n° 4…",
+                  "fontFamily": "Inter",
+                  "fontSize": 16
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "c0t9xz",
+              "name": "Entrées",
+              "fill": "#00000000",
+              "gap": 28,
+              "padding": [
+                10,
+                0,
+                0,
+                0
+              ],
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "uuhke",
+                  "name": "Je joue",
+                  "fill": "#00000000",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "AxnMn",
+                      "name": "L",
+                      "fill": "#8F8A80",
+                      "content": "JE JOUE DU",
+                      "fontFamily": "Inter",
+                      "fontSize": 11,
+                      "fontWeight": "700",
+                      "letterSpacing": 2
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Jc1vI",
+                      "name": "Chips",
+                      "fill": "#00000000",
+                      "gap": 6,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "gBOuy",
+                          "name": "Pastille Piano",
+                          "fill": "#1C1B19",
+                          "cornerRadius": 999,
+                          "stroke": "#E4E0D6",
+                          "strokeWidth": 1,
+                          "padding": [
+                            5,
+                            11
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "Cyaqr",
+                              "name": "T",
+                              "fill": "#FFFFFF",
+                              "content": "Piano",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "i6NdL",
+                          "name": "Pastille Voix",
+                          "fill": "#FFFFFF",
+                          "cornerRadius": 999,
+                          "stroke": "#E4E0D6",
+                          "strokeWidth": 1,
+                          "padding": [
+                            5,
+                            11
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "jf6n0",
+                              "name": "T",
+                              "fill": "#5F5B53",
+                              "content": "Voix",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "RRxkz",
+                          "name": "Pastille Guitare",
+                          "fill": "#FFFFFF",
+                          "cornerRadius": 999,
+                          "stroke": "#E4E0D6",
+                          "strokeWidth": 1,
+                          "padding": [
+                            5,
+                            11
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "u2vfFC",
+                              "name": "T",
+                              "fill": "#5F5B53",
+                              "content": "Guitare",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "tgj00",
+                          "name": "Pastille Violon",
+                          "fill": "#FFFFFF",
+                          "cornerRadius": 999,
+                          "stroke": "#E4E0D6",
+                          "strokeWidth": 1,
+                          "padding": [
+                            5,
+                            11
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "UQRUe",
+                              "name": "T",
+                              "fill": "#5F5B53",
+                              "content": "Violon",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "y9pkwF",
+                  "name": "Niveau",
+                  "fill": "#00000000",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "l8HWVd",
+                      "name": "L",
+                      "fill": "#8F8A80",
+                      "content": "MON NIVEAU",
+                      "fontFamily": "Inter",
+                      "fontSize": 11,
+                      "fontWeight": "700",
+                      "letterSpacing": 2
+                    },
+                    {
+                      "type": "frame",
+                      "id": "tbtv3",
+                      "name": "Chips",
+                      "fill": "#00000000",
+                      "gap": 6,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "w62Tn",
+                          "name": "Pastille Débutant",
+                          "fill": "#FFFFFF",
+                          "cornerRadius": 999,
+                          "stroke": "#E4E0D6",
+                          "strokeWidth": 1,
+                          "padding": [
+                            5,
+                            11
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "NSpl1",
+                              "name": "T",
+                              "fill": "#5F5B53",
+                              "content": "Débutant",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "SPtI7",
+                          "name": "Pastille Intermédiaire",
+                          "fill": "#FFFFFF",
+                          "cornerRadius": 999,
+                          "stroke": "#E4E0D6",
+                          "strokeWidth": 1,
+                          "padding": [
+                            5,
+                            11
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "xBp3n",
+                              "name": "T",
+                              "fill": "#5F5B53",
+                              "content": "Intermédiaire",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "qH1HX",
+                          "name": "Pastille Avancé",
+                          "fill": "#FFFFFF",
+                          "cornerRadius": 999,
+                          "stroke": "#E4E0D6",
+                          "strokeWidth": 1,
+                          "padding": [
+                            5,
+                            11
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "o8ztKm",
+                              "name": "T",
+                              "fill": "#5F5B53",
+                              "content": "Avancé",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "guCvi",
+                          "name": "Pastille Original",
+                          "fill": "#FFFFFF",
+                          "cornerRadius": 999,
+                          "stroke": "#E4E0D6",
+                          "strokeWidth": 1,
+                          "padding": [
+                            5,
+                            11
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "O01rh",
+                              "name": "T",
+                              "fill": "#5F5B53",
+                              "content": "Original",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "eIy6W",
+          "name": "Derniers ajouts",
+          "width": "fill_container",
+          "fill": "#00000000",
+          "layout": "vertical",
+          "gap": 18,
+          "padding": [
+            24,
+            64,
+            64,
+            64
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "qm2nb",
+              "name": "T",
+              "fill": "#1C1B19",
+              "content": "Derniers ajouts",
+              "fontFamily": "Source Serif 4",
+              "fontSize": 28,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "JgFRE",
+              "name": "Grille",
+              "width": "fill_container",
+              "fill": "#00000000",
+              "gap": 18,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "lSrxf",
+                  "name": "Carte Prélude en ut majeur",
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 10,
+                  "stroke": "#E4E0D6",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "gap": 6,
+                  "padding": [
+                    16,
+                    18
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "YoHkY",
+                      "name": "Titre",
+                      "fill": "#1C1B19",
+                      "content": "Prélude en ut majeur",
+                      "fontFamily": "Source Serif 4",
+                      "fontSize": 17,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "jLhYE",
+                      "name": "Sous",
+                      "fill": "#5F5B53",
+                      "content": "J. S. Bach · BWV 846 · Piano",
+                      "fontFamily": "Inter",
+                      "fontSize": 13
+                    },
+                    {
+                      "type": "frame",
+                      "id": "HqLWE",
+                      "name": "Badges",
+                      "fill": "#00000000",
+                      "gap": 6,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "rd7oh",
+                          "name": "Pastille Original",
+                          "fill": "#FFFFFF",
+                          "cornerRadius": 999,
+                          "stroke": "#E4E0D6",
+                          "strokeWidth": 1,
+                          "padding": [
+                            5,
+                            11
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "V7FhB",
+                              "name": "T",
+                              "fill": "#5F5B53",
+                              "content": "Original",
+                              "fontFamily": "Inter",
+                              "fontSize": 11,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "grD82",
+                          "name": "Pastille Libre · CC0",
+                          "fill": "#E6F0E8",
+                          "cornerRadius": 999,
+                          "padding": [
+                            5,
+                            11
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "nykfn",
+                              "name": "T",
+                              "fill": "#2F6B3F",
+                              "content": "Libre · CC0",
+                              "fontFamily": "Inter",
+                              "fontSize": 11,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "AYa0s",
+                  "name": "Carte Au clair de la lune",
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 10,
+                  "stroke": "#E4E0D6",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "gap": 6,
+                  "padding": [
+                    16,
+                    18
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "PV0o6",
+                      "name": "Titre",
+                      "fill": "#1C1B19",
+                      "content": "Au clair de la lune",
+                      "fontFamily": "Source Serif 4",
+                      "fontSize": 17,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "IADOL",
+                      "name": "Sous",
+                      "fill": "#5F5B53",
+                      "content": "Traditionnel · Voix",
+                      "fontFamily": "Inter",
+                      "fontSize": 13
+                    },
+                    {
+                      "type": "frame",
+                      "id": "P4bks",
+                      "name": "Badges",
+                      "fill": "#00000000",
+                      "gap": 6,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "S5mNCB",
+                          "name": "Pastille Débutant",
+                          "fill": "#FFFFFF",
+                          "cornerRadius": 999,
+                          "stroke": "#E4E0D6",
+                          "strokeWidth": 1,
+                          "padding": [
+                            5,
+                            11
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "wfy6O",
+                              "name": "T",
+                              "fill": "#5F5B53",
+                              "content": "Débutant",
+                              "fontFamily": "Inter",
+                              "fontSize": 11,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "Do7vT",
+                          "name": "Pastille Libre · CC0",
+                          "fill": "#E6F0E8",
+                          "cornerRadius": 999,
+                          "padding": [
+                            5,
+                            11
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "O1VEV",
+                              "name": "T",
+                              "fill": "#2F6B3F",
+                              "content": "Libre · CC0",
+                              "fontFamily": "Inter",
+                              "fontSize": 11,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "F0o0OG",
+                  "name": "Carte Gymnopédie n° 1",
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 10,
+                  "stroke": "#E4E0D6",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "gap": 6,
+                  "padding": [
+                    16,
+                    18
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "S5wcEQ",
+                      "name": "Titre",
+                      "fill": "#1C1B19",
+                      "content": "Gymnopédie n° 1",
+                      "fontFamily": "Source Serif 4",
+                      "fontSize": 17,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "gzh3d",
+                      "name": "Sous",
+                      "fill": "#5F5B53",
+                      "content": "E. Satie · Piano",
+                      "fontFamily": "Inter",
+                      "fontSize": 13
+                    },
+                    {
+                      "type": "frame",
+                      "id": "wvYWU",
+                      "name": "Badges",
+                      "fill": "#00000000",
+                      "gap": 6,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "k4pLa",
+                          "name": "Pastille Intermédiaire",
+                          "fill": "#FFFFFF",
+                          "cornerRadius": 999,
+                          "stroke": "#E4E0D6",
+                          "strokeWidth": 1,
+                          "padding": [
+                            5,
+                            11
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "E36RHE",
+                              "name": "T",
+                              "fill": "#5F5B53",
+                              "content": "Intermédiaire",
+                              "fontFamily": "Inter",
+                              "fontSize": 11,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "QDYBa",
+                          "name": "Pastille Libre · CC0",
+                          "fill": "#E6F0E8",
+                          "cornerRadius": 999,
+                          "padding": [
+                            5,
+                            11
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "xk3In",
+                              "name": "T",
+                              "fill": "#2F6B3F",
+                              "content": "Libre · CC0",
+                              "fontFamily": "Inter",
+                              "fontSize": 11,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "RPXV5",
+                  "name": "Carte Für Elise",
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 10,
+                  "stroke": "#E4E0D6",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "gap": 6,
+                  "padding": [
+                    16,
+                    18
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "ljEdt",
+                      "name": "Titre",
+                      "fill": "#1C1B19",
+                      "content": "Für Elise",
+                      "fontFamily": "Source Serif 4",
+                      "fontSize": 17,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "lpI26",
+                      "name": "Sous",
+                      "fill": "#5F5B53",
+                      "content": "L. van Beethoven · WoO 59 · Piano",
+                      "fontFamily": "Inter",
+                      "fontSize": 13
+                    },
+                    {
+                      "type": "frame",
+                      "id": "f6Lkgo",
+                      "name": "Badges",
+                      "fill": "#00000000",
+                      "gap": 6,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "xee57",
+                          "name": "Pastille Débutant",
+                          "fill": "#FFFFFF",
+                          "cornerRadius": 999,
+                          "stroke": "#E4E0D6",
+                          "strokeWidth": 1,
+                          "padding": [
+                            5,
+                            11
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "V6rrE",
+                              "name": "T",
+                              "fill": "#5F5B53",
+                              "content": "Débutant",
+                              "fontFamily": "Inter",
+                              "fontSize": 11,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "x0pbX",
+                          "name": "Pastille Libre · CC0",
+                          "fill": "#E6F0E8",
+                          "cornerRadius": 999,
+                          "padding": [
+                            5,
+                            11
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "OeJXz",
+                              "name": "T",
+                              "fill": "#2F6B3F",
+                              "content": "Libre · CC0",
+                              "fontFamily": "Inter",
+                              "fontSize": 11,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "IZ9fE",
+          "name": "Pied",
+          "width": "fill_container",
+          "fill": "#00000000",
+          "stroke": "#E4E0D6",
+          "strokeWidth": 1,
+          "layout": "vertical",
+          "padding": [
+            22,
+            64
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "ZfSqg",
+              "name": "T",
+              "fill": "#5F5B53",
+              "content": "Toutes les partitions de Musicalis sont libres : vous pouvez les imprimer, les copier et les jouer en public.",
+              "fontFamily": "Inter",
+              "fontSize": 13
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "FJIuP",
+      "x": 0,
+      "y": 0,
+      "name": "AccueilMobile",
+      "width": 390,
+      "fill": "#FBFAF7",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "EoPH5",
+          "name": "En-tête",
+          "width": "fill_container",
+          "fill": "#00000000",
+          "stroke": "#E4E0D6",
+          "strokeWidth": 1,
+          "padding": [
+            14,
+            16
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "VpPnh",
+              "name": "Marque",
+              "fill": "#1C1B19",
+              "content": "Musicalis",
+              "fontFamily": "Source Serif 4",
+              "fontSize": 20,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "nIWz7",
+              "name": "Menu",
+              "fill": "#8A3B12",
+              "content": "Menu",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "600"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "jvVnz",
+          "name": "Héros",
+          "width": "fill_container",
+          "fill": "#00000000",
+          "layout": "vertical",
+          "gap": 14,
+          "padding": [
+            28,
+            16,
+            20,
+            16
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "Us75f",
+              "name": "Titre",
+              "fill": "#1C1B19",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Partitions libres, de l’original aux versions débutant.",
+              "fontFamily": "Source Serif 4",
+              "fontSize": 30,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "rDFpw",
+              "name": "Chapeau",
+              "fill": "#5F5B53",
+              "content": "Gratuit, imprimable et réutilisable.",
+              "fontFamily": "Inter",
+              "fontSize": 15
+            },
+            {
+              "type": "frame",
+              "id": "dy0vP",
+              "name": "Recherche",
+              "width": "fill_container",
+              "fill": "#FFFFFF",
+              "cornerRadius": 999,
+              "stroke": "#E4E0D6",
+              "strokeWidth": 1,
+              "gap": 8,
+              "padding": [
+                12,
+                14
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "I7MuTs",
+                  "name": "L",
+                  "fill": "#8F8A80",
+                  "content": "⌕",
+                  "fontFamily": "Inter",
+                  "fontSize": 16
+                },
+                {
+                  "type": "text",
+                  "id": "H7r5VN",
+                  "name": "Ph",
+                  "fill": "#8F8A80",
+                  "content": "Titre, compositeur, catalogue…",
+                  "fontFamily": "Inter",
+                  "fontSize": 14
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "YlxgG",
+              "name": "L1",
+              "fill": "#8F8A80",
+              "content": "JE JOUE DU",
+              "fontFamily": "Inter",
+              "fontSize": 11,
+              "fontWeight": "700",
+              "letterSpacing": 2
+            },
+            {
+              "type": "frame",
+              "id": "v4Kuj",
+              "name": "Chips",
+              "fill": "#00000000",
+              "gap": 6,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "TC9zv",
+                  "name": "Pastille Piano",
+                  "fill": "#1C1B19",
+                  "cornerRadius": 999,
+                  "stroke": "#E4E0D6",
+                  "strokeWidth": 1,
+                  "padding": [
+                    5,
+                    11
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "oSR3s",
+                      "name": "T",
+                      "fill": "#FFFFFF",
+                      "content": "Piano",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "w5M6Pi",
+                  "name": "Pastille Voix",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 999,
+                  "stroke": "#E4E0D6",
+                  "strokeWidth": 1,
+                  "padding": [
+                    5,
+                    11
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "kSewj",
+                      "name": "T",
+                      "fill": "#5F5B53",
+                      "content": "Voix",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "yGZrG",
+                  "name": "Pastille Guitare",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 999,
+                  "stroke": "#E4E0D6",
+                  "strokeWidth": 1,
+                  "padding": [
+                    5,
+                    11
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "s2IBg",
+                      "name": "T",
+                      "fill": "#5F5B53",
+                      "content": "Guitare",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "500"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "CNqew",
+              "name": "L2",
+              "fill": "#8F8A80",
+              "content": "MON NIVEAU",
+              "fontFamily": "Inter",
+              "fontSize": 11,
+              "fontWeight": "700",
+              "letterSpacing": 2
+            },
+            {
+              "type": "frame",
+              "id": "x3ZmDo",
+              "name": "Chips2",
+              "fill": "#00000000",
+              "gap": 6,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "Gwgfu",
+                  "name": "Pastille Débutant",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 999,
+                  "stroke": "#E4E0D6",
+                  "strokeWidth": 1,
+                  "padding": [
+                    5,
+                    11
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "cPVng",
+                      "name": "T",
+                      "fill": "#5F5B53",
+                      "content": "Débutant",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "xJ0iL",
+                  "name": "Pastille Intermédiaire",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 999,
+                  "stroke": "#E4E0D6",
+                  "strokeWidth": 1,
+                  "padding": [
+                    5,
+                    11
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "ApZoo",
+                      "name": "T",
+                      "fill": "#5F5B53",
+                      "content": "Intermédiaire",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "UQznV",
+                  "name": "Pastille Avancé",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 999,
+                  "stroke": "#E4E0D6",
+                  "strokeWidth": 1,
+                  "padding": [
+                    5,
+                    11
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "GeBhk",
+                      "name": "T",
+                      "fill": "#5F5B53",
+                      "content": "Avancé",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "500"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "V5n3R",
+          "name": "Derniers ajouts",
+          "width": "fill_container",
+          "fill": "#00000000",
+          "layout": "vertical",
+          "gap": 12,
+          "padding": [
+            12,
+            16,
+            28,
+            16
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "jLP92",
+              "name": "T",
+              "fill": "#1C1B19",
+              "content": "Derniers ajouts",
+              "fontFamily": "Source Serif 4",
+              "fontSize": 22,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "EcpZ8",
+              "name": "Carte Prélude en ut majeur",
+              "width": "fill_container",
+              "fill": "#FFFFFF",
+              "cornerRadius": 10,
+              "stroke": "#E4E0D6",
+              "strokeWidth": 1,
+              "layout": "vertical",
+              "gap": 6,
+              "padding": [
+                16,
+                18
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "jeBLf",
+                  "name": "Titre",
+                  "fill": "#1C1B19",
+                  "content": "Prélude en ut majeur",
+                  "fontFamily": "Source Serif 4",
+                  "fontSize": 17,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "Scm1X",
+                  "name": "Sous",
+                  "fill": "#5F5B53",
+                  "content": "J. S. Bach · BWV 846 · Piano",
+                  "fontFamily": "Inter",
+                  "fontSize": 13
+                },
+                {
+                  "type": "frame",
+                  "id": "Topyk",
+                  "name": "Badges",
+                  "fill": "#00000000",
+                  "gap": 6,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "QrB3b",
+                      "name": "Pastille Original",
+                      "fill": "#FFFFFF",
+                      "cornerRadius": 999,
+                      "stroke": "#E4E0D6",
+                      "strokeWidth": 1,
+                      "padding": [
+                        5,
+                        11
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "Rxrsh",
+                          "name": "T",
+                          "fill": "#5F5B53",
+                          "content": "Original",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Ar5ap",
+                      "name": "Pastille Libre · CC0",
+                      "fill": "#E6F0E8",
+                      "cornerRadius": 999,
+                      "padding": [
+                        5,
+                        11
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "blZ8u",
+                          "name": "T",
+                          "fill": "#2F6B3F",
+                          "content": "Libre · CC0",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "R54Wq",
+              "name": "Carte Au clair de la lune",
+              "width": "fill_container",
+              "fill": "#FFFFFF",
+              "cornerRadius": 10,
+              "stroke": "#E4E0D6",
+              "strokeWidth": 1,
+              "layout": "vertical",
+              "gap": 6,
+              "padding": [
+                16,
+                18
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "pdUpK",
+                  "name": "Titre",
+                  "fill": "#1C1B19",
+                  "content": "Au clair de la lune",
+                  "fontFamily": "Source Serif 4",
+                  "fontSize": 17,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "WY8aR",
+                  "name": "Sous",
+                  "fill": "#5F5B53",
+                  "content": "Traditionnel · Voix",
+                  "fontFamily": "Inter",
+                  "fontSize": 13
+                },
+                {
+                  "type": "frame",
+                  "id": "rcveI",
+                  "name": "Badges",
+                  "fill": "#00000000",
+                  "gap": 6,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "J3ve1G",
+                      "name": "Pastille Débutant",
+                      "fill": "#FFFFFF",
+                      "cornerRadius": 999,
+                      "stroke": "#E4E0D6",
+                      "strokeWidth": 1,
+                      "padding": [
+                        5,
+                        11
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "UhaiX",
+                          "name": "T",
+                          "fill": "#5F5B53",
+                          "content": "Débutant",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "O27mR",
+                      "name": "Pastille Libre · CC0",
+                      "fill": "#E6F0E8",
+                      "cornerRadius": 999,
+                      "padding": [
+                        5,
+                        11
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "bRHlj",
+                          "name": "T",
+                          "fill": "#2F6B3F",
+                          "content": "Libre · CC0",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "I8Mdj",
+      "x": 0,
+      "y": 0,
+      "name": "Partition",
+      "width": 1440,
+      "fill": "#FBFAF7",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "wFF2v",
+          "name": "En-tête",
+          "width": "fill_container",
+          "fill": "#00000000",
+          "stroke": "#E4E0D6",
+          "strokeWidth": 1,
+          "padding": [
+            18,
+            64
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "GbsHf",
+              "name": "Marque",
+              "fill": "#1C1B19",
+              "content": "Musicalis",
+              "fontFamily": "Source Serif 4",
+              "fontSize": 24,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "gE3Gf",
+              "name": "Navigation",
+              "fill": "#00000000",
+              "gap": 28,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "E0aHL",
+                  "name": "Explorer",
+                  "fill": "#5F5B53",
+                  "content": "Explorer",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "tWAW2",
+                  "name": "Niveaux",
+                  "fill": "#5F5B53",
+                  "content": "Niveaux",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "d3ukD",
+                  "name": "Instruments",
+                  "fill": "#5F5B53",
+                  "content": "Instruments",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "Lt68E",
+                  "name": "Compositeurs",
+                  "fill": "#5F5B53",
+                  "content": "Compositeurs",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "frame",
+                  "id": "YfuTB",
+                  "name": "Pastille FR ▾",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 999,
+                  "stroke": "#E4E0D6",
+                  "strokeWidth": 1,
+                  "padding": [
+                    5,
+                    11
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "U4vRQt",
+                      "name": "T",
+                      "fill": "#5F5B53",
+                      "content": "FR ▾",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "500"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "mU27N",
+          "name": "Contenu",
+          "width": "fill_container",
+          "fill": "#00000000",
+          "layout": "vertical",
+          "gap": 16,
+          "padding": [
+            28,
+            64,
+            56,
+            64
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "kzTNE",
+              "name": "Fil",
+              "fill": "#8F8A80",
+              "content": "Compositeurs › J. S. Bach › Prélude en ut majeur",
+              "fontFamily": "Inter",
+              "fontSize": 13
+            },
+            {
+              "type": "frame",
+              "id": "jtgTt",
+              "name": "Titre",
+              "width": "fill_container",
+              "fill": "#00000000",
+              "justifyContent": "space_between",
+              "alignItems": "end",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "iJgu2",
+                  "name": "Gauche",
+                  "fill": "#00000000",
+                  "layout": "vertical",
+                  "gap": 6,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Q3XnZ",
+                      "name": "T",
+                      "fill": "#1C1B19",
+                      "content": "Prélude en ut majeur",
+                      "fontFamily": "Source Serif 4",
+                      "fontSize": 40,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "CUlhv",
+                      "name": "M",
+                      "fill": "#5F5B53",
+                      "content": "J. S. Bach · BWV 846 · Piano · Libre (CC0) : imprimez-la, copiez-la, jouez-la en public.",
+                      "fontFamily": "Inter",
+                      "fontSize": 14
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "ogx1A",
+              "name": "Échelle des versions",
+              "fill": "#00000000",
+              "gap": 6,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "HMNWz",
+                  "name": "L",
+                  "fill": "#8F8A80",
+                  "content": "VERSION",
+                  "fontFamily": "Inter",
+                  "fontSize": 11,
+                  "fontWeight": "700",
+                  "letterSpacing": 2
+                },
+                {
+                  "type": "frame",
+                  "id": "DpCEY",
+                  "name": "Pastille Original",
+                  "fill": "#1C1B19",
+                  "cornerRadius": 999,
+                  "stroke": "#E4E0D6",
+                  "strokeWidth": 1,
+                  "padding": [
+                    6,
+                    13
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "M2IQx",
+                      "name": "T",
+                      "fill": "#FFFFFF",
+                      "content": "Original",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "NBXgg",
+                  "name": "Pastille Avancé",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 999,
+                  "stroke": "#E4E0D6",
+                  "strokeWidth": 1,
+                  "padding": [
+                    6,
+                    13
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "lqw8A",
+                      "name": "T",
+                      "fill": "#5F5B53",
+                      "content": "Avancé",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "ze667",
+                  "name": "Pastille Intermédiaire",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 999,
+                  "stroke": "#E4E0D6",
+                  "strokeWidth": 1,
+                  "padding": [
+                    6,
+                    13
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "xzCmO",
+                      "name": "T",
+                      "fill": "#5F5B53",
+                      "content": "Intermédiaire",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "H9qiBw",
+                  "name": "Pastille Débutant",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 999,
+                  "stroke": "#E4E0D6",
+                  "strokeWidth": 1,
+                  "padding": [
+                    6,
+                    13
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "MNKBb",
+                      "name": "T",
+                      "fill": "#5F5B53",
+                      "content": "Débutant",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "zDRGM",
+                  "name": "Note",
+                  "fill": "#8F8A80",
+                  "content": "Débutant : main gauche simplifiée, tempo 60",
+                  "fontFamily": "Inter",
+                  "fontSize": 12
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "xu6Bl",
+              "name": "Lecteur",
+              "width": "fill_container",
+              "fill": "#FFFFFF",
+              "cornerRadius": 999,
+              "stroke": "#E4E0D6",
+              "strokeWidth": 1,
+              "gap": 22,
+              "padding": [
+                12,
+                16
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "BqXsu",
+                  "name": "Bouton ▶ Lecture",
+                  "fill": "#8A3B12",
+                  "cornerRadius": 999,
+                  "padding": [
+                    10,
+                    18
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "DDF0E",
+                      "name": "T",
+                      "fill": "#FFFFFF",
+                      "content": "▶ Lecture",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "kU6Fa",
+                  "name": "Tempo",
+                  "fill": "#00000000",
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "UzDPH",
+                      "name": "L",
+                      "fill": "#5F5B53",
+                      "content": "Tempo",
+                      "fontFamily": "Inter",
+                      "fontSize": 13
+                    },
+                    {
+                      "type": "frame",
+                      "id": "N68rn0",
+                      "name": "Curseur",
+                      "width": 120,
+                      "height": 4,
+                      "fill": "#E4E0D6",
+                      "cornerRadius": 2,
+                      "layout": "vertical"
+                    },
+                    {
+                      "type": "text",
+                      "id": "F6Ux4o",
+                      "name": "V",
+                      "fill": "#1C1B19",
+                      "content": "100 %",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "b1Wqtk",
+                  "name": "Mains",
+                  "fill": "#00000000",
+                  "gap": 4,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "ZjHOY",
+                      "name": "Pastille Les deux",
+                      "fill": "#F6E7DC",
+                      "cornerRadius": 999,
+                      "padding": [
+                        5,
+                        11
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "VNmDx",
+                          "name": "T",
+                          "fill": "#8A3B12",
+                          "content": "Les deux",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "mzFJv",
+                      "name": "Pastille Main droite",
+                      "fill": "#FFFFFF",
+                      "cornerRadius": 999,
+                      "padding": [
+                        5,
+                        11
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "k0wi0p",
+                          "name": "T",
+                          "fill": "#5F5B53",
+                          "content": "Main droite",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "JWWcC",
+                      "name": "Pastille Main gauche",
+                      "fill": "#FFFFFF",
+                      "cornerRadius": 999,
+                      "padding": [
+                        5,
+                        11
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "C61sw",
+                          "name": "T",
+                          "fill": "#5F5B53",
+                          "content": "Main gauche",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "nbLwW",
+                  "name": "Pastille ⟲ Boucle m. 1–4",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 999,
+                  "padding": [
+                    5,
+                    11
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "r0GDIg",
+                      "name": "T",
+                      "fill": "#5F5B53",
+                      "content": "⟲ Boucle m. 1–4",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "pzV3n",
+                  "name": "Pastille ♩ Métronome",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 999,
+                  "padding": [
+                    5,
+                    11
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "OxA5t",
+                      "name": "T",
+                      "fill": "#5F5B53",
+                      "content": "♩ Métronome",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "500"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "j7oKPR",
+              "name": "Corps",
+              "width": "fill_container",
+              "fill": "#00000000",
+              "gap": 18,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "ZdWVL",
+                  "name": "Partition",
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 10,
+                  "stroke": "#E4E0D6",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "gap": 22,
+                  "padding": [
+                    22,
+                    26
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "dXULi",
+                      "name": "Titre gravé",
+                      "fill": "#1C1B19",
+                      "content": "Prélude en ut majeur, BWV 846",
+                      "fontFamily": "Source Serif 4",
+                      "fontSize": 18
+                    },
+                    {
+                      "type": "frame",
+                      "id": "CsQ2H",
+                      "name": "Système 1",
+                      "width": "fill_container",
+                      "fill": "#00000000",
+                      "layout": "vertical",
+                      "gap": 10,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "U9IbP",
+                          "name": "Portée sol",
+                          "width": "fill_container",
+                          "fill": "#00000000",
+                          "layout": "vertical",
+                          "gap": 7,
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "MSkGd",
+                              "name": "L",
+                              "width": "fill_container",
+                              "height": 1,
+                              "fill": "#8F8A80",
+                              "layout": "vertical"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "zKHUw",
+                              "name": "L",
+                              "width": "fill_container",
+                              "height": 1,
+                              "fill": "#8F8A80",
+                              "layout": "vertical"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "Ec0ha",
+                              "name": "L",
+                              "width": "fill_container",
+                              "height": 1,
+                              "fill": "#8F8A80",
+                              "layout": "vertical"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "DcwJp",
+                              "name": "L",
+                              "width": "fill_container",
+                              "height": 1,
+                              "fill": "#8F8A80",
+                              "layout": "vertical"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "cbbnc",
+                              "name": "L",
+                              "width": "fill_container",
+                              "height": 1,
+                              "fill": "#8F8A80",
+                              "layout": "vertical"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "VgGp8",
+                          "name": "Portée fa",
+                          "width": "fill_container",
+                          "fill": "#00000000",
+                          "layout": "vertical",
+                          "gap": 7,
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "z0TFb",
+                              "name": "L",
+                              "width": "fill_container",
+                              "height": 1,
+                              "fill": "#8F8A80",
+                              "layout": "vertical"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "JtpdN",
+                              "name": "L",
+                              "width": "fill_container",
+                              "height": 1,
+                              "fill": "#8F8A80",
+                              "layout": "vertical"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "uDZLe",
+                              "name": "L",
+                              "width": "fill_container",
+                              "height": 1,
+                              "fill": "#8F8A80",
+                              "layout": "vertical"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "bWbMD",
+                              "name": "L",
+                              "width": "fill_container",
+                              "height": 1,
+                              "fill": "#8F8A80",
+                              "layout": "vertical"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "bHUkM",
+                              "name": "L",
+                              "width": "fill_container",
+                              "height": 1,
+                              "fill": "#8F8A80",
+                              "layout": "vertical"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "e19bam",
+                      "name": "Système 2",
+                      "width": "fill_container",
+                      "fill": "#00000000",
+                      "layout": "vertical",
+                      "gap": 10,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "u17K3",
+                          "name": "Portée sol",
+                          "width": "fill_container",
+                          "fill": "#00000000",
+                          "layout": "vertical",
+                          "gap": 7,
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "Ewwt1",
+                              "name": "L",
+                              "width": "fill_container",
+                              "height": 1,
+                              "fill": "#8F8A80",
+                              "layout": "vertical"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "Qwo9B",
+                              "name": "L",
+                              "width": "fill_container",
+                              "height": 1,
+                              "fill": "#8F8A80",
+                              "layout": "vertical"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "viN6e",
+                              "name": "L",
+                              "width": "fill_container",
+                              "height": 1,
+                              "fill": "#8F8A80",
+                              "layout": "vertical"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "iaNH9",
+                              "name": "L",
+                              "width": "fill_container",
+                              "height": 1,
+                              "fill": "#8F8A80",
+                              "layout": "vertical"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "Icfw9",
+                              "name": "L",
+                              "width": "fill_container",
+                              "height": 1,
+                              "fill": "#8F8A80",
+                              "layout": "vertical"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "ThxHg",
+                          "name": "Portée fa",
+                          "width": "fill_container",
+                          "fill": "#00000000",
+                          "layout": "vertical",
+                          "gap": 7,
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "G8j4Q",
+                              "name": "L",
+                              "width": "fill_container",
+                              "height": 1,
+                              "fill": "#8F8A80",
+                              "layout": "vertical"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "f1LZTv",
+                              "name": "L",
+                              "width": "fill_container",
+                              "height": 1,
+                              "fill": "#8F8A80",
+                              "layout": "vertical"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "b4t0x",
+                              "name": "L",
+                              "width": "fill_container",
+                              "height": 1,
+                              "fill": "#8F8A80",
+                              "layout": "vertical"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "z0GAt1",
+                              "name": "L",
+                              "width": "fill_container",
+                              "height": 1,
+                              "fill": "#8F8A80",
+                              "layout": "vertical"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "xjxQT",
+                              "name": "L",
+                              "width": "fill_container",
+                              "height": 1,
+                              "fill": "#8F8A80",
+                              "layout": "vertical"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "WE9Sk",
+                      "name": "Système 3",
+                      "width": "fill_container",
+                      "fill": "#00000000",
+                      "layout": "vertical",
+                      "gap": 10,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "u7WAdI",
+                          "name": "Portée sol",
+                          "width": "fill_container",
+                          "fill": "#00000000",
+                          "layout": "vertical",
+                          "gap": 7,
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "DY2jV",
+                              "name": "L",
+                              "width": "fill_container",
+                              "height": 1,
+                              "fill": "#8F8A80",
+                              "layout": "vertical"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "e6hQLR",
+                              "name": "L",
+                              "width": "fill_container",
+                              "height": 1,
+                              "fill": "#8F8A80",
+                              "layout": "vertical"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "IheSb",
+                              "name": "L",
+                              "width": "fill_container",
+                              "height": 1,
+                              "fill": "#8F8A80",
+                              "layout": "vertical"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "Zvgz1",
+                              "name": "L",
+                              "width": "fill_container",
+                              "height": 1,
+                              "fill": "#8F8A80",
+                              "layout": "vertical"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "elVUO",
+                              "name": "L",
+                              "width": "fill_container",
+                              "height": 1,
+                              "fill": "#8F8A80",
+                              "layout": "vertical"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "CVdPi",
+                          "name": "Portée fa",
+                          "width": "fill_container",
+                          "fill": "#00000000",
+                          "layout": "vertical",
+                          "gap": 7,
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "CyvwU",
+                              "name": "L",
+                              "width": "fill_container",
+                              "height": 1,
+                              "fill": "#8F8A80",
+                              "layout": "vertical"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "PYLVk",
+                              "name": "L",
+                              "width": "fill_container",
+                              "height": 1,
+                              "fill": "#8F8A80",
+                              "layout": "vertical"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "VGvv1",
+                              "name": "L",
+                              "width": "fill_container",
+                              "height": 1,
+                              "fill": "#8F8A80",
+                              "layout": "vertical"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "n891U",
+                              "name": "L",
+                              "width": "fill_container",
+                              "height": 1,
+                              "fill": "#8F8A80",
+                              "layout": "vertical"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "BAtVs",
+                              "name": "L",
+                              "width": "fill_container",
+                              "height": 1,
+                              "fill": "#8F8A80",
+                              "layout": "vertical"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "FHPOf",
+                  "name": "Panneau",
+                  "width": 320,
+                  "fill": "#00000000",
+                  "layout": "vertical",
+                  "gap": 14,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "ZsiyI",
+                      "name": "Calques",
+                      "width": "fill_container",
+                      "fill": "#FFFFFF",
+                      "cornerRadius": 10,
+                      "stroke": "#E4E0D6",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "gap": 10,
+                      "padding": [
+                        16,
+                        18
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "o6894E",
+                          "name": "T",
+                          "fill": "#1C1B19",
+                          "content": "Annotations",
+                          "fontFamily": "Inter",
+                          "fontSize": 15,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "d0pRR",
+                          "name": "Doigté pour petites mains",
+                          "fill": "#00000000",
+                          "gap": 8,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "xBYSC",
+                              "name": "Case",
+                              "width": 16,
+                              "height": 16,
+                              "fill": "#8A3B12",
+                              "cornerRadius": 4,
+                              "stroke": "#E4E0D6",
+                              "strokeWidth": 1,
+                              "layout": "vertical"
+                            },
+                            {
+                              "type": "text",
+                              "id": "f6tbKB",
+                              "name": "T",
+                              "fill": "#5F5B53",
+                              "content": "Doigté pour petites mains",
+                              "fontFamily": "Inter",
+                              "fontSize": 13
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "Sv60B",
+                          "name": "Lecture",
+                          "fill": "#00000000",
+                          "gap": 8,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "GTB04",
+                              "name": "Case",
+                              "width": 16,
+                              "height": 16,
+                              "fill": "#8A3B12",
+                              "cornerRadius": 4,
+                              "stroke": "#E4E0D6",
+                              "strokeWidth": 1,
+                              "layout": "vertical"
+                            },
+                            {
+                              "type": "text",
+                              "id": "Pbpit",
+                              "name": "T",
+                              "fill": "#5F5B53",
+                              "content": "Lecture",
+                              "fontFamily": "Inter",
+                              "fontSize": 13
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "vereR",
+                          "name": "Analyse",
+                          "fill": "#00000000",
+                          "gap": 8,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "uBiuv",
+                              "name": "Case",
+                              "width": 16,
+                              "height": 16,
+                              "fill": "#FFFFFF",
+                              "cornerRadius": 4,
+                              "stroke": "#E4E0D6",
+                              "strokeWidth": 1,
+                              "layout": "vertical"
+                            },
+                            {
+                              "type": "text",
+                              "id": "ooXJW",
+                              "name": "T",
+                              "fill": "#5F5B53",
+                              "content": "Analyse",
+                              "fontFamily": "Inter",
+                              "fontSize": 13
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "oZ09b",
+                          "name": "Histoire",
+                          "fill": "#00000000",
+                          "gap": 8,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "CsGAP",
+                              "name": "Case",
+                              "width": 16,
+                              "height": 16,
+                              "fill": "#FFFFFF",
+                              "cornerRadius": 4,
+                              "stroke": "#E4E0D6",
+                              "strokeWidth": 1,
+                              "layout": "vertical"
+                            },
+                            {
+                              "type": "text",
+                              "id": "SCAv9",
+                              "name": "T",
+                              "fill": "#5F5B53",
+                              "content": "Histoire",
+                              "fontFamily": "Inter",
+                              "fontSize": 13
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Sdyb8",
+                      "name": "Note",
+                      "width": "fill_container",
+                      "fill": "#F6E7DC",
+                      "cornerRadius": 10,
+                      "layout": "vertical",
+                      "gap": 4,
+                      "padding": [
+                        14,
+                        16
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "gq82s",
+                          "name": "T",
+                          "fill": "#8A3B12",
+                          "content": "Motif",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "ZFYiU",
+                          "name": "B",
+                          "fill": "#1C1B19",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Chaque mesure est un accord brisé, joué deux fois.",
+                          "fontFamily": "Inter",
+                          "fontSize": 13
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "nX5xO",
+                      "name": "Vidéo",
+                      "width": "fill_container",
+                      "fill": "#FFFFFF",
+                      "cornerRadius": 10,
+                      "stroke": "#E4E0D6",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "gap": 8,
+                      "padding": [
+                        16,
+                        18
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "uHatF",
+                          "name": "T",
+                          "fill": "#1C1B19",
+                          "content": "Interprétations",
+                          "fontFamily": "Inter",
+                          "fontSize": 15,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "F7qYV",
+                          "name": "Vignette",
+                          "width": "fill_container",
+                          "height": 150,
+                          "fill": "#1C1B19",
+                          "cornerRadius": 8,
+                          "layout": "vertical"
+                        },
+                        {
+                          "type": "text",
+                          "id": "UJcBx",
+                          "name": "I",
+                          "fill": "#5F5B53",
+                          "content": "Interprète · 2019 · aller à la mesure 3",
+                          "fontFamily": "Inter",
+                          "fontSize": 12
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "pGG2R",
+                      "name": "Téléchargements",
+                      "width": "fill_container",
+                      "fill": "#FFFFFF",
+                      "cornerRadius": 10,
+                      "stroke": "#E4E0D6",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "gap": 6,
+                      "padding": [
+                        16,
+                        18
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "WEbKh",
+                          "name": "T",
+                          "fill": "#1C1B19",
+                          "content": "Télécharger",
+                          "fontFamily": "Inter",
+                          "fontSize": 15,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "s7ugt",
+                          "name": "PDF — pour jouer",
+                          "fill": "#8A3B12",
+                          "content": "PDF — pour jouer",
+                          "fontFamily": "Inter",
+                          "fontSize": 13
+                        },
+                        {
+                          "type": "text",
+                          "id": "hd1bt",
+                          "name": "MusicXML — pour modifier",
+                          "fill": "#8A3B12",
+                          "content": "MusicXML — pour modifier",
+                          "fontFamily": "Inter",
+                          "fontSize": 13
+                        },
+                        {
+                          "type": "text",
+                          "id": "JyyfP",
+                          "name": "MIDI — pour écouter",
+                          "fill": "#8A3B12",
+                          "content": "MIDI — pour écouter",
+                          "fontFamily": "Inter",
+                          "fontSize": 13
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "efkd5",
+      "x": 0,
+      "y": 0,
+      "name": "PartitionMobile",
+      "width": 390,
+      "fill": "#FBFAF7",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "mmD2W",
+          "name": "En-tête",
+          "width": "fill_container",
+          "fill": "#00000000",
+          "stroke": "#E4E0D6",
+          "strokeWidth": 1,
+          "padding": [
+            14,
+            16
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "X4MAm",
+              "name": "Marque",
+              "fill": "#1C1B19",
+              "content": "Musicalis",
+              "fontFamily": "Source Serif 4",
+              "fontSize": 20,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "abH2D",
+              "name": "Menu",
+              "fill": "#8A3B12",
+              "content": "Menu",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "600"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "N0FpJs",
+          "name": "Contenu",
+          "width": "fill_container",
+          "fill": "#00000000",
+          "layout": "vertical",
+          "gap": 12,
+          "padding": [
+            16,
+            12,
+            24,
+            12
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "p1U2s5",
+              "name": "T",
+              "fill": "#1C1B19",
+              "content": "Prélude en ut majeur",
+              "fontFamily": "Source Serif 4",
+              "fontSize": 28,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "C9yxVX",
+              "name": "M",
+              "fill": "#5F5B53",
+              "content": "J. S. Bach · BWV 846 · Piano · Libre (CC0)",
+              "fontFamily": "Inter",
+              "fontSize": 13
+            },
+            {
+              "type": "frame",
+              "id": "ENVah",
+              "name": "Versions",
+              "fill": "#00000000",
+              "gap": 6,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "ru7zq",
+                  "name": "Pastille Original",
+                  "fill": "#1C1B19",
+                  "cornerRadius": 999,
+                  "stroke": "#E4E0D6",
+                  "strokeWidth": 1,
+                  "padding": [
+                    5,
+                    11
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "igUUv",
+                      "name": "T",
+                      "fill": "#FFFFFF",
+                      "content": "Original",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "sfQfM",
+                  "name": "Pastille Avancé",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 999,
+                  "stroke": "#E4E0D6",
+                  "strokeWidth": 1,
+                  "padding": [
+                    5,
+                    11
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "l0r4am",
+                      "name": "T",
+                      "fill": "#5F5B53",
+                      "content": "Avancé",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Y0F8q",
+                  "name": "Pastille Interm.",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 999,
+                  "stroke": "#E4E0D6",
+                  "strokeWidth": 1,
+                  "padding": [
+                    5,
+                    11
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "aNIQA",
+                      "name": "T",
+                      "fill": "#5F5B53",
+                      "content": "Interm.",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "N3L5p",
+                  "name": "Pastille Débutant",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 999,
+                  "stroke": "#E4E0D6",
+                  "strokeWidth": 1,
+                  "padding": [
+                    5,
+                    11
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "F6zpew",
+                      "name": "T",
+                      "fill": "#5F5B53",
+                      "content": "Débutant",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "500"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "iqLNA",
+              "name": "Partition",
+              "width": "fill_container",
+              "fill": "#FFFFFF",
+              "cornerRadius": 10,
+              "stroke": "#E4E0D6",
+              "strokeWidth": 1,
+              "layout": "vertical",
+              "gap": 14,
+              "padding": [
+                12,
+                10
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "E4Jj2",
+                  "name": "Titre gravé",
+                  "fill": "#1C1B19",
+                  "content": "Prélude en ut majeur, BWV 846",
+                  "fontFamily": "Source Serif 4",
+                  "fontSize": 14
+                },
+                {
+                  "type": "frame",
+                  "id": "OrjbQ",
+                  "name": "Système 1",
+                  "width": "fill_container",
+                  "fill": "#00000000",
+                  "layout": "vertical",
+                  "gap": 6,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "TL0Wp",
+                      "name": "Portée sol",
+                      "width": "fill_container",
+                      "fill": "#00000000",
+                      "layout": "vertical",
+                      "gap": 5,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "KRml0",
+                          "name": "L",
+                          "width": "fill_container",
+                          "height": 1,
+                          "fill": "#8F8A80",
+                          "layout": "vertical"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "lalIN",
+                          "name": "L",
+                          "width": "fill_container",
+                          "height": 1,
+                          "fill": "#8F8A80",
+                          "layout": "vertical"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "TIuxx",
+                          "name": "L",
+                          "width": "fill_container",
+                          "height": 1,
+                          "fill": "#8F8A80",
+                          "layout": "vertical"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "W7iB7",
+                          "name": "L",
+                          "width": "fill_container",
+                          "height": 1,
+                          "fill": "#8F8A80",
+                          "layout": "vertical"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "B4Rur",
+                          "name": "L",
+                          "width": "fill_container",
+                          "height": 1,
+                          "fill": "#8F8A80",
+                          "layout": "vertical"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "i9q66",
+                      "name": "Portée fa",
+                      "width": "fill_container",
+                      "fill": "#00000000",
+                      "layout": "vertical",
+                      "gap": 5,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "daqCj",
+                          "name": "L",
+                          "width": "fill_container",
+                          "height": 1,
+                          "fill": "#8F8A80",
+                          "layout": "vertical"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "qAx84",
+                          "name": "L",
+                          "width": "fill_container",
+                          "height": 1,
+                          "fill": "#8F8A80",
+                          "layout": "vertical"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "Erss0",
+                          "name": "L",
+                          "width": "fill_container",
+                          "height": 1,
+                          "fill": "#8F8A80",
+                          "layout": "vertical"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "OkmmX",
+                          "name": "L",
+                          "width": "fill_container",
+                          "height": 1,
+                          "fill": "#8F8A80",
+                          "layout": "vertical"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "R1NJQ",
+                          "name": "L",
+                          "width": "fill_container",
+                          "height": 1,
+                          "fill": "#8F8A80",
+                          "layout": "vertical"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "WKL6o",
+                  "name": "Système 2",
+                  "width": "fill_container",
+                  "fill": "#00000000",
+                  "layout": "vertical",
+                  "gap": 6,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "iCjYe",
+                      "name": "Portée sol",
+                      "width": "fill_container",
+                      "fill": "#00000000",
+                      "layout": "vertical",
+                      "gap": 5,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "FXleQ",
+                          "name": "L",
+                          "width": "fill_container",
+                          "height": 1,
+                          "fill": "#8F8A80",
+                          "layout": "vertical"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "hX29I",
+                          "name": "L",
+                          "width": "fill_container",
+                          "height": 1,
+                          "fill": "#8F8A80",
+                          "layout": "vertical"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "B08nw9",
+                          "name": "L",
+                          "width": "fill_container",
+                          "height": 1,
+                          "fill": "#8F8A80",
+                          "layout": "vertical"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "T8GZm",
+                          "name": "L",
+                          "width": "fill_container",
+                          "height": 1,
+                          "fill": "#8F8A80",
+                          "layout": "vertical"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "LQvop",
+                          "name": "L",
+                          "width": "fill_container",
+                          "height": 1,
+                          "fill": "#8F8A80",
+                          "layout": "vertical"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "QKdYD",
+                      "name": "Portée fa",
+                      "width": "fill_container",
+                      "fill": "#00000000",
+                      "layout": "vertical",
+                      "gap": 5,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "DgTRS",
+                          "name": "L",
+                          "width": "fill_container",
+                          "height": 1,
+                          "fill": "#8F8A80",
+                          "layout": "vertical"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "A4jb6",
+                          "name": "L",
+                          "width": "fill_container",
+                          "height": 1,
+                          "fill": "#8F8A80",
+                          "layout": "vertical"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "myRk8",
+                          "name": "L",
+                          "width": "fill_container",
+                          "height": 1,
+                          "fill": "#8F8A80",
+                          "layout": "vertical"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "eJ8qS",
+                          "name": "L",
+                          "width": "fill_container",
+                          "height": 1,
+                          "fill": "#8F8A80",
+                          "layout": "vertical"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "VqXqt",
+                          "name": "L",
+                          "width": "fill_container",
+                          "height": 1,
+                          "fill": "#8F8A80",
+                          "layout": "vertical"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "a1aXPB",
+              "name": "Annotations",
+              "width": "fill_container",
+              "fill": "#FFFFFF",
+              "cornerRadius": 10,
+              "stroke": "#E4E0D6",
+              "strokeWidth": 1,
+              "layout": "vertical",
+              "gap": 8,
+              "padding": [
+                12,
+                14
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "q9sjO7",
+                  "name": "T",
+                  "fill": "#1C1B19",
+                  "content": "Annotations",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "frame",
+                  "id": "KWGZC",
+                  "name": "Chips",
+                  "fill": "#00000000",
+                  "gap": 6,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "q0VM5",
+                      "name": "Pastille Doigté",
+                      "fill": "#F6E7DC",
+                      "cornerRadius": 999,
+                      "stroke": "#E4E0D6",
+                      "strokeWidth": 1,
+                      "padding": [
+                        5,
+                        11
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "a7s2j",
+                          "name": "T",
+                          "fill": "#8A3B12",
+                          "content": "Doigté",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Wd1ah",
+                      "name": "Pastille Lecture",
+                      "fill": "#F6E7DC",
+                      "cornerRadius": 999,
+                      "stroke": "#E4E0D6",
+                      "strokeWidth": 1,
+                      "padding": [
+                        5,
+                        11
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "Y94QxX",
+                          "name": "T",
+                          "fill": "#8A3B12",
+                          "content": "Lecture",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "SoAme",
+                      "name": "Pastille Analyse",
+                      "fill": "#FFFFFF",
+                      "cornerRadius": 999,
+                      "stroke": "#E4E0D6",
+                      "strokeWidth": 1,
+                      "padding": [
+                        5,
+                        11
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "wG7Kw",
+                          "name": "T",
+                          "fill": "#5F5B53",
+                          "content": "Analyse",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "b74WWp",
+              "name": "Télécharger",
+              "width": "fill_container",
+              "fill": "#FFFFFF",
+              "cornerRadius": 10,
+              "stroke": "#E4E0D6",
+              "strokeWidth": 1,
+              "layout": "vertical",
+              "gap": 6,
+              "padding": [
+                12,
+                14
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "ZfpK9",
+                  "name": "T",
+                  "fill": "#1C1B19",
+                  "content": "Télécharger",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "xywnT",
+                  "name": "L",
+                  "fill": "#8A3B12",
+                  "content": "PDF · MusicXML · MIDI",
+                  "fontFamily": "Inter",
+                  "fontSize": 13
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "BXmPK",
+          "name": "Lecteur collant",
+          "width": "fill_container",
+          "fill": "#FFFFFF",
+          "stroke": "#E4E0D6",
+          "strokeWidth": 1,
+          "layout": "vertical",
+          "gap": 8,
+          "padding": [
+            10,
+            12
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "TWh9O",
+              "name": "Ligne 1",
+              "width": "fill_container",
+              "fill": "#00000000",
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "Dig9f",
+                  "name": "Bouton ▶ Lecture",
+                  "fill": "#8A3B12",
+                  "cornerRadius": 999,
+                  "padding": [
+                    9,
+                    16
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "YRvjx",
+                      "name": "T",
+                      "fill": "#FFFFFF",
+                      "content": "▶ Lecture",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "ERMbf",
+                  "name": "Tempo",
+                  "fill": "#00000000",
+                  "gap": 6,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "Eip1o",
+                      "name": "Curseur",
+                      "width": 90,
+                      "height": 4,
+                      "fill": "#E4E0D6",
+                      "cornerRadius": 2,
+                      "layout": "vertical"
+                    },
+                    {
+                      "type": "text",
+                      "id": "hxiQN",
+                      "name": "V",
+                      "fill": "#1C1B19",
+                      "content": "100 %",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "u4g6M",
+              "name": "Mains",
+              "fill": "#00000000",
+              "gap": 6,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "IVi5Y",
+                  "name": "Pastille Les deux",
+                  "fill": "#F6E7DC",
+                  "cornerRadius": 999,
+                  "stroke": "#E4E0D6",
+                  "strokeWidth": 1,
+                  "padding": [
+                    5,
+                    11
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "a3OWSP",
+                      "name": "T",
+                      "fill": "#8A3B12",
+                      "content": "Les deux",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "BsGGB",
+                  "name": "Pastille Droite",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 999,
+                  "stroke": "#E4E0D6",
+                  "strokeWidth": 1,
+                  "padding": [
+                    5,
+                    11
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "eaaKk",
+                      "name": "T",
+                      "fill": "#5F5B53",
+                      "content": "Droite",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "itn3E",
+                  "name": "Pastille Gauche",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 999,
+                  "stroke": "#E4E0D6",
+                  "strokeWidth": 1,
+                  "padding": [
+                    5,
+                    11
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "LaPjD",
+                      "name": "T",
+                      "fill": "#5F5B53",
+                      "content": "Gauche",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "500"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "G1OHea",
+      "x": 0,
+      "y": 0,
+      "name": "Oeuvre",
+      "width": 1440,
+      "fill": "#FBFAF7",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "CUNyS",
+          "name": "En-tête",
+          "width": "fill_container",
+          "fill": "#00000000",
+          "stroke": "#E4E0D6",
+          "strokeWidth": 1,
+          "padding": [
+            18,
+            64
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "AxXBW",
+              "name": "Marque",
+              "fill": "#1C1B19",
+              "content": "Musicalis",
+              "fontFamily": "Source Serif 4",
+              "fontSize": 24,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "pXRe2",
+              "name": "Navigation",
+              "fill": "#00000000",
+              "gap": 28,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "AKRFo",
+                  "name": "Explorer",
+                  "fill": "#5F5B53",
+                  "content": "Explorer",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "Anfmw",
+                  "name": "Niveaux",
+                  "fill": "#5F5B53",
+                  "content": "Niveaux",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "pIp8f",
+                  "name": "Instruments",
+                  "fill": "#5F5B53",
+                  "content": "Instruments",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "hKb9c",
+                  "name": "Compositeurs",
+                  "fill": "#5F5B53",
+                  "content": "Compositeurs",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "frame",
+                  "id": "y2PYXf",
+                  "name": "Pastille FR ▾",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 999,
+                  "stroke": "#E4E0D6",
+                  "strokeWidth": 1,
+                  "padding": [
+                    5,
+                    11
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "iAh2h",
+                      "name": "T",
+                      "fill": "#5F5B53",
+                      "content": "FR ▾",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "500"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "GLRh2",
+          "name": "Contenu",
+          "width": "fill_container",
+          "fill": "#00000000",
+          "layout": "vertical",
+          "gap": 18,
+          "padding": [
+            28,
+            64,
+            56,
+            64
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "V40BJS",
+              "name": "Fil",
+              "fill": "#8F8A80",
+              "content": "Compositeurs › J. S. Bach",
+              "fontFamily": "Inter",
+              "fontSize": 13
+            },
+            {
+              "type": "text",
+              "id": "Og9Wv",
+              "name": "T",
+              "fill": "#1C1B19",
+              "content": "Prélude et fugue en ut majeur, BWV 846",
+              "fontFamily": "Source Serif 4",
+              "fontSize": 40,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "XBEpz",
+              "name": "N",
+              "fill": "#5F5B53",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Premier prélude du Clavier bien tempéré (1722). Un accord brisé par mesure, joué deux fois : une page d’harmonie pure, idéale pour travailler la régularité.",
+              "fontFamily": "Inter",
+              "fontSize": 16
+            },
+            {
+              "type": "text",
+              "id": "iZgOL",
+              "name": "S",
+              "fill": "#1C1B19",
+              "content": "De l’original au débutant",
+              "fontFamily": "Source Serif 4",
+              "fontSize": 26,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "W1z3q",
+              "name": "Échelle",
+              "width": "fill_container",
+              "fill": "#00000000",
+              "layout": "vertical",
+              "gap": 10,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "XGq4Y",
+                  "name": "Version Original",
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 10,
+                  "stroke": "#8A3B12",
+                  "strokeWidth": 1,
+                  "padding": [
+                    16,
+                    18
+                  ],
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "VINrB",
+                      "name": "Gauche",
+                      "width": "fill_container",
+                      "fill": "#00000000",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "nqrhD",
+                          "name": "Titre",
+                          "fill": "#00000000",
+                          "gap": 10,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "n6gy6e",
+                              "name": "N",
+                              "fill": "#1C1B19",
+                              "content": "Original",
+                              "fontFamily": "Source Serif 4",
+                              "fontSize": 19,
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "text",
+                              "id": "gsYw3",
+                              "name": "F",
+                              "fill": "#8F8A80",
+                              "content": "Piano · 35 mesures",
+                              "fontFamily": "Inter",
+                              "fontSize": 13
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "N6mx12",
+                          "name": "D",
+                          "fill": "#5F5B53",
+                          "content": "Le texte de Bach, d’après la Bach-Gesellschaft (1866).",
+                          "fontFamily": "Inter",
+                          "fontSize": 14
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "e8uLM4",
+                      "name": "Actions",
+                      "fill": "#00000000",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "LCB7P",
+                          "name": "Pastille Libre · CC0",
+                          "fill": "#E6F0E8",
+                          "cornerRadius": 999,
+                          "padding": [
+                            5,
+                            11
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "h7XVQl",
+                              "name": "T",
+                              "fill": "#2F6B3F",
+                              "content": "Libre · CC0",
+                              "fontFamily": "Inter",
+                              "fontSize": 11,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "hDwRk",
+                          "name": "Bouton Ouvrir",
+                          "fill": "#8A3B12",
+                          "cornerRadius": 999,
+                          "padding": [
+                            8,
+                            16
+                          ],
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "QHRqw",
+                              "name": "T",
+                              "fill": "#FFFFFF",
+                              "content": "Ouvrir",
+                              "fontFamily": "Inter",
+                              "fontSize": 13,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "o7UygG",
+                  "name": "Version Avancé",
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 10,
+                  "stroke": "#E4E0D6",
+                  "strokeWidth": 1,
+                  "padding": [
+                    16,
+                    18
+                  ],
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "pgfkN",
+                      "name": "Gauche",
+                      "width": "fill_container",
+                      "fill": "#00000000",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "Zn4Fi",
+                          "name": "Titre",
+                          "fill": "#00000000",
+                          "gap": 10,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "y9vzXK",
+                              "name": "N",
+                              "fill": "#1C1B19",
+                              "content": "Avancé",
+                              "fontFamily": "Source Serif 4",
+                              "fontSize": 19,
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "text",
+                              "id": "i8ygK",
+                              "name": "F",
+                              "fill": "#8F8A80",
+                              "content": "Piano · 35 mesures",
+                              "fontFamily": "Inter",
+                              "fontSize": 13
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "uj7mj",
+                          "name": "D",
+                          "fill": "#5F5B53",
+                          "content": "Doigtés et pédale indiqués.",
+                          "fontFamily": "Inter",
+                          "fontSize": 14
+                        },
+                        {
+                          "type": "text",
+                          "id": "bb1wv",
+                          "name": "S",
+                          "fill": "#8A3B12",
+                          "content": "Ajouts : doigtés",
+                          "fontFamily": "Inter",
+                          "fontSize": 12
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "X18XR",
+                      "name": "Actions",
+                      "fill": "#00000000",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "Skv8t",
+                          "name": "Pastille Libre · CC0",
+                          "fill": "#E6F0E8",
+                          "cornerRadius": 999,
+                          "padding": [
+                            5,
+                            11
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "NSucb",
+                              "name": "T",
+                              "fill": "#2F6B3F",
+                              "content": "Libre · CC0",
+                              "fontFamily": "Inter",
+                              "fontSize": 11,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "eh9G5",
+                          "name": "Bouton Ouvrir",
+                          "fill": "#8A3B12",
+                          "cornerRadius": 999,
+                          "padding": [
+                            8,
+                            16
+                          ],
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "nGMyp",
+                              "name": "T",
+                              "fill": "#FFFFFF",
+                              "content": "Ouvrir",
+                              "fontFamily": "Inter",
+                              "fontSize": 13,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "iJOJZ",
+                  "name": "Version Intermédiaire",
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 10,
+                  "stroke": "#E4E0D6",
+                  "strokeWidth": 1,
+                  "padding": [
+                    16,
+                    18
+                  ],
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "UZHvx",
+                      "name": "Gauche",
+                      "width": "fill_container",
+                      "fill": "#00000000",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "zlfnf",
+                          "name": "Titre",
+                          "fill": "#00000000",
+                          "gap": 10,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "nNZhV",
+                              "name": "N",
+                              "fill": "#1C1B19",
+                              "content": "Intermédiaire",
+                              "fontFamily": "Source Serif 4",
+                              "fontSize": 19,
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "text",
+                              "id": "Q2B6pz",
+                              "name": "F",
+                              "fill": "#8F8A80",
+                              "content": "Piano · 35 mesures",
+                              "fontFamily": "Inter",
+                              "fontSize": 13
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "tXzfq",
+                          "name": "D",
+                          "fill": "#5F5B53",
+                          "content": "Main gauche en notes tenues, tempo 72.",
+                          "fontFamily": "Inter",
+                          "fontSize": 14
+                        },
+                        {
+                          "type": "text",
+                          "id": "Zsucu",
+                          "name": "S",
+                          "fill": "#8A3B12",
+                          "content": "Simplifié : main gauche, tempo",
+                          "fontFamily": "Inter",
+                          "fontSize": 12
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "sHECJ",
+                      "name": "Actions",
+                      "fill": "#00000000",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "XYZWD",
+                          "name": "Pastille Libre · CC0",
+                          "fill": "#E6F0E8",
+                          "cornerRadius": 999,
+                          "padding": [
+                            5,
+                            11
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "muyTd",
+                              "name": "T",
+                              "fill": "#2F6B3F",
+                              "content": "Libre · CC0",
+                              "fontFamily": "Inter",
+                              "fontSize": 11,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "HKkqK",
+                          "name": "Bouton Ouvrir",
+                          "fill": "#8A3B12",
+                          "cornerRadius": 999,
+                          "padding": [
+                            8,
+                            16
+                          ],
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "n3vDF",
+                              "name": "T",
+                              "fill": "#FFFFFF",
+                              "content": "Ouvrir",
+                              "fontFamily": "Inter",
+                              "fontSize": 13,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "EIbm3",
+                  "name": "Version Débutant",
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 10,
+                  "stroke": "#E4E0D6",
+                  "strokeWidth": 1,
+                  "padding": [
+                    16,
+                    18
+                  ],
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "WbMUz",
+                      "name": "Gauche",
+                      "width": "fill_container",
+                      "fill": "#00000000",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "KbVtM",
+                          "name": "Titre",
+                          "fill": "#00000000",
+                          "gap": 10,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "iM8D9",
+                              "name": "N",
+                              "fill": "#1C1B19",
+                              "content": "Débutant",
+                              "fontFamily": "Source Serif 4",
+                              "fontSize": 19,
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "text",
+                              "id": "J9pPxP",
+                              "name": "F",
+                              "fill": "#8F8A80",
+                              "content": "Piano · 16 mesures",
+                              "fontFamily": "Inter",
+                              "fontSize": 13
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "N9bV5",
+                          "name": "D",
+                          "fill": "#5F5B53",
+                          "content": "Accords plaqués à la main gauche, ambitus réduit, tempo 60.",
+                          "fontFamily": "Inter",
+                          "fontSize": 14
+                        },
+                        {
+                          "type": "text",
+                          "id": "FiyAX",
+                          "name": "S",
+                          "fill": "#8A3B12",
+                          "content": "Simplifié : main gauche, ambitus, rythmes, coupures",
+                          "fontFamily": "Inter",
+                          "fontSize": 12
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "B0vzr9",
+                      "name": "Actions",
+                      "fill": "#00000000",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "yQ8c7",
+                          "name": "Pastille Libre · CC0",
+                          "fill": "#E6F0E8",
+                          "cornerRadius": 999,
+                          "padding": [
+                            5,
+                            11
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "FcoGR",
+                              "name": "T",
+                              "fill": "#2F6B3F",
+                              "content": "Libre · CC0",
+                              "fontFamily": "Inter",
+                              "fontSize": 11,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "KQpx8",
+                          "name": "Bouton Ouvrir",
+                          "fill": "#8A3B12",
+                          "cornerRadius": 999,
+                          "padding": [
+                            8,
+                            16
+                          ],
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "B6H1p",
+                              "name": "T",
+                              "fill": "#FFFFFF",
+                              "content": "Ouvrir",
+                              "fontFamily": "Inter",
+                              "fontSize": 13,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "u5pX1",
+              "name": "I",
+              "fill": "#1C1B19",
+              "content": "Interprétations",
+              "fontFamily": "Source Serif 4",
+              "fontSize": 26,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "SyAot",
+              "name": "Vidéos",
+              "fill": "#00000000",
+              "gap": 14,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "gU8Oy",
+                  "name": "Vidéo 0",
+                  "width": 300,
+                  "fill": "#00000000",
+                  "layout": "vertical",
+                  "gap": 6,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "y4z09",
+                      "name": "Vignette",
+                      "width": "fill_container",
+                      "height": 170,
+                      "fill": "#1C1B19",
+                      "cornerRadius": 8,
+                      "layout": "vertical"
+                    },
+                    {
+                      "type": "text",
+                      "id": "EtMqt",
+                      "name": "T",
+                      "fill": "#5F5B53",
+                      "content": "Interprète A · 2019",
+                      "fontFamily": "Inter",
+                      "fontSize": 13
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "EEJcZ",
+                  "name": "Vidéo 1",
+                  "width": 300,
+                  "fill": "#00000000",
+                  "layout": "vertical",
+                  "gap": 6,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "ePL77",
+                      "name": "Vignette",
+                      "width": "fill_container",
+                      "height": 170,
+                      "fill": "#1C1B19",
+                      "cornerRadius": 8,
+                      "layout": "vertical"
+                    },
+                    {
+                      "type": "text",
+                      "id": "J4nLQ",
+                      "name": "T",
+                      "fill": "#5F5B53",
+                      "content": "Interprète B · 2021",
+                      "fontFamily": "Inter",
+                      "fontSize": 13
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "QMkG5",
+                  "name": "Vidéo 2",
+                  "width": 300,
+                  "fill": "#00000000",
+                  "layout": "vertical",
+                  "gap": 6,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "r4cbf",
+                      "name": "Vignette",
+                      "width": "fill_container",
+                      "height": 170,
+                      "fill": "#1C1B19",
+                      "cornerRadius": 8,
+                      "layout": "vertical"
+                    },
+                    {
+                      "type": "text",
+                      "id": "IkJZr",
+                      "name": "T",
+                      "fill": "#5F5B53",
+                      "content": "Interprète C · 2023",
+                      "fontFamily": "Inter",
+                      "fontSize": 13
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "wQXWv",
+      "x": 0,
+      "y": 0,
+      "name": "OeuvreMobile",
+      "width": 390,
+      "fill": "#FBFAF7",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "HiChL",
+          "name": "En-tête",
+          "width": "fill_container",
+          "fill": "#00000000",
+          "stroke": "#E4E0D6",
+          "strokeWidth": 1,
+          "padding": [
+            14,
+            16
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "vRdEu",
+              "name": "Marque",
+              "fill": "#1C1B19",
+              "content": "Musicalis",
+              "fontFamily": "Source Serif 4",
+              "fontSize": 20,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "OkQ0k",
+              "name": "Menu",
+              "fill": "#8A3B12",
+              "content": "Menu",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "600"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "y2HKUp",
+          "name": "Contenu",
+          "width": "fill_container",
+          "fill": "#00000000",
+          "layout": "vertical",
+          "gap": 12,
+          "padding": [
+            16,
+            16,
+            28,
+            16
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "Q4B5TI",
+              "name": "T",
+              "fill": "#1C1B19",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Prélude et fugue en ut majeur, BWV 846",
+              "fontFamily": "Source Serif 4",
+              "fontSize": 26,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "TE50l",
+              "name": "N",
+              "fill": "#5F5B53",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Premier prélude du Clavier bien tempéré (1722).",
+              "fontFamily": "Inter",
+              "fontSize": 14
+            },
+            {
+              "type": "text",
+              "id": "l55Jgd",
+              "name": "S",
+              "fill": "#1C1B19",
+              "content": "De l’original au débutant",
+              "fontFamily": "Source Serif 4",
+              "fontSize": 20,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "hnI0O",
+              "name": "Version Original",
+              "width": "fill_container",
+              "fill": "#FFFFFF",
+              "cornerRadius": 10,
+              "stroke": "#8A3B12",
+              "strokeWidth": 1,
+              "layout": "vertical",
+              "gap": 6,
+              "padding": [
+                12,
+                14
+              ],
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "YduNv",
+                  "name": "Haut",
+                  "width": "fill_container",
+                  "fill": "#00000000",
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "nMveV",
+                      "name": "N",
+                      "fill": "#1C1B19",
+                      "content": "Original",
+                      "fontFamily": "Source Serif 4",
+                      "fontSize": 17,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "b8hjqq",
+                      "name": "Pastille CC0",
+                      "fill": "#E6F0E8",
+                      "cornerRadius": 999,
+                      "padding": [
+                        5,
+                        11
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "DEYW4",
+                          "name": "T",
+                          "fill": "#2F6B3F",
+                          "content": "CC0",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "l9QZ4",
+                  "name": "D",
+                  "fill": "#5F5B53",
+                  "content": "Le texte de Bach (1866).",
+                  "fontFamily": "Inter",
+                  "fontSize": 13
+                },
+                {
+                  "type": "frame",
+                  "id": "iE6Ln",
+                  "name": "Bouton Ouvrir",
+                  "width": "fill_container",
+                  "fill": "#8A3B12",
+                  "cornerRadius": 999,
+                  "padding": [
+                    9,
+                    14
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "P8ayMG",
+                      "name": "T",
+                      "fill": "#FFFFFF",
+                      "content": "Ouvrir",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "fAnz9",
+              "name": "Version Intermédiaire",
+              "width": "fill_container",
+              "fill": "#FFFFFF",
+              "cornerRadius": 10,
+              "stroke": "#E4E0D6",
+              "strokeWidth": 1,
+              "layout": "vertical",
+              "gap": 6,
+              "padding": [
+                12,
+                14
+              ],
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "L4luo",
+                  "name": "Haut",
+                  "width": "fill_container",
+                  "fill": "#00000000",
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "p2ZhL",
+                      "name": "N",
+                      "fill": "#1C1B19",
+                      "content": "Intermédiaire",
+                      "fontFamily": "Source Serif 4",
+                      "fontSize": 17,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "rK4G2",
+                      "name": "Pastille CC0",
+                      "fill": "#E6F0E8",
+                      "cornerRadius": 999,
+                      "padding": [
+                        5,
+                        11
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "l9RI3D",
+                          "name": "T",
+                          "fill": "#2F6B3F",
+                          "content": "CC0",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "lAdT1",
+                  "name": "D",
+                  "fill": "#5F5B53",
+                  "content": "Main gauche en notes tenues.",
+                  "fontFamily": "Inter",
+                  "fontSize": 13
+                },
+                {
+                  "type": "frame",
+                  "id": "kwRdZ",
+                  "name": "Bouton Ouvrir",
+                  "width": "fill_container",
+                  "fill": "#8A3B12",
+                  "cornerRadius": 999,
+                  "padding": [
+                    9,
+                    14
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "WKRWj",
+                      "name": "T",
+                      "fill": "#FFFFFF",
+                      "content": "Ouvrir",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "HUQjx",
+              "name": "Version Débutant",
+              "width": "fill_container",
+              "fill": "#FFFFFF",
+              "cornerRadius": 10,
+              "stroke": "#E4E0D6",
+              "strokeWidth": 1,
+              "layout": "vertical",
+              "gap": 6,
+              "padding": [
+                12,
+                14
+              ],
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "w0zAi",
+                  "name": "Haut",
+                  "width": "fill_container",
+                  "fill": "#00000000",
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Rfit2",
+                      "name": "N",
+                      "fill": "#1C1B19",
+                      "content": "Débutant",
+                      "fontFamily": "Source Serif 4",
+                      "fontSize": 17,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "fJYxk",
+                      "name": "Pastille CC0",
+                      "fill": "#E6F0E8",
+                      "cornerRadius": 999,
+                      "padding": [
+                        5,
+                        11
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "oPz3N",
+                          "name": "T",
+                          "fill": "#2F6B3F",
+                          "content": "CC0",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "M8tHd",
+                  "name": "D",
+                  "fill": "#5F5B53",
+                  "content": "Accords plaqués, 16 mesures.",
+                  "fontFamily": "Inter",
+                  "fontSize": 13
+                },
+                {
+                  "type": "frame",
+                  "id": "gmDHh",
+                  "name": "Bouton Ouvrir",
+                  "width": "fill_container",
+                  "fill": "#8A3B12",
+                  "cornerRadius": 999,
+                  "padding": [
+                    9,
+                    14
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "WoaaD",
+                      "name": "T",
+                      "fill": "#FFFFFF",
+                      "content": "Ouvrir",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "fileToken": "8092324b-94b5-486d-80c6-9698c0b30906"
+}

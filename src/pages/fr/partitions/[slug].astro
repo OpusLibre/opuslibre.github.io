@@ -36,6 +36,7 @@ const piano = meta.formation === "piano" && score.staves === 2;
   <section class="telechargements" aria-label="Téléchargements">
     <h2>Télécharger</h2>
     <ul>
+      <li><a href={`${score.base}score.pdf`}>PDF</a> — pour jouer (A4, même gravure qu’à l’écran)</li>
       <li><a href={`${score.base}score.musicxml`}>MusicXML</a> — à ouvrir et modifier dans MuseScore, Dorico, Finale ou Sibelius</li>
       <li><a href={`${score.base}score.mid`}>MIDI</a> — pour écouter</li>
     </ul>

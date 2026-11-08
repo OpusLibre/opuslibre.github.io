@@ -33,7 +33,8 @@ worker/index.ts      # Worker : site statique + fichiers R2 sous /p/<slug>/<empr
 
 ```bash
 npm ci
-npm run build                      # pipeline des partitions puis site
+npm run build                      # pipeline des partitions (MEI, MIDI, PDF A4, ancres) puis site
+npm test                           # tests Playwright en 390, 768 et 1440 px (après le build)
 node scripts/upload-files.mjs      # fichiers générés → R2 (CLOUDFLARE_API_TOKEN, CLOUDFLARE_ACCOUNT_ID)
 npx wrangler deploy                # Worker « musicalis » (compte grainedigitale)
 ```
@@ -44,7 +45,6 @@ Astro 7 demande Node ≥ 22.23 (la CI utilise Node 24).
 
 ## Reste à faire
 
-- Génération du PDF au build.
 
 - Fichiers `.mxl` compressés, empreinte de mesure des annotations, collections Astro typées (artistes, œuvres), i18n en/it/es, Pagefind.
 - Banque de sons hébergée sur R2 plutôt que chargée depuis tonejs.github.io.

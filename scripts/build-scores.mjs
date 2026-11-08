@@ -2,6 +2,7 @@
 /**
  * Score pipeline (build time). For every contenus/partitions/<slug>/:
  *   score.musicxml ──Verovio──▶ score.mei (stable element ids)
+ *                              ├─▶ score.pdf (A4, same engraving as the screen)
  *                              ├─▶ score.mid (one track per staff)
  *                              └─▶ anchors.json (musical address → element ids)
  *   annotations.json ──anchors──▶ annotations.resolved.json (ids ready for the browser)
@@ -17,9 +18,11 @@ import { VerovioToolkit } from "verovio/esm";
 import { createHash } from "node:crypto";
 import { mkdir, readdir, readFile, writeFile, copyFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
+import PDFDocument from "pdfkit";
+import SVGtoPDF from "svg-to-pdfkit";
 import path from "node:path";
 
-const PIPELINE_VERSION = "1";
+const PIPELINE_VERSION = "2";
 const root = path.resolve(import.meta.dirname, "..");
 const scoresDir = path.join(root, "contenus/partitions");
 const outFiles = path.join(root, "build/files");
@@ -68,6 +71,34 @@ function meiNotes(mei) {
     if (n && !/[#b]/.test(n.pitch)) n.pitch = n.pitch.replace(/(\d)$/, `${m[2] === "s" ? "#" : "b"}$1`);
   }
   return notes;
+}
+
+/**
+ * Verovio's SVG relies on a stylesheet (stroke: currentColor, hidden placeholders)
+ * that the SVG-to-PDF converter ignores: make those rules explicit attributes.
+ */
+function svgForPdf(svg) {
+  return svg
+    .replace(/<g [^>]*class="[^"]*\bplaceholder\b[^"]*"[^>]*>[\s\S]*?<\/g>/g, "")
+    .replaceAll("currentColor", "#000")
+    .replace(/<(path|polyline|polygon|rect|ellipse)\b(?![^>]*\bstroke=)([^>]*\bstroke-width=)/g, '<$1 stroke="#000"$2');
+}
+
+/** A4 PDF (595 × 842 pt) engraved by Verovio: page units are tenths of a millimetre. */
+function renderPdf(toolkit, title, licence) {
+  toolkit.setOptions({ pageWidth: 2100, pageHeight: 2970, pageMarginLeft: 100, pageMarginRight: 100, pageMarginTop: 100, pageMarginBottom: 120, scale: 45, footer: "none", header: "auto", breaks: "auto", svgViewBox: true, adjustPageHeight: false });
+  toolkit.redoLayout();
+  const doc = new PDFDocument({ size: "A4", margin: 0, info: { Title: title, Creator: "Musicalis", Subject: `Partition libre — ${licence}` } });
+  const chunks = [];
+  doc.on("data", (c) => chunks.push(c));
+  const done = new Promise((resolve) => doc.on("end", () => resolve(Buffer.concat(chunks))));
+  for (let page = 1; page <= toolkit.getPageCount(); page += 1) {
+    if (page > 1) doc.addPage();
+    SVGtoPDF(doc, svgForPdf(toolkit.renderToSVG(page)), 0, 0, { width: 595.28, height: 841.89, preserveAspectRatio: "xMidYMin meet" });
+    doc.font("Times-Roman").fontSize(8).fillColor("#555").text(`Musicalis — partition libre (${licence}) — page ${page}/${toolkit.getPageCount()}`, 0, 812, { width: 595.28, align: "center" });
+  }
+  doc.end();
+  return done;
 }
 
 const tk = new VerovioToolkit(await createVerovioModule());
@@ -124,6 +155,7 @@ for (const slug of slugs) {
 
   await writeFile(path.join(out, "score.mei"), mei);
   await writeFile(path.join(out, "score.mid"), midi);
+  await writeFile(path.join(out, "score.pdf"), await renderPdf(tk, meta.titre, meta.licence));
   await copyFile(path.join(dir, "score.musicxml"), path.join(out, "score.musicxml"));
   await writeFile(path.join(out, "anchors.json"), JSON.stringify(anchors));
   await writeFile(path.join(out, "annotations.json"), JSON.stringify(resolved));
