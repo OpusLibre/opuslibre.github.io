@@ -1,9 +1,24 @@
 ---
+import "@fontsource/libre-baskerville/400.css";
+import "@fontsource/libre-baskerville/700.css";
+import "@fontsource/inter/400.css";
+import "@fontsource/inter/500.css";
+import "@fontsource/inter/600.css";
+
 interface Props {
   title: string;
   description?: string;
+  section?: "partitions" | "compositeurs" | "niveaux" | "instruments";
+  /** The catalogue and home pages carry their own large search field. */
+  headerSearch?: boolean;
 }
-const { title, description = "Partitions libres, de la version originale aux versions débutant." } = Astro.props;
+const { headerSearch = true, title, description = "Catalogue de partitions libres : œuvres originales et versions par niveau, à lire, écouter et imprimer.", section } = Astro.props;
+const NAV = [
+  { id: "partitions", href: "/fr/partitions/", label: "Partitions" },
+  { id: "compositeurs", href: "/fr/compositeurs/", label: "Compositeurs" },
+  { id: "niveaux", href: "/fr/niveaux/", label: "Niveaux" },
+  { id: "instruments", href: "/fr/instruments/", label: "Instruments" },
+];
 ---
 <!doctype html>
 <html lang="fr">
@@ -12,39 +27,128 @@ const { title, description = "Partitions libres, de la version originale aux ver
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title} — Musicalis</title>
     <meta name="description" content={description} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="alternate" hreflang="fr" href={Astro.url.pathname} />
   </head>
   <body>
-    <header class="entete">
-      <a class="marque" href="/fr/">Musicalis</a>
-      <nav aria-label="Navigation principale"><a href="/fr/">Partitions</a></nav>
+    <header class="site-header">
+      <div class="bar">
+        <a class="brand" href="/fr/" aria-label="Musicalis, accueil">
+          <img src="/favicon.svg" alt="" width="34" height="34" />
+          <span>Musicalis</span>
+        </a>
+        {headerSearch ? (
+          <form class="header-search" action="/fr/partitions/" method="get" role="search">
+            <label for="header-q" class="visually-hidden">Rechercher une partition</label>
+            <input id="header-q" name="q" type="search" placeholder="Rechercher…" autocomplete="off" enterkeyhint="search" />
+          </form>
+        ) : null}
+        {headerSearch ? (
+          <a class="search-link" href="/fr/partitions/#recherche" aria-label="Rechercher">
+            <svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="m15.5 15.5 5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </a>
+        ) : null}
+        <details class="menu">
+          <summary>Menu</summary>
+          <nav aria-label="Navigation principale">
+            {NAV.map((n) => <a href={n.href} aria-current={section === n.id ? "page" : undefined}>{n.label}</a>)}
+            <span class="lang" title="Français">FR</span>
+          </nav>
+        </details>
+      </div>
     </header>
     <main><slot /></main>
-    <footer class="pied">
-      <p>Toutes les partitions de Musicalis sont libres : vous pouvez les imprimer, les copier et les jouer en public. La licence est indiquée sur chaque page.</p>
+    <footer class="site-footer">
+      <div>
+        <p class="footer-brand"><img src="/favicon.svg" alt="" width="22" height="22" /> Musicalis</p>
+        <p>Toutes les partitions sont libres : vous pouvez les imprimer, les copier et les jouer en public. La source et la licence sont indiquées sur chaque page.</p>
+      </div>
+      <nav aria-label="Pied de page">
+        {NAV.map((n) => <a href={n.href}>{n.label}</a>)}
+      </nav>
     </footer>
   </body>
 </html>
+<script>
+  // The menu is open on wide screens (plain navigation bar) and a disclosure on phones.
+  const menu = document.querySelector<HTMLDetailsElement>(".menu");
+  const wide = window.matchMedia("(min-width: 760px)");
+  const sync = () => { if (menu) menu.open = wide.matches; };
+  sync();
+  wide.addEventListener("change", sync);
+</script>
 <style is:global>
   :root {
-    --fond: #fbfaf7;
-    --carte: #ffffff;
-    --encre: #1c1b19;
-    --doux: #5f5b53;
-    --trait: #e4e0d6;
-    --accent: #8a3b12;
-    --accent-pale: #f6e7dc;
-    --jeu: #c2410c;
+    --paper: #ffffff;
+    --ink: #111111;
+    --muted: #5c5c5c;
+    --rule: #dedede;
+    --rule-strong: #111111;
+    --band: #f3f3f2;
+    --play: #111111;
+    --serif: "Libre Baskerville", Georgia, serif;
+    --sans: Inter, system-ui, sans-serif;
+    --gutter: clamp(1rem, 5vw, 4.5rem);
     color-scheme: light;
-    font-family: Georgia, "Times New Roman", serif;
   }
   * { box-sizing: border-box; }
-  body { margin: 0; background: var(--fond); color: var(--encre); }
-  a { color: var(--accent); }
-  main { max-width: 72rem; margin: 0 auto; padding: 1.5rem 1rem 3rem; }
-  .entete { display: flex; justify-content: space-between; align-items: center; max-width: 72rem; margin: 0 auto; padding: 1rem; border-bottom: 1px solid var(--trait); }
-  .marque { font-size: 1.4rem; font-weight: 700; text-decoration: none; color: var(--encre); letter-spacing: 0.02em; }
-  .entete nav a { font-family: system-ui, sans-serif; font-size: 0.95rem; text-decoration: none; }
-  .pied { max-width: 72rem; margin: 0 auto; padding: 1.5rem 1rem; border-top: 1px solid var(--trait); color: var(--doux); font: 0.85rem/1.5 system-ui, sans-serif; }
-  :focus-visible { outline: 3px solid var(--jeu); outline-offset: 2px; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font: 400 1rem/1.55 var(--sans); }
+  a { color: inherit; }
+  h1, h2, h3 { font-family: var(--serif); font-weight: 400; line-height: 1.2; margin: 0; }
+  main { max-width: 90rem; margin: 0 auto; padding: 0 var(--gutter) 4rem; }
+  :focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+  .eyebrow { font: 600 0.72rem/1 var(--sans); letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); margin: 0 0 1rem; }
+  .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+  .site-header { border-bottom: 1px solid var(--rule-strong); }
+  .bar { max-width: 90rem; margin: 0 auto; padding: 0.9rem var(--gutter); display: flex; align-items: center; justify-content: space-between; gap: 1rem; position: relative; }
+  .brand { display: flex; align-items: center; gap: 0.7rem; text-decoration: none; font: 700 1.35rem/1 var(--serif); }
+  .brand { margin-right: auto; }
+  .header-search { display: none; }
+  .header-search input { width: 15rem; border: 1px solid var(--rule); background: var(--band); font: inherit; font-size: 0.9rem; padding: 0.45rem 0.8rem; }
+  .header-search input:focus { outline: none; border-color: var(--ink); background: var(--paper); }
+  .search-link { display: flex; padding: 0.3rem; }
+  .menu summary { list-style: none; cursor: pointer; font-weight: 600; padding: 0.4rem 0; }
+  .menu summary::-webkit-details-marker { display: none; }
+  .menu nav { display: flex; flex-direction: column; position: absolute; right: 0; left: 0; top: 100%; background: var(--paper); border-bottom: 1px solid var(--rule-strong); padding: 0.5rem var(--gutter) 1rem; z-index: 20; }
+  .menu nav a { text-decoration: none; padding: 0.7rem 0; border-bottom: 1px solid var(--rule); }
+  .menu nav a[aria-current="page"] { font-weight: 600; }
+  .lang { font-size: 0.8rem; font-weight: 600; color: var(--muted); padding-top: 0.7rem; }
+  @media (min-width: 760px) {
+    .brand { margin-right: auto; }
+  .header-search { display: none; }
+  .header-search input { width: 15rem; border: 1px solid var(--rule); background: var(--band); font: inherit; font-size: 0.9rem; padding: 0.45rem 0.8rem; }
+  .header-search input:focus { outline: none; border-color: var(--ink); background: var(--paper); }
+  .search-link { display: flex; padding: 0.3rem; }
+  .menu summary { display: none; }
+    .menu nav { position: static; flex-direction: row; align-items: center; gap: 2.2rem; padding: 0; border: 0; }
+    .menu nav a { border: 0; padding: 0.3rem 0; font-size: 0.95rem; }
+    .menu nav a:hover, .menu nav a[aria-current="page"] { text-decoration: underline; text-underline-offset: 6px; }
+    .lang { padding: 0; }
+  }
+
+  .site-footer { border-top: 1px solid var(--rule-strong); max-width: 90rem; margin: 0 auto; padding: 2rem var(--gutter) 3rem; display: flex; flex-wrap: wrap; gap: 1.5rem 4rem; justify-content: space-between; color: var(--muted); font-size: 0.85rem; }
+  .site-footer > div { max-width: 36rem; }
+  .footer-brand { display: flex; align-items: center; gap: 0.5rem; font: 700 1rem var(--serif); color: var(--ink); margin: 0 0 0.5rem; }
+  .site-footer nav { display: flex; flex-wrap: wrap; gap: 0.6rem 1.6rem; align-content: start; }
+  .site-footer nav a { text-decoration: none; color: var(--ink); }
+
+  /* Catalogue table, shared by the home page, the catalogue and the composer pages. */
+  .score-table { width: 100%; border-collapse: collapse; border: 1px solid var(--rule); }
+  .score-table td { padding: 0.95rem 1.2rem; border-top: 1px solid var(--rule); font-size: 0.9rem; color: var(--muted); vertical-align: baseline; }
+  .score-table td.title { font: 400 1.1rem/1.3 var(--serif); color: var(--ink); }
+  .score-table td.title a { text-decoration: none; }
+  .score-table td.title a:hover { text-decoration: underline; }
+  .score-table td.level { font-weight: 600; color: var(--ink); font-size: 0.82rem; white-space: nowrap; }
+  .score-table tr[hidden] { display: none; }
+  .score-table tr:hover td { background: #fafafa; }
+  @media (max-width: 759px) {
+    .score-table, .score-table tbody { display: block; }
+    .score-table tr { display: grid; grid-template-columns: 1fr auto; gap: 0.2rem 1rem; padding: 0.9rem 1rem; border-top: 1px solid var(--rule); }
+    .score-table td { display: block; padding: 0; border: 0; }
+    .score-table td.title { grid-column: 1 / -1; }
+    .score-table td.ref, .score-table td.instrument { display: none; }
+  }
 </style>

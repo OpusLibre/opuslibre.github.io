@@ -5,3 +5,4 @@ build/
 .wrangler/
 test-results/
 playwright-report/
+src/generated/previews/

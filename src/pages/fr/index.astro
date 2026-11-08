@@ -1,33 +1,79 @@
 ---
 import Base from "../../layouts/Base.astro";
-import scores from "../../generated/scores.json";
+import ScoreTable from "../../components/ScoreTable.astro";
+import SearchBox from "../../components/SearchBox.astro";
+import { ENTRIES, LEVELS, INSTRUMENTS, COMPOSERS, countBy, plural, catalogueUrl, levelLabel } from "../../lib/catalogue";
 
-const LEVELS: Record<string, string> = { original: "Version originale", avance: "Avancé", intermediaire: "Intermédiaire", debutant: "Débutant" };
-const FORMATIONS: Record<string, string> = { piano: "Piano", voix: "Voix" };
-const list = Object.entries(scores).map(([slug, s]) => ({ slug, ...s.meta }));
+const previews = import.meta.glob<string>("../../generated/previews/*.svg", { query: "?raw", import: "default", eager: true });
+const featured = ENTRIES.find((e) => e.level === "original" && e.instrument === "piano") ?? ENTRIES[0]!;
+const featuredSvg = previews[`../../generated/previews/${featured.slug}.svg`];
+const byLevel = countBy((e) => e.level);
+const byInstrument = countBy((e) => e.instrument);
+const byComposer = countBy((e) => e.composer.id);
+const instruments = Object.keys(INSTRUMENTS).filter((i) => byInstrument[i]);
+const composers = Object.values(COMPOSERS).filter((c) => byComposer[c.id]).sort((a, b) => a.name.localeCompare(b.name, "fr"));
 ---
-<Base title="Partitions libres">
-  <h1>Partitions libres</h1>
-  <p class="chapeau">Prototype : la page partition avec rendu Verovio, lecture MIDI synchronisée, main droite ou gauche seule, et doigtés en surimpression.</p>
-  <ul class="cartes">
-    {list.map((p) => (
-      <li class="carte">
-        <a href={`/fr/partitions/${p.slug}/`}>
-          <strong>{p.titre}</strong>
-          <span>{FORMATIONS[p.formation] ?? p.formation} · {LEVELS[p.niveau] ?? p.niveau}</span>
-          <small>Libre ({p.licence})</small>
-        </a>
-      </li>
-    ))}
-  </ul>
+<Base title="Partitions libres" headerSearch={false}>
+  <section class="hero">
+    <div class="intro">
+      <p class="eyebrow">Catalogue de partitions libres</p>
+      <h1>Trouvez la partition qu’il vous faut.</h1>
+      <p class="lead">Œuvres du domaine public, en version originale et en versions débutant, intermédiaire ou avancé. Gratuites, imprimables, réutilisables.</p>
+      <SearchBox id="home-q" large />
+      <p class="quick">
+        <span>Accès rapide :</span>
+        {instruments.map((i) => <a href={catalogueUrl({ instrument: i })}>{INSTRUMENTS[i]}</a>)}
+        {composers.slice(0, 4).map((c) => <a href={`/fr/compositeurs/${c.id}/`}>{c.short}</a>)}
+      </p>
+    </div>
+    <figure class="featured">
+      <p class="eyebrow">À la une</p>
+      <a href={`/fr/partitions/${featured.slug}/`} class="engraving" aria-label={`Ouvrir ${featured.title}`} set:html={featuredSvg} />
+      <figcaption><a href={`/fr/partitions/${featured.slug}/`}>{featured.composer.short} — {featured.title}{featured.reference ? `, ${featured.reference}` : ""}</a> · {levelLabel(featured.level)}</figcaption>
+    </figure>
+  </section>
+
+  <section aria-labelledby="levels-title" class="block">
+    <h2 id="levels-title">Par niveau</h2>
+    <ul class="levels">
+      {LEVELS.map((l) => (
+        <li><a href={catalogueUrl({ niveau: l.id })}><strong>{l.label}</strong><span>{plural(byLevel[l.id] ?? 0, "partition")}</span></a></li>
+      ))}
+    </ul>
+  </section>
+
+  <section aria-labelledby="latest-title" class="block">
+    <div class="block-head">
+      <h2 id="latest-title">Derniers ajouts</h2>
+      <a href="/fr/partitions/">Tout le catalogue ({ENTRIES.length}) →</a>
+    </div>
+    <ScoreTable entries={ENTRIES.slice(0, 8)} />
+  </section>
 </Base>
 <style>
-  h1 { font-size: 2.2rem; margin: 0.5rem 0; }
-  .chapeau { color: var(--doux); font-family: system-ui, sans-serif; max-width: 44rem; }
-  .cartes { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr)); gap: 1rem; margin-top: 1.5rem; }
-  .carte a { display: grid; gap: 0.3rem; padding: 1.1rem 1.2rem; background: var(--carte); border: 1px solid var(--trait); border-radius: 0.6rem; text-decoration: none; color: inherit; }
-  .carte a:hover { border-color: var(--accent); }
-  .carte strong { font-size: 1.15rem; }
-  .carte span, .carte small { font-family: system-ui, sans-serif; color: var(--doux); font-size: 0.85rem; }
-  .carte small { color: var(--accent); }
+  .hero { display: grid; grid-template-columns: minmax(0, 1fr); gap: 3rem; padding: 3rem 0 2.5rem; align-items: start; }
+  @media (min-width: 960px) { .hero { grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 5rem; padding: 4.5rem 0 3.5rem; } }
+  h1 { font-size: clamp(2.1rem, 5vw, 3.4rem); margin-bottom: 1.4rem; }
+  .lead { color: var(--muted); max-width: 34rem; margin: 0 0 2.2rem; }
+  .quick { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; margin-top: 1.2rem; font-size: 0.85rem; color: var(--muted); }
+  .quick a { border: 1px solid var(--rule); padding: 0.3rem 0.7rem; text-decoration: none; color: var(--ink); }
+  .quick a:hover { border-color: var(--ink); }
+  .featured { margin: 0; min-width: 0; }
+  .engraving { display: block; }
+  .engraving :global(svg) { width: 100%; height: auto; color: var(--ink); }
+  figcaption { font: 0.9rem var(--serif); margin-top: 1rem; }
+  figcaption a { text-decoration: none; }
+  figcaption a:hover { text-decoration: underline; }
+  .block { margin-top: 3rem; }
+  .block h2 { font-size: 1.6rem; margin-bottom: 1.1rem; }
+  .block-head { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 0.5rem 1rem; }
+  .block-head a { font-size: 0.9rem; }
+  .levels { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(2, 1fr); border: 1px solid var(--rule); }
+  @media (min-width: 760px) { .levels { grid-template-columns: repeat(4, 1fr); } }
+  .levels li + li { border-left: 1px solid var(--rule); }
+  @media (max-width: 759px) { .levels li:nth-child(3) { border-left: 0; } .levels li:nth-child(n+3) { border-top: 1px solid var(--rule); } }
+  .levels a { display: grid; gap: 0.2rem; padding: 1.2rem 1.4rem; text-decoration: none; }
+  .levels a:hover { background: var(--band); }
+  .levels strong { font: 400 1.3rem var(--serif); }
+  .levels span { font-size: 0.82rem; color: var(--muted); }
 </style>

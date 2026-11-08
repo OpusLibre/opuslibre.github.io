@@ -1,0 +1,25 @@
+---
+import Base from "../../../layouts/Base.astro";
+import ScoreTable from "../../../components/ScoreTable.astro";
+import { ENTRIES, COMPOSERS, plural } from "../../../lib/catalogue";
+
+export function getStaticPaths() {
+  return Object.values(COMPOSERS).filter((c) => ENTRIES.some((e) => e.composer.id === c.id)).map((c) => ({ params: { id: c.id }, props: { composer: c } }));
+}
+const { composer } = Astro.props;
+const entries = ENTRIES.filter((e) => e.composer.id === composer.id).sort((a, b) => a.title.localeCompare(b.title, "fr"));
+---
+<Base title={composer.name} section="compositeurs">
+  <nav class="crumbs" aria-label="Fil d’Ariane"><a href="/fr/compositeurs/">Compositeurs</a> <span>/</span> {composer.name}</nav>
+  <h1>{composer.name}</h1>
+  <p class="lead">{composer.dates ? `${composer.dates} · ` : ""}{plural(entries.length, "partition")}</p>
+  <ScoreTable entries={entries} />
+</Base>
+<style>
+  .crumbs { padding-top: 2rem; font-size: 0.82rem; color: var(--muted); }
+  .crumbs a { text-decoration: none; }
+  .crumbs a:hover { text-decoration: underline; }
+  .crumbs span { margin: 0 0.4rem; }
+  h1 { font-size: clamp(2rem, 4vw, 2.8rem); margin-top: 1rem; }
+  .lead { color: var(--muted); margin: 0.6rem 0 2rem; }
+</style>

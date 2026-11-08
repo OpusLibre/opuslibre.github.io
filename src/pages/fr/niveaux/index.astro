@@ -1,0 +1,22 @@
+---
+import Base from "../../../layouts/Base.astro";
+import GroupIndex from "../../../components/GroupIndex.astro";
+import { LEVELS, countBy, catalogueUrl } from "../../../lib/catalogue";
+
+const byLevel = countBy((e) => e.level);
+const TEXT: Record<string, string> = {
+  debutant: "Versions simplifiées, lisibles dès les premières années de pratique.",
+  intermediaire: "L’essentiel de l’œuvre, avec une écriture allégée.",
+  avance: "Proche de l’original, pour musiciens confirmés.",
+  original: "Le texte du compositeur, d’après une édition de référence.",
+};
+---
+<Base title="Niveaux" section="niveaux">
+  <h1>Niveaux</h1>
+  <p class="lead">Chaque niveau est une partition à part entière, pour un public différent.</p>
+  <GroupIndex groups={LEVELS.map((l) => ({ label: l.label, href: catalogueUrl({ niveau: l.id }), n: byLevel[l.id] ?? 0, text: TEXT[l.id] }))} />
+</Base>
+<style>
+  h1 { font-size: clamp(2rem, 4vw, 2.8rem); padding-top: 2.5rem; }
+  .lead { color: var(--muted); margin: 0.6rem 0 0; }
+</style>

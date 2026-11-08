@@ -1,0 +1,17 @@
+---
+import Base from "../../../layouts/Base.astro";
+import GroupIndex from "../../../components/GroupIndex.astro";
+import { INSTRUMENTS, countBy, catalogueUrl } from "../../../lib/catalogue";
+
+const byInstrument = countBy((e) => e.instrument);
+const ids = Object.keys(INSTRUMENTS).sort((a, b) => (byInstrument[b] ?? 0) - (byInstrument[a] ?? 0));
+---
+<Base title="Instruments" section="instruments">
+  <h1>Instruments</h1>
+  <p class="lead">Les partitions classées par instrument ou formation.</p>
+  <GroupIndex groups={ids.map((id) => ({ label: INSTRUMENTS[id]!, href: catalogueUrl({ instrument: id }), n: byInstrument[id] ?? 0 }))} />
+</Base>
+<style>
+  h1 { font-size: clamp(2rem, 4vw, 2.8rem); padding-top: 2.5rem; }
+  .lead { color: var(--muted); margin: 0.6rem 0 0; }
+</style>

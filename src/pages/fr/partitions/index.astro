@@ -1,0 +1,129 @@
+---
+import Base from "../../../layouts/Base.astro";
+import ScoreTable from "../../../components/ScoreTable.astro";
+import SearchBox from "../../../components/SearchBox.astro";
+import { ENTRIES, LEVELS, INSTRUMENTS, COMPOSERS, countBy } from "../../../lib/catalogue";
+
+const byLevel = countBy((e) => e.level);
+const byInstrument = countBy((e) => e.instrument);
+const byComposer = countBy((e) => e.composer.id);
+const groups = [
+  { name: "niveau", legend: "Niveau", all: "Tous niveaux", options: LEVELS.map((l) => ({ value: l.id, label: l.label, n: byLevel[l.id] ?? 0 })) },
+  { name: "instrument", legend: "Instrument", all: "Tous instruments", options: Object.entries(INSTRUMENTS).filter(([id]) => byInstrument[id]).map(([value, label]) => ({ value, label, n: byInstrument[value]! })) },
+  { name: "compositeur", legend: "Compositeur", all: "Tous compositeurs", options: Object.values(COMPOSERS).filter((c) => byComposer[c.id]).sort((a, b) => a.name.localeCompare(b.name, "fr")).map((c) => ({ value: c.id, label: c.short, n: byComposer[c.id]! })) },
+];
+---
+<Base title="Toutes les partitions" section="partitions" headerSearch={false}>
+  <div class="head">
+    <h1>Partitions</h1>
+    <p class="count" data-count role="status" aria-live="polite">{ENTRIES.length} partitions</p>
+  </div>
+  <div id="recherche"><SearchBox id="catalogue-q" large /></div>
+
+  <div class="layout">
+    <form class="filters" aria-label="Filtres" data-filters>
+      {groups.map((g) => (
+        <fieldset>
+          <legend>{g.legend}</legend>
+          <div class="chips">
+            <label><input type="radio" name={g.name} value="" checked /><span><span class="all-short">Tous</span><span class="all-long">{g.all}</span></span></label>
+            {g.options.map((o) => (
+              <label><input type="radio" name={g.name} value={o.value} disabled={o.n === 0} /><span>{o.label} <small>{o.n}</small></span></label>
+            ))}
+          </div>
+        </fieldset>
+      ))}
+      <button type="reset" class="reset" data-reset hidden>Effacer les filtres</button>
+    </form>
+
+    <div class="results">
+      <ScoreTable entries={ENTRIES} filterable />
+      <p class="empty" data-empty hidden>Aucune partition ne correspond. Essayez un autre mot ou <button type="button" data-reset>effacez les filtres</button>.</p>
+    </div>
+  </div>
+</Base>
+<script>
+  const input = document.querySelector<HTMLInputElement>("#catalogue-q")!;
+  const filters = document.querySelector<HTMLFormElement>("[data-filters]")!;
+  const rows = [...document.querySelectorAll<HTMLTableRowElement>("tr[data-search]")];
+  const count = document.querySelector<HTMLElement>("[data-count]")!;
+  const empty = document.querySelector<HTMLElement>("[data-empty]")!;
+  const FIELDS = ["niveau", "instrument", "compositeur"] as const;
+  const fold = (s: string) => s.normalize("NFD").replace(/\p{Diacritic}/gu, "").toLowerCase().trim();
+
+  // Restore the state from the URL (links from the home page, the menu and shared searches).
+  const params = new URLSearchParams(location.search);
+  input.value = params.get("q") ?? "";
+  for (const f of FIELDS) {
+    const value = params.get(f);
+    const radio = value ? filters.querySelector<HTMLInputElement>(`input[name="${f}"][value="${CSS.escape(value)}"]`) : null;
+    if (radio) radio.checked = true;
+  }
+
+  function apply(): void {
+    const words = fold(input.value).split(/\s+/).filter(Boolean);
+    const chosen = Object.fromEntries(FIELDS.map((f) => [f, filters.querySelector<HTMLInputElement>(`input[name="${f}"]:checked`)?.value ?? ""]));
+    let shown = 0;
+    for (const row of rows) {
+      const ok = words.every((w) => row.dataset.search!.includes(w)) && FIELDS.every((f) => !chosen[f] || row.dataset[f] === chosen[f]);
+      row.hidden = !ok;
+      if (ok) shown += 1;
+    }
+    count.textContent = `${shown} partition${shown > 1 ? "s" : ""}${shown === rows.length ? "" : ` sur ${rows.length}`}`;
+    empty.hidden = shown > 0;
+    filters.querySelector<HTMLElement>(".reset")!.hidden = !input.value.trim() && FIELDS.every((f) => !chosen[f]);
+    const next = new URLSearchParams();
+    if (input.value.trim()) next.set("q", input.value.trim());
+    for (const f of FIELDS) if (chosen[f]) next.set(f, chosen[f]);
+    history.replaceState(null, "", `${location.pathname}${next.toString() ? `?${next}` : ""}`);
+  }
+
+  input.form!.addEventListener("submit", (e) => { e.preventDefault(); input.blur(); apply(); });
+  input.addEventListener("input", apply);
+  filters.addEventListener("change", apply);
+  document.querySelectorAll("[data-reset]").forEach((b) => b.addEventListener("click", (e) => {
+    e.preventDefault();
+    filters.reset();
+    input.value = "";
+    apply();
+    input.focus();
+  }));
+  // "/" focuses the search from anywhere on the page.
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "/" && !(e.target instanceof HTMLInputElement)) { e.preventDefault(); input.focus(); }
+  });
+  if (location.hash === "#recherche") input.focus();
+  apply();
+</script>
+<style>
+  .head { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; padding: 2.5rem 0 1rem; }
+  h1 { font-size: clamp(2rem, 4vw, 2.8rem); }
+  .count { color: var(--muted); font-size: 0.9rem; margin: 0; white-space: nowrap; }
+  .layout { display: grid; gap: 1.5rem; margin-top: 1.5rem; }
+  @media (min-width: 960px) { .layout { grid-template-columns: 15rem 1fr; gap: 3rem; margin-top: 2.5rem; } }
+  .filters { display: grid; gap: 1rem; align-content: start; min-width: 0; }
+  fieldset { border: 0; padding: 0; margin: 0; min-width: 0; }
+  legend { font: 600 0.72rem var(--sans); letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.5rem; padding: 0; }
+  .chips { display: flex; gap: 0.4rem; overflow-x: auto; scrollbar-width: none; padding-bottom: 2px; }
+  @media (min-width: 960px) { .chips { flex-wrap: wrap; overflow: visible; } }
+  .chips label { flex: none; position: relative; }
+  .chips input { position: absolute; opacity: 0; inset: 0; margin: 0; cursor: pointer; }
+  .all-long { display: none; }
+  @media (max-width: 959px) {
+    legend { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+    .filters { gap: 0.5rem; }
+    .all-short { display: none; }
+    .all-long { display: inline; }
+  }
+  .chips > label > span { display: block; border: 1px solid var(--rule); padding: 0.45rem 0.8rem; font-size: 0.88rem; white-space: nowrap; }
+  .chips small { color: var(--muted); margin-left: 0.2rem; }
+  .chips input:checked + span { background: var(--ink); color: #fff; border-color: var(--ink); }
+  .chips input:checked + span small { color: #ccc; }
+  .chips input:focus-visible + span { outline: 2px solid var(--ink); outline-offset: 2px; }
+  .chips input:disabled + span { opacity: 0.4; }
+  .chips input:not(:checked):not(:disabled):hover + span { border-color: var(--ink); }
+  .reset[hidden] { display: none; }
+  .reset, .empty button { justify-self: start; border: 0; background: none; padding: 0; font: inherit; font-size: 0.88rem; text-decoration: underline; cursor: pointer; color: var(--ink); }
+  .results { min-width: 0; }
+  .empty { padding: 2rem 0; color: var(--muted); }
+</style>

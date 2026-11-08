@@ -15,11 +15,54 @@ async function check(page: Page, url: string): Promise<string[]> {
   return errors;
 }
 
-test("la liste des partitions s'affiche sans débordement", async ({ page }) => {
+test("l'accueil montre la recherche, les niveaux et les derniers ajouts", async ({ page }) => {
   const errors = await check(page, "/fr/");
   await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
-  await expect(page.locator(".carte")).toHaveCount(SLUGS.length);
+  await expect(page.locator(".featured svg").first()).toBeVisible();
+  await expect(page.locator(".score-table tr")).toHaveCount(Math.min(8, SLUGS.length));
+  await page.getByLabel("Rechercher une partition").fill("bach");
+  await page.getByLabel("Rechercher une partition").press("Enter");
+  await expect(page).toHaveURL(/\/fr\/partitions\/\?q=bach/);
+  await expect(page.locator(".score-table tr:visible")).toHaveCount(1);
   expect(errors).toEqual([]);
+});
+
+test("le catalogue filtre pendant la frappe et par niveau, instrument, compositeur", async ({ page }) => {
+  const errors = await check(page, "/fr/partitions/");
+  const rows = page.locator(".score-table tr:visible");
+  await expect(rows).toHaveCount(SLUGS.length);
+  const search = page.getByLabel("Rechercher une partition");
+  await search.fill("prelude"); // without the accent
+  await expect(rows).toHaveCount(1);
+  await expect(rows.first()).toContainText("Prélude");
+  await search.fill("introuvable xyz");
+  await expect(page.getByText("Aucune partition ne correspond")).toBeVisible();
+  await page.getByRole("button", { name: "effacez les filtres" }).click();
+  await expect(rows).toHaveCount(SLUGS.length);
+  await page.locator("label", { hasText: "Voix" }).click();
+  await expect(rows).toHaveCount(1);
+  await expect(page).toHaveURL(/instrument=voix/);
+  // Filters come back from the URL (shared links, links from the level pages).
+  await page.goto("/fr/partitions/?niveau=original");
+  await expect(rows).toHaveCount(1);
+  await expect(rows.first()).toContainText("Prélude");
+  expect(errors).toEqual([]);
+});
+
+for (const path of ["/fr/compositeurs/", "/fr/compositeurs/bach/", "/fr/niveaux/", "/fr/instruments/"]) {
+  test(`la page ${path} s'affiche sans débordement`, async ({ page }) => {
+    const errors = await check(page, path);
+    await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
+    expect(errors).toEqual([]);
+  });
+}
+
+test("la navigation principale est accessible à toutes les largeurs", async ({ page }) => {
+  await page.goto("/fr/");
+  const nav = page.getByRole("navigation", { name: "Navigation principale" });
+  if (!(await nav.isVisible())) await page.getByText("Menu", { exact: true }).click();
+  await nav.getByRole("link", { name: "Compositeurs" }).click();
+  await expect(page).toHaveURL(/\/fr\/compositeurs\/$/);
 });
 
 for (const slug of SLUGS) {
@@ -32,7 +75,7 @@ for (const slug of SLUGS) {
     expect(box!.width).toBeLessThanOrEqual(page.viewportSize()!.width);
     await expect(page.locator("[data-score] .note").first()).toBeVisible();
 
-    const play = page.getByRole("button", { name: /Lecture/ });
+    const play = page.getByRole("button", { name: /Écouter/ });
     await expect(play).toBeEnabled();
     await play.focus();
     await expect(play).toBeFocused();

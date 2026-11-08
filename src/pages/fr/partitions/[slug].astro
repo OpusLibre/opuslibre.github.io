@@ -1,73 +1,163 @@
 ---
 import Base from "../../../layouts/Base.astro";
-import scores from "../../../generated/scores.json";
+import { ENTRIES, LEVELS, versionsOf, instrumentLabel, levelLabel } from "../../../lib/catalogue";
 
 export function getStaticPaths() {
-  return Object.entries(scores).map(([slug, score]) => ({ params: { slug }, props: { slug, score } }));
+  return ENTRIES.map((entry) => ({ params: { slug: entry.slug }, props: { entry } }));
 }
-const { slug, score } = Astro.props;
-const meta = score.meta;
-const LEVELS: Record<string, string> = { original: "Version originale", avance: "Avancé", intermediaire: "Intermédiaire", debutant: "Débutant" };
-const piano = meta.formation === "piano" && score.staves === 2;
+const { entry } = Astro.props;
+const versions = versionsOf(entry);
+const piano = entry.instrument === "piano" && entry.staves === 2;
+const short = (id: string) => LEVELS.find((l) => l.id === id)!;
+const subtitle = [entry.composer.dates ? `${entry.composer.name} (${entry.composer.dates})` : entry.composer.name, entry.reference, entry.collection].filter(Boolean).join(" · ");
 ---
-<Base title={meta.titre}>
-  <p class="fil"><a href="/fr/">Partitions</a> › {meta.titre}</p>
-  <h1>{meta.titre}</h1>
-  <p class="infos">{meta.formation === "piano" ? "Piano" : "Voix"} · {LEVELS[meta.niveau] ?? meta.niveau} · <span class="licence">Libre ({meta.licence}) : vous pouvez l’imprimer, la copier, la jouer en public.</span></p>
-
-  <section class="lecteur" aria-label="Lecteur" data-base={score.base} data-staves={score.staves}>
-    <div class="commandes">
-      <button type="button" data-play class="jouer" disabled>▶ Lecture</button>
-      <label>Tempo <input type="range" min="50" max="150" step="5" value="100" data-tempo aria-describedby="tempo-valeur" /> <output id="tempo-valeur" data-tempo-value>100 %</output></label>
-      {piano ? (
-        <fieldset class="mains"><legend>Mains</legend>
-          <label><input type="radio" name="mains" value="both" checked /> Les deux</label>
-          <label><input type="radio" name="mains" value="right" /> Main droite</label>
-          <label><input type="radio" name="mains" value="left" /> Main gauche</label>
-        </fieldset>
-      ) : null}
-      {score.annotations > 0 ? <label class="calque"><input type="checkbox" data-layer="doigte" checked /> Doigté pour petites mains</label> : null}
+<Base title={`${entry.title} — ${entry.composer.short}`} description={`${entry.title}, ${entry.composer.name} — ${instrumentLabel(entry.instrument)}, ${levelLabel(entry.level)}. Partition libre à lire, écouter et imprimer (PDF, MusicXML, MIDI).`} section="partitions">
+  <nav class="crumbs" aria-label="Fil d’Ariane">
+    <a href="/fr/compositeurs/">Compositeurs</a><span>/</span><a href={`/fr/compositeurs/${entry.composer.id}/`}>{entry.composer.name}</a><span>/</span><span aria-current="page">{entry.title}</span>
+  </nav>
+  <header class="title">
+    <div>
+      <h1>{entry.title}</h1>
+      <p class="subtitle">{subtitle}</p>
     </div>
-    <p class="etat" data-status role="status">Chargement de la partition…</p>
-    <div class="partition" data-score aria-label="Partition"></div>
-    <aside class="notes-lecture" data-notes hidden></aside>
-  </section>
+    <p class="licence">Libre · {entry.licence.replace(/-1\.0$/, "")}</p>
+  </header>
 
-  <section class="telechargements" aria-label="Téléchargements">
-    <h2>Télécharger</h2>
-    <ul>
-      <li><a href={`${score.base}score.pdf`}>PDF</a> — pour jouer (A4, même gravure qu’à l’écran)</li>
-      <li><a href={`${score.base}score.musicxml`}>MusicXML</a> — à ouvrir et modifier dans MuseScore, Dorico, Finale ou Sibelius</li>
-      <li><a href={`${score.base}score.mid`}>MIDI</a> — pour écouter</li>
-    </ul>
-    <p class="source">Source : {meta.source} · Transcription : {meta.transcripteur}</p>
+  <nav class="versions" aria-label="Versions de cette œuvre">
+    {versions.map((v) => v.slug === entry.slug
+      ? <span aria-current="page"><span class="long">{short(v.level).label}</span><span class="abbr">{short(v.level).short}</span></span>
+      : <a href={`/fr/partitions/${v.slug}/`}><span class="long">{short(v.level).label}</span><span class="abbr">{short(v.level).short}</span></a>)}
+    <span class="facts">{instrumentLabel(entry.instrument)}</span>
+  </nav>
+
+  <section class="viewer" aria-label="Partition et écoute" data-base={entry.base} data-staves={entry.staves}>
+    <div class="player">
+      <button type="button" data-play class="play" disabled>▶ Écouter</button>
+      <button type="button" class="settings-toggle" aria-expanded="false" aria-controls="player-settings" data-settings-toggle>Réglages</button>
+      <div class="settings" id="player-settings">
+        <label class="setting">
+          <span class="setting-name">Tempo</span>
+          <span class="tempo"><input type="range" min="50" max="150" step="5" value="100" data-tempo aria-describedby="tempo-value" /><output id="tempo-value" data-tempo-value>100 %</output></span>
+        </label>
+        {piano ? (
+          <fieldset class="setting hands">
+            <legend class="setting-name">Mains</legend>
+            <label><input type="radio" name="mains" value="both" checked /><span>Les deux</span></label>
+            <label><input type="radio" name="mains" value="right" /><span>Droite</span></label>
+            <label><input type="radio" name="mains" value="left" /><span>Gauche</span></label>
+          </fieldset>
+        ) : null}
+      </div>
+    </div>
+    <p class="status" data-status role="status">Chargement de la partition…</p>
+
+    <div class="layout">
+      <div class="score" data-score aria-label="Partition"></div>
+      <aside class="side">
+        {entry.annotations > 0 ? (
+          <section>
+            <h2 class="eyebrow">Annotations</h2>
+            <label class="layer"><input type="checkbox" data-layer="doigte" checked /> Doigté pour petites mains</label>
+            <div class="notes" data-notes hidden></div>
+          </section>
+        ) : <div data-notes hidden></div>}
+        <section>
+          <h2 class="eyebrow">Télécharger</h2>
+          <ul class="downloads">
+            <li><a href={`${entry.base}score.pdf`}>PDF</a><span>A4, pour jouer</span></li>
+            <li><a href={`${entry.base}score.musicxml`}>MusicXML</a><span>pour modifier (MuseScore, Dorico…)</span></li>
+            <li><a href={`${entry.base}score.mid`}>MIDI</a><span>pour écouter</span></li>
+          </ul>
+        </section>
+        <section>
+          <h2 class="eyebrow">Source</h2>
+          <p class="source">{entry.source}<br />Transcription : {entry.transcriber}<br />Licence {entry.licence} : vous pouvez l’imprimer, la copier et la jouer en public.</p>
+        </section>
+      </aside>
+    </div>
   </section>
 </Base>
 <script>
   import { mountViewer } from "../../../scripts/score-viewer";
-  const root = document.querySelector<HTMLElement>(".lecteur");
+  const root = document.querySelector<HTMLElement>(".viewer");
   if (root) mountViewer(root);
+  const toggle = document.querySelector<HTMLButtonElement>("[data-settings-toggle]");
+  toggle?.addEventListener("click", () => toggle.setAttribute("aria-expanded", String(toggle.getAttribute("aria-expanded") !== "true")));
 </script>
 <style>
-  .fil { font: 0.85rem system-ui, sans-serif; color: var(--doux); }
-  h1 { font-size: 2rem; margin: 0.2rem 0; }
-  .infos { font: 0.95rem system-ui, sans-serif; color: var(--doux); }
-  .licence { color: var(--accent); }
-  .lecteur { margin-top: 1.2rem; background: var(--carte); border: 1px solid var(--trait); border-radius: 0.7rem; padding: 1rem; }
-  .commandes { display: flex; flex-wrap: wrap; gap: 0.8rem 1.4rem; align-items: center; font: 0.9rem system-ui, sans-serif; }
-  .jouer { font: 600 1rem system-ui, sans-serif; padding: 0.55rem 1.1rem; border-radius: 999px; border: 0; background: var(--accent); color: #fff; cursor: pointer; min-width: 8rem; }
-  .jouer:disabled { opacity: 0.5; cursor: wait; }
-  .mains { border: 0; display: flex; gap: 0.8rem; padding: 0; margin: 0; align-items: center; }
-  .mains legend { float: left; margin-right: 0.6rem; font-weight: 600; }
-  .etat { font: 0.8rem system-ui, sans-serif; color: var(--doux); min-height: 1.2em; }
-  .partition { overflow-x: auto; }
-  .partition :global(svg) { width: 100%; height: auto; }
-  .partition :global(.note.joue) { fill: var(--jeu); }
-  .partition :global(.note.joue *) { fill: var(--jeu); stroke: var(--jeu); }
-  .partition :global(.note.vise) { fill: var(--accent); }
-  .partition :global(.doigte) { fill: var(--accent); font-family: system-ui, sans-serif; font-weight: 700; }
-  .notes-lecture { margin-top: 0.8rem; padding: 0.8rem 1rem; border-radius: 0.5rem; background: var(--accent-pale); font: 0.9rem system-ui, sans-serif; }
-  .telechargements { margin-top: 2rem; font-family: system-ui, sans-serif; }
-  .telechargements h2 { font-family: Georgia, serif; }
-  .source { color: var(--doux); font-size: 0.8rem; }
+  .crumbs { padding-top: 2rem; font-size: 0.82rem; color: var(--muted); display: flex; flex-wrap: wrap; gap: 0.2rem 0.5rem; }
+  .crumbs a { text-decoration: none; }
+  .crumbs a:hover { text-decoration: underline; }
+  .title { display: flex; justify-content: space-between; align-items: flex-end; gap: 1rem; margin-top: 1.2rem; }
+  h1 { font-size: clamp(1.8rem, 4.5vw, 3rem); }
+  .subtitle { color: var(--muted); margin: 0.6rem 0 0; font-size: 0.95rem; }
+  .licence { flex: none; border: 1px solid var(--ink); padding: 0.35rem 0.7rem; font-size: 0.78rem; font-weight: 600; margin: 0; }
+  .versions { display: flex; flex-wrap: wrap; align-items: stretch; margin-top: 1.4rem; }
+  .versions > a, .versions > span[aria-current] { border: 1px solid var(--rule); padding: 0.6rem 1.2rem; font-size: 0.92rem; text-decoration: none; color: var(--muted); margin-right: -1px; }
+  .versions > span[aria-current] { border: 2px solid var(--ink); color: var(--ink); font-weight: 600; position: relative; z-index: 1; }
+  .versions > a:hover { color: var(--ink); background: var(--band); }
+  .versions .abbr { display: none; }
+  .facts { align-self: center; margin-left: 1.2rem; font-size: 0.88rem; color: var(--muted); }
+
+  .player { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 2.5rem; background: var(--band); padding: 0.9rem 1.1rem; margin-top: 1.4rem; }
+  .play { font: 600 0.95rem var(--sans); background: var(--play); color: #fff; border: 0; padding: 0.8rem 1.3rem; min-width: 8.5rem; cursor: pointer; text-align: left; }
+  .play:disabled { opacity: 0.55; cursor: wait; }
+  .settings { display: flex; flex-wrap: wrap; gap: 1rem 2.5rem; align-items: center; }
+  .settings-toggle { display: none; }
+  .setting { display: grid; gap: 0.25rem; border: 0; padding: 0; margin: 0; font-size: 0.9rem; }
+  .setting-name { font: 600 0.68rem var(--sans); letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); padding: 0; }
+  .tempo { display: flex; align-items: center; gap: 0.6rem; }
+  .tempo input { width: 8rem; accent-color: var(--ink); }
+  .tempo output { min-width: 3rem; }
+  .hands { display: flex; flex-wrap: wrap; gap: 0 0.2rem; }
+  .hands legend { float: left; width: 100%; margin-bottom: 0.25rem; }
+  .hands label { position: relative; }
+  .hands input { position: absolute; opacity: 0; inset: 0; margin: 0; cursor: pointer; }
+  .hands span { display: block; padding: 0.1rem 0.45rem; border-bottom: 2px solid transparent; }
+  .hands input:checked + span { border-bottom-color: var(--ink); font-weight: 600; }
+  .hands input:focus-visible + span { outline: 2px solid var(--ink); }
+  .status { font-size: 0.8rem; color: var(--muted); min-height: 1.2em; margin: 0.6rem 0; }
+
+  .layout { display: grid; gap: 2.5rem; }
+  @media (min-width: 1100px) { .layout { grid-template-columns: 1fr 18rem; gap: 4rem; } }
+  .score { min-width: 0; overflow-x: hidden; }
+  .score :global(svg) { width: 100%; height: auto; color: var(--ink); }
+  .score :global(.note.joue), .score :global(.note.joue *) { fill: #b42318; stroke: #b42318; }
+  .score :global(.note.vise), .score :global(.note.vise *) { fill: #b42318; }
+  .score :global(.doigte) { fill: var(--ink); font-family: var(--sans); font-weight: 600; }
+  .side { display: grid; gap: 2rem; align-content: start; }
+  .side .eyebrow { font-family: var(--sans); font-size: 0.72rem; }
+  .layer { display: flex; gap: 0.6rem; align-items: center; font-size: 0.95rem; }
+  .layer input { accent-color: var(--ink); width: 1rem; height: 1rem; }
+  .notes { margin-top: 1rem; border: 1px solid var(--ink); padding: 0.8rem 1rem; font-size: 0.88rem; color: var(--muted); }
+  .notes :global(p) { margin: 0; }
+  .notes :global(strong) { display: block; font: 400 1rem var(--serif); color: var(--ink); margin-bottom: 0.3rem; }
+  .notes :global(button) { border: 0; background: none; padding: 0; font: inherit; text-decoration: underline; cursor: pointer; color: var(--ink); }
+  .downloads { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.6rem; }
+  .downloads a { font-weight: 600; }
+  .downloads span { color: var(--muted); font-size: 0.88rem; margin-left: 0.5rem; }
+  .source { font-size: 0.85rem; color: var(--muted); margin: 0; }
+
+  /* Phones: compact header, the player becomes a bar fixed at the bottom of the screen. */
+  @media (max-width: 759px) {
+    .crumbs { display: none; }
+    .title { margin-top: 1.4rem; align-items: flex-start; }
+    .licence { display: none; }
+    .subtitle::after { content: " · Libre"; }
+    .versions { flex-wrap: nowrap; overflow-x: auto; }
+    .versions > a, .versions > span[aria-current] { padding: 0.5rem 0.75rem; font-size: 0.82rem; flex: none; }
+    .versions .long { display: none; }
+    .versions .abbr { display: inline; }
+    .facts { display: none; }
+    .player { position: fixed; left: 0; right: 0; bottom: 0; z-index: 30; margin: 0; background: var(--ink); color: #fff; padding: 0.6rem 1rem calc(0.6rem + env(safe-area-inset-bottom)); gap: 0.6rem 1rem; justify-content: space-between; }
+    .play { background: transparent; padding: 0.5rem 0; min-width: 0; font-size: 1rem; }
+    .settings-toggle { display: block; background: none; border: 1px solid #555; color: #fff; font: 500 0.85rem var(--sans); padding: 0.45rem 0.8rem; cursor: pointer; }
+    .settings { display: none; width: 100%; padding: 0.4rem 0 0.3rem; }
+    .settings-toggle[aria-expanded="true"] + .settings { display: flex; }
+    .setting-name { color: #aaa; }
+    .tempo input { width: 10rem; accent-color: #fff; }
+    .hands input:checked + span { border-bottom-color: #fff; }
+    .layout { gap: 2rem; }
+    .viewer { padding-bottom: 4.5rem; }
+  }
 </style>

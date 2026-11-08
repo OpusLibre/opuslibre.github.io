@@ -36,7 +36,7 @@ export async function mountViewer(root: HTMLElement): Promise<void> {
   const SCALE = 40;
   function render(): void {
     const width = Math.max(320, scoreEl.clientWidth);
-    tk.setOptions({ scale: SCALE, pageWidth: Math.round((width * 100) / SCALE), adjustPageHeight: true, breaks: "auto", svgViewBox: true, footer: "none", header: "auto" });
+    tk.setOptions({ scale: SCALE, pageWidth: Math.round((width * 100) / SCALE), adjustPageHeight: true, breaks: "auto", svgViewBox: true, footer: "none", header: "none" });
     tk.loadData(mei);
     scoreEl.innerHTML = Array.from({ length: tk.getPageCount() }, (_, i) => tk.renderToSVG(i + 1)).join("");
     drawOverlays();
@@ -66,7 +66,7 @@ export async function mountViewer(root: HTMLElement): Promise<void> {
     }
     const reading = annotations.filter((a) => a.layer !== "doigte");
     notesPanel.hidden = reading.length === 0;
-    notesPanel.innerHTML = reading.map((a) => `<p><strong>${escapeHtml(a.title?.fr ?? "Note")}</strong> — ${escapeHtml(a.text)} <button type="button" data-show="${a.ids.join(" ")}">Voir</button></p>`).join("");
+    notesPanel.innerHTML = reading.map((a) => `<p><strong>${escapeHtml(a.title?.fr ?? "Note")}</strong>${escapeHtml(a.text)} <button type="button" data-show="${a.ids.join(" ")}">Voir</button></p>`).join("");
   }
   notesPanel.addEventListener("click", (event) => {
     const ids = (event.target as HTMLElement).closest<HTMLElement>("[data-show]")?.dataset.show?.split(" ") ?? [];
@@ -157,7 +157,7 @@ export async function mountViewer(root: HTMLElement): Promise<void> {
     playing = false;
     cancelAnimationFrame(frame);
     scoreEl.querySelectorAll(".joue").forEach((n) => n.classList.remove("joue"));
-    playButton.textContent = "▶ Lecture";
+    playButton.textContent = "▶ Écouter";
   }
   function restart(): void {
     stop();

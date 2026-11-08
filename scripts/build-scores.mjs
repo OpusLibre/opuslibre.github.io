@@ -27,6 +27,9 @@ const root = path.resolve(import.meta.dirname, "..");
 const scoresDir = path.join(root, "contenus/partitions");
 const outFiles = path.join(root, "build/files");
 const outManifest = path.join(root, "src/generated/scores.json");
+const outPreviews = path.join(root, "src/generated/previews");
+const composers = JSON.parse(await readFile(path.join(root, "contenus/compositeurs.json"), "utf8"));
+const LEVELS = ["debutant", "intermediaire", "avance", "original"];
 
 /** Minimal front matter reader (key: value lines between --- fences). */
 function frontMatter(text) {
@@ -101,6 +104,13 @@ function renderPdf(toolkit, title, licence) {
   return done;
 }
 
+/** First page of the score at a fixed width, inlined by the home page (no Verovio in the browser there). */
+function renderPreview(toolkit) {
+  toolkit.setOptions({ pageWidth: 1600, pageHeight: 1150, scale: 40, adjustPageHeight: true, breaks: "auto", svgViewBox: true, footer: "none", header: "none" });
+  toolkit.redoLayout();
+  return toolkit.renderToSVG(1);
+}
+
 const tk = new VerovioToolkit(await createVerovioModule());
 const manifest = {};
 const slugs = (await readdir(scoresDir, { withFileTypes: true })).filter((d) => d.isDirectory()).map((d) => d.name).sort();
@@ -114,6 +124,8 @@ for (const slug of slugs) {
     problems.push(`${slug} : champs manquants dans meta.md (${missing.join(", ")}) — une partition sans source ni licence n'est pas publiée.`);
     continue;
   }
+  if (!composers[meta.artiste]) { problems.push(`${slug} : artiste « ${meta.artiste} » absent de contenus/compositeurs.json.`); continue; }
+  if (!LEVELS.includes(meta.niveau)) { problems.push(`${slug} : niveau « ${meta.niveau} » inconnu (${LEVELS.join(", ")}).`); continue; }
   const source = await readFile(path.join(dir, "score.musicxml"), "utf8");
   const annotationsPath = path.join(dir, "annotations.json");
   const annotationsText = existsSync(annotationsPath) ? await readFile(annotationsPath, "utf8") : "[]";
@@ -156,6 +168,8 @@ for (const slug of slugs) {
   await writeFile(path.join(out, "score.mei"), mei);
   await writeFile(path.join(out, "score.mid"), midi);
   await writeFile(path.join(out, "score.pdf"), await renderPdf(tk, meta.titre, meta.licence));
+  await mkdir(outPreviews, { recursive: true });
+  await writeFile(path.join(outPreviews, `${slug}.svg`), renderPreview(tk));
   await copyFile(path.join(dir, "score.musicxml"), path.join(out, "score.musicxml"));
   await writeFile(path.join(out, "anchors.json"), JSON.stringify(anchors));
   await writeFile(path.join(out, "annotations.json"), JSON.stringify(resolved));

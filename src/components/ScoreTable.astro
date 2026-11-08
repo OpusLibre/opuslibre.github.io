@@ -1,0 +1,25 @@
+---
+import { instrumentLabel, levelLabel, searchText, type Entry } from "../lib/catalogue";
+
+interface Props { entries: Entry[]; filterable?: boolean }
+const { entries, filterable = false } = Astro.props;
+---
+<table class="score-table">
+  <caption class="visually-hidden">Partitions</caption>
+  <tbody>
+    {entries.map((e) => (
+      <tr
+        data-search={filterable ? searchText(e) : undefined}
+        data-niveau={filterable ? e.level : undefined}
+        data-instrument={filterable ? e.instrument : undefined}
+        data-compositeur={filterable ? e.composer.id : undefined}
+      >
+        <td class="title"><a href={`/fr/partitions/${e.slug}/`}>{e.title}</a></td>
+        <td class="composer">{e.composer.short}</td>
+        <td class="ref">{e.reference ?? "—"}</td>
+        <td class="instrument">{instrumentLabel(e.instrument)}</td>
+        <td class="level">{levelLabel(e.level)}</td>
+      </tr>
+    ))}
+  </tbody>
+</table>

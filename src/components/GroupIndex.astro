@@ -1,0 +1,24 @@
+---
+/** A page listing catalogue groups (levels or instruments), each linking to the filtered catalogue. */
+import { plural } from "../lib/catalogue";
+interface Props { groups: { label: string; href: string; n: number; text?: string }[] }
+const { groups } = Astro.props;
+---
+<ul class="groups">
+  {groups.map((g) => (
+    <li>
+      {g.n > 0 ? <a href={g.href}><strong>{g.label}</strong><span>{plural(g.n, "partition")}</span>{g.text ? <p>{g.text}</p> : null}</a>
+        : <div class="none"><strong>{g.label}</strong><span>Bientôt</span>{g.text ? <p>{g.text}</p> : null}</div>}
+    </li>
+  ))}
+</ul>
+<style>
+  .groups { list-style: none; padding: 0; margin: 2rem 0 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); border-top: 1px solid var(--rule); border-left: 1px solid var(--rule); }
+  .groups li { border-right: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+  .groups a, .none { display: grid; gap: 0.25rem; padding: 1.4rem; text-decoration: none; height: 100%; }
+  .groups a:hover { background: var(--band); }
+  .groups strong { font: 400 1.35rem var(--serif); }
+  .groups span { font-size: 0.82rem; color: var(--muted); }
+  .groups p { margin: 0.5rem 0 0; font-size: 0.9rem; color: var(--muted); }
+  .none { opacity: 0.55; }
+</style>
