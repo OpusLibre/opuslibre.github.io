@@ -7,3 +7,4 @@ test-results/
 playwright-report/
 src/generated/previews/
 .venv/
+__pycache__/
