@@ -9,6 +9,6 @@ recueil: "Le Clavier bien tempéré, livre I"
 ajout: 2026-11-07
 source: "Bach-Gesellschaft Ausgabe, Band 14 (1866), scan IMSLP"
 licence: CC0-1.0
-transcripteur: Musicalis
+transcripteur: Opus Libre
 ---
 Extrait de prototype : les huit premières mesures du premier prélude du Clavier bien tempéré, livre I.

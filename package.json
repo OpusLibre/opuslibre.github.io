@@ -1,12 +1,11 @@
 {
-  "name": "musicalis",
+  "name": "opuslibre",
   "private": true,
   "type": "module",
   "scripts": {
     "scores": "node scripts/build-scores.mjs",
-    "build": "node scripts/build-scores.mjs && astro build",
+    "build": "node scripts/build-scores.mjs && astro build && node scripts/pages.mjs",
     "dev": "astro dev",
-    "deploy": "wrangler deploy",
     "test": "playwright test"
   },
   "dependencies": {
@@ -20,8 +19,6 @@
     "verovio": "^6.4.1"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^5.20261107.1",
-    "@playwright/test": "^1.49.1",
-    "wrangler": "^4.158.0"
+    "@playwright/test": "^1.49.1"
   }
 }

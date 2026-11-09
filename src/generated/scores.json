@@ -1,7 +1,7 @@
 {
   "au-clair-de-la-lune": {
-    "key": "e1dd351d63a6434f",
-    "base": "/p/au-clair-de-la-lune/e1dd351d63a6434f/",
+    "key": "a48739db78dbb85e",
+    "base": "/p/au-clair-de-la-lune/a48739db78dbb85e/",
     "meta": {
       "titre": "Au clair de la lune",
       "oeuvre": "au-clair-de-la-lune",
@@ -11,14 +11,14 @@
       "ajout": "2026-11-07",
       "source": "Air traditionnel français (XVIIIe siècle), domaine public",
       "licence": "CC0-1.0",
-      "transcripteur": "Musicalis"
+      "transcripteur": "Opus Libre"
     },
     "staves": 1,
     "annotations": 0
   },
   "bach-bwv-846-preludio": {
-    "key": "48f5fc73edb55a2a",
-    "base": "/p/bach-bwv-846-preludio/48f5fc73edb55a2a/",
+    "key": "8ab1002307ada08b",
+    "base": "/p/bach-bwv-846-preludio/8ab1002307ada08b/",
     "meta": {
       "titre": "Prélude en ut majeur (mesures 1–8)",
       "oeuvre": "bach-bwv-846-preludio-in-do-maggiore",
@@ -30,7 +30,7 @@
       "ajout": "2026-11-07",
       "source": "Bach-Gesellschaft Ausgabe, Band 14 (1866), scan IMSLP",
       "licence": "CC0-1.0",
-      "transcripteur": "Musicalis"
+      "transcripteur": "Opus Libre"
     },
     "staves": 2,
     "annotations": 7

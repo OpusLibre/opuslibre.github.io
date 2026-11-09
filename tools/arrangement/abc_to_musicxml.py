@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-ABC (one voice per hand) -> MusicXML for Musicalis.
+ABC (one voice per hand) -> MusicXML for Opus Libre.
 
 The arrangement is written as a standard multi-voice ABC file:
 

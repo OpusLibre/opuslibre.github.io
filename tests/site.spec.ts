@@ -101,3 +101,9 @@ test("une page inconnue renvoie la page 404", async ({ page }) => {
   expect(response?.status()).toBe(404);
   await expect(page.getByRole("heading", { name: "Page introuvable" })).toBeVisible();
 });
+
+test("la racine renvoie vers la version française", async ({ page }) => {
+  await page.goto("/");
+  await expect(page).toHaveURL(/\/fr\/$/);
+  await expect(page.getByRole("link", { name: "Opus Libre, accueil" })).toBeVisible();
+});

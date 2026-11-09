@@ -1,8 +1,8 @@
-# Musicalis
+# Opus Libre
 
 Bibliothèque de partitions libres : un catalogue statique où la partition MusicXML est la seule source musicale. Le rendu, le MIDI et les fichiers téléchargeables sont générés au build. Architecture de référence : le document « Bibliothèque de partitions — Architecture ».
 
-En ligne (prototype) : https://musicalis.grainedigitale.workers.dev/
+En ligne : https://opuslibre.github.io/ (dépôt `OpusLibre/opuslibre.github.io`, publié par GitHub Pages)
 
 ## Prototype (novembre 2026)
 
@@ -23,23 +23,21 @@ contenus/partitions/<slug>/
   annotations.json   # annotations ancrées par adresse musicale (mesure, offset, portée, hauteur)
 scripts/
   build-scores.mjs   # MusicXML → MEI, MIDI, ancres, annotations résolues (échoue si une ancre est introuvable)
-  upload-files.mjs   # envoie les fichiers générés sur R2 (clés immuables, jamais renvoyées)
+  pages.mjs          # copie les fichiers générés dans dist/p/ et écrit la page racine (redirection /fr/)
   sample-scores.mjs  # génère les deux partitions de test
 src/                 # site Astro (statique)
-worker/index.ts      # Worker : site statique + fichiers R2 sous /p/<slug>/<empreinte>/
+tools/arrangement/   # outils d'arrangement (ABC → MusicXML, contrôles de niveau et d'harmonie, aperçus)
 ```
 
 ## Commandes
 
 ```bash
 npm ci
-npm run build                      # pipeline des partitions (MEI, MIDI, PDF A4, ancres) puis site
+npm run build                      # pipeline des partitions (MEI, MIDI, PDF A4, ancres), site, puis dist/ complet
 npm test                           # tests Playwright en 390, 768 et 1440 px (après le build)
-node scripts/upload-files.mjs      # fichiers générés → R2 (CLOUDFLARE_API_TOKEN, CLOUDFLARE_ACCOUNT_ID)
-npx wrangler deploy                # Worker « musicalis » (compte grainedigitale)
 ```
 
-Un push sur `main` fait tout cela automatiquement (GitHub Actions : secret `CLOUDFLARE_API_TOKEN`, variable `CLOUDFLARE_ACCOUNT_ID`).
+Un push sur `main` construit, teste et publie `dist/` sur GitHub Pages (Settings → Pages → Source : GitHub Actions). Aucun secret n'est nécessaire.
 
 Astro 7 demande Node ≥ 22.23 (la CI utilise Node 24).
 
@@ -47,7 +45,7 @@ Astro 7 demande Node ≥ 22.23 (la CI utilise Node 24).
 
 
 - Fichiers `.mxl` compressés, empreinte de mesure des annotations, collections Astro typées (artistes, œuvres), i18n en/it/es, Pagefind.
-- Banque de sons hébergée sur R2 plutôt que chargée depuis tonejs.github.io.
+- Banque de sons hébergée avec le site plutôt que chargée depuis tonejs.github.io.
 
 ## Licences
 

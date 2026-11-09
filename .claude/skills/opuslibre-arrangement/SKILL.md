@@ -1,17 +1,17 @@
 ---
-name: musicalis-arrangement
-description: Arranger une œuvre du domaine public en versions par niveau (débutant, intermédiaire, avancé, original) pour le catalogue Musicalis — trouver la source libre, écrire chaque niveau en ABC, produire le MusicXML, vérifier l'harmonie contre l'original et la difficulté du niveau, relire la gravure, puis publier dans contenus/partitions/. À utiliser dès qu'il faut créer, simplifier, transposer, vérifier ou intégrer une partition / un arrangement pour Musicalis.
+name: opuslibre-arrangement
+description: Arranger une œuvre du domaine public en versions par niveau (débutant, intermédiaire, avancé, original) pour le catalogue Opus Libre — trouver la source libre, écrire chaque niveau en ABC, produire le MusicXML, vérifier l'harmonie contre l'original et la difficulté du niveau, relire la gravure, puis publier dans contenus/partitions/. À utiliser dès qu'il faut créer, simplifier, transposer, vérifier ou intégrer une partition / un arrangement pour Opus Libre.
 ---
 
-# Arrangements Musicalis
+# Arrangements Opus Libre
 
-Dépôt : `~/work/musicalis` (voir la mémoire « Projet Musicalis »). Outils : `tools/arrangement/`.
-Musicalis est un **catalogue de références**, pas une méthode : chaque niveau est une partition autonome pour un public différent, pas une étape d'un parcours. Pas de conseils pédagogiques dans les fiches.
+Dépôt : `~/work/opuslibre` (voir la mémoire « Projet Opus Libre »). Outils : `tools/arrangement/`.
+Opus Libre est un **catalogue de références**, pas une méthode : chaque niveau est une partition autonome pour un public différent, pas une étape d'un parcours. Pas de conseils pédagogiques dans les fiches.
 
 ## 0. Préparer l'environnement (une fois)
 
 ```sh
-cd ~/work/musicalis
+cd ~/work/opuslibre
 python3 -m venv .venv && .venv/bin/pip install -r tools/arrangement/requirements.txt
 export PATH=$HOME/.local/opt/node/bin:$PATH   # pour preview.mjs et le build
 ```
@@ -103,10 +103,10 @@ Pour chaque niveau, un dossier `contenus/partitions/<oeuvre>-<niveau>/` :
   ajout: AAAA-MM-JJ
   source: "Partition d'orchestre, Simrock 1884 (domaine public, IMSLP)"
   licence: CC0-1.0            # ou CC-BY-4.0 si la source l'impose
-  transcripteur: Musicalis    # ou le nom de la personne
+  transcripteur: Opus Libre   # ou le nom de la personne
   ---
   Adaptation pour piano du thème (mes. 1–52), en 3/4 (original en 3/8, valeurs doublées).
   ```
 - `annotations.json` facultatif (calques affichables à l'écran, voir le doc d'architecture).
 
-Puis : `npm run build` (échoue si un champ manque ou si l'artiste est inconnu), `npx playwright test`, commit en anglais, push avec le jeton `github-grainedi` (la CI déploie). Envoyer à l'utilisateur les aperçus PNG et le rapport de `check.py`, en séparant ce qui est vérifié de ce qui reste un doute.
+Puis : `npm run build` (échoue si un champ manque ou si l'artiste est inconnu), `npx playwright test`, commit en anglais, push avec le jeton `github-opuslibre` (la CI publie sur GitHub Pages). Envoyer à l'utilisateur les aperçus PNG et le rapport de `check.py`, en séparant ce qui est vérifié de ce qui reste un doute.

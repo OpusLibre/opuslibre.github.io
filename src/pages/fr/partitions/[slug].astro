@@ -64,9 +64,9 @@ const subtitle = [entry.composer.dates ? `${entry.composer.name} (${entry.compos
         <section>
           <h2 class="eyebrow">Télécharger</h2>
           <ul class="downloads">
-            <li><a href={`${entry.base}score.pdf`}>PDF</a><span>A4, pour jouer</span></li>
-            <li><a href={`${entry.base}score.musicxml`}>MusicXML</a><span>pour modifier (MuseScore, Dorico…)</span></li>
-            <li><a href={`${entry.base}score.mid`}>MIDI</a><span>pour écouter</span></li>
+            <li><a href={`${entry.base}score.pdf`} download={`${entry.slug}.pdf`}>PDF</a><span>A4, pour jouer</span></li>
+            <li><a href={`${entry.base}score.musicxml`} download={`${entry.slug}.musicxml`}>MusicXML</a><span>pour modifier (MuseScore, Dorico…)</span></li>
+            <li><a href={`${entry.base}score.mid`} download={`${entry.slug}.mid`}>MIDI</a><span>pour écouter</span></li>
           </ul>
         </section>
         <section>

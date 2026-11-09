@@ -7,6 +7,6 @@ formation: voix
 ajout: 2026-11-07
 source: "Air traditionnel français (XVIIIe siècle), domaine public"
 licence: CC0-1.0
-transcripteur: Musicalis
+transcripteur: Opus Libre
 ---
 Première strophe, mélodie seule avec paroles.

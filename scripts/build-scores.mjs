@@ -91,14 +91,14 @@ function svgForPdf(svg) {
 function renderPdf(toolkit, title, licence) {
   toolkit.setOptions({ pageWidth: 2100, pageHeight: 2970, pageMarginLeft: 100, pageMarginRight: 100, pageMarginTop: 100, pageMarginBottom: 120, scale: 45, footer: "none", header: "auto", breaks: "auto", svgViewBox: true, adjustPageHeight: false });
   toolkit.redoLayout();
-  const doc = new PDFDocument({ size: "A4", margin: 0, info: { Title: title, Creator: "Musicalis", Subject: `Partition libre — ${licence}` } });
+  const doc = new PDFDocument({ size: "A4", margin: 0, info: { Title: title, Creator: "Opus Libre", Subject: `Partition libre — ${licence}` } });
   const chunks = [];
   doc.on("data", (c) => chunks.push(c));
   const done = new Promise((resolve) => doc.on("end", () => resolve(Buffer.concat(chunks))));
   for (let page = 1; page <= toolkit.getPageCount(); page += 1) {
     if (page > 1) doc.addPage();
     SVGtoPDF(doc, svgForPdf(toolkit.renderToSVG(page)), 0, 0, { width: 595.28, height: 841.89, preserveAspectRatio: "xMidYMin meet" });
-    doc.font("Times-Roman").fontSize(8).fillColor("#555").text(`Musicalis — partition libre (${licence}) — page ${page}/${toolkit.getPageCount()}`, 0, 812, { width: 595.28, align: "center" });
+    doc.font("Times-Roman").fontSize(8).fillColor("#555").text(`Opus Libre — partition libre (${licence}) — page ${page}/${toolkit.getPageCount()}`, 0, 812, { width: 595.28, align: "center" });
   }
   doc.end();
   return done;

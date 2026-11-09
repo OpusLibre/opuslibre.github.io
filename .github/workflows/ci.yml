@@ -5,6 +5,8 @@ on:
 concurrency:
   group: ci-${{ github.ref }}
   cancel-in-progress: false
+permissions:
+  contents: read
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -15,21 +17,26 @@ jobs:
           node-version: 24
           cache: npm
       - run: npm ci
-      # Validates every score (metadata, licence, annotation anchors), then builds the static site.
+      # Validates every score (metadata, licence, annotation anchors), then builds the static site into dist/.
       - run: npm run build
       # Responsive and behaviour checks (390, 768, 1440 px) on the built site; a failure blocks the deployment.
       - run: npx playwright install --with-deps chromium
       - run: npx playwright test
-      # Deploys main only: generated score files to R2 (immutable keys, sent once), then the Worker.
-      - name: Upload score files to R2
+      - uses: actions/upload-pages-artifact@v3
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-        run: node scripts/upload-files.mjs
-        env:
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
-      - name: Deploy the Worker
-        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-        run: npx wrangler deploy
-        env:
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
+        with:
+          path: dist
+  # main only: publishes dist/ to GitHub Pages (https://opuslibre.github.io/).
+  deploy:
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

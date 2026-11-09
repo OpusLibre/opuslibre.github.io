@@ -25,7 +25,7 @@ const NAV = [
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{title} — Musicalis</title>
+    <title>{title} — Opus Libre</title>
     <meta name="description" content={description} />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -34,9 +34,9 @@ const NAV = [
   <body>
     <header class="site-header">
       <div class="bar">
-        <a class="brand" href="/fr/" aria-label="Musicalis, accueil">
+        <a class="brand" href="/fr/" aria-label="Opus Libre, accueil">
           <img src="/favicon.svg" alt="" width="34" height="34" />
-          <span>Musicalis</span>
+          <span>Opus Libre</span>
         </a>
         {headerSearch ? (
           <form class="header-search" action="/fr/partitions/" method="get" role="search">
@@ -61,7 +61,7 @@ const NAV = [
     <main><slot /></main>
     <footer class="site-footer">
       <div>
-        <p class="footer-brand"><img src="/favicon.svg" alt="" width="22" height="22" /> Musicalis</p>
+        <p class="footer-brand"><img src="/favicon.svg" alt="" width="22" height="22" /> Opus Libre</p>
         <p>Toutes les partitions sont libres : vous pouvez les imprimer, les copier et les jouer en public. La source et la licence sont indiquées sur chaque page.</p>
       </div>
       <nav aria-label="Pied de page">

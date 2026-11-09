@@ -30,7 +30,7 @@ const header = (title, composer, parts) => `<?xml version="1.0" encoding="UTF-8"
 <!DOCTYPE score-partwise PUBLIC "-//Recordare//DTD MusicXML 4.0 Partwise//EN" "http://www.musicxml.org/dtds/partwise.dtd">
 <score-partwise version="4.0">
   <work><work-title>${title}</work-title></work>
-  <identification><creator type="composer">${composer}</creator><rights>CC0 1.0 — transcription Musicalis</rights></identification>
+  <identification><creator type="composer">${composer}</creator><rights>CC0 1.0 — transcription Opus Libre</rights></identification>
   <part-list>${parts}</part-list>`;
 
 // ---------- Bach BWV 846, bars 1–8 ----------
