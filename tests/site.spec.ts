@@ -43,7 +43,7 @@ test("le catalogue filtre pendant la frappe et par niveau, instrument, composite
   await expect(rows).toHaveCount(1);
   await expect(page).toHaveURL(/instrument=voix/);
   // Filters come back from the URL (shared links, links from the level pages).
-  await page.goto("/fr/partitions/?niveau=original");
+  await page.goto("/fr/partitions/?niveau=original&q=prelude");
   await expect(rows).toHaveCount(1);
   await expect(rows.first()).toContainText("Prélude");
   expect(errors).toEqual([]);
