@@ -36,9 +36,15 @@ export type Entry = {
   base: string;
   staves: number;
   annotations: number;
+  /** Name of this version in the version tabs (meta `version`, else the level). */
+  versionLabel: string;
+  credit: Credit;
 };
 
-type Generated = Record<string, { base: string; staves: number; annotations: number; meta: Record<string, string> }>;
+/** Origin and licence block, built by scripts/credit.mjs. */
+export type Credit = { title: string; details: string; source: string; licence: string; licenceText: string; licenceUrl: string; url: string; version: string; short: string };
+
+type Generated = Record<string, { base: string; staves: number; annotations: number; meta: Record<string, string>; credit: Credit }>;
 
 export const ENTRIES: Entry[] = Object.entries(scores as Generated)
   .map(([slug, s]) => ({
@@ -57,6 +63,8 @@ export const ENTRIES: Entry[] = Object.entries(scores as Generated)
     base: s.base,
     staves: s.staves,
     annotations: s.annotations,
+    versionLabel: s.meta.version || (LEVELS.find((l) => l.id === s.meta.niveau)?.label ?? s.meta.niveau!),
+    credit: s.credit,
   }))
   .sort((a, b) => b.added.localeCompare(a.added) || a.title.localeCompare(b.title, "fr"));
 

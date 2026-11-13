@@ -6,7 +6,7 @@
   <movement-title>Symphonie n° 3 – III. Poco Allegretto</movement-title>
   <identification>
     <creator type="composer">Johannes Brahms</creator>
-    <creator type="arranger">Arrangement pédagogique</creator>
+    <creator type="arranger">Arrangement Opus Libre</creator>
     <encoding>
       <encoding-date>2026-11-08</encoding-date>
       <software>music21 v.10.5.2</software>
@@ -31,7 +31,7 @@
     <credit-words default-x="1950" default-y="1550" font-size="12" halign="center" justify="right" valign="top">Johannes Brahms</credit-words>
   </credit>
   <credit page="1">
-    <credit-words default-x="1950" default-y="1480" font-size="10" halign="center" justify="right" valign="top">Arrangement pédagogique</credit-words>
+    <credit-words default-x="1950" default-y="1480" font-size="10" halign="center" justify="right" valign="top">Arrangement Opus Libre</credit-words>
   </credit>
   <part-list>
     <score-part id="P868ab0b0a69b837db0e79dcb3dbcb598">

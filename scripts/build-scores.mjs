@@ -21,8 +21,11 @@ import { existsSync } from "node:fs";
 import PDFDocument from "pdfkit";
 import SVGtoPDF from "svg-to-pdfkit";
 import path from "node:path";
+import midiPkg from "@tonejs/midi";
+import { credit, musicxmlWithCredit, ascii } from "./credit.mjs";
+const { Midi } = midiPkg;
 
-const PIPELINE_VERSION = "2";
+const PIPELINE_VERSION = "3";
 const root = path.resolve(import.meta.dirname, "..");
 const scoresDir = path.join(root, "contenus/partitions");
 const outFiles = path.join(root, "build/files");
@@ -88,17 +91,34 @@ function svgForPdf(svg) {
 }
 
 /** A4 PDF (595 × 842 pt) engraved by Verovio: page units are tenths of a millimetre. */
-function renderPdf(toolkit, title, licence) {
-  toolkit.setOptions({ pageWidth: 2100, pageHeight: 2970, pageMarginLeft: 100, pageMarginRight: 100, pageMarginTop: 100, pageMarginBottom: 120, scale: 45, footer: "none", header: "auto", breaks: "auto", svgViewBox: true, adjustPageHeight: false });
+function renderPdf(toolkit, c, logo) {
+  toolkit.setOptions({ pageWidth: 2100, pageHeight: 2970, pageMarginLeft: 100, pageMarginRight: 100, pageMarginTop: 100, pageMarginBottom: 260, scale: 45, footer: "none", header: "auto", breaks: "auto", svgViewBox: true, adjustPageHeight: false });
   toolkit.redoLayout();
-  const doc = new PDFDocument({ size: "A4", margin: 0, info: { Title: title, Creator: "Opus Libre", Subject: `Partition libre — ${licence}` } });
+  const doc = new PDFDocument({ size: "A4", margin: 0, info: { Title: c.title, Creator: "Opus Libre", Subject: `${c.source} ${c.licence} — ${c.licenceText}`, Keywords: `${c.licence}, partition libre, ${c.url}` } });
   const chunks = [];
-  doc.on("data", (c) => chunks.push(c));
+  doc.on("data", (chunk) => chunks.push(chunk));
   const done = new Promise((resolve) => doc.on("end", () => resolve(Buffer.concat(chunks))));
-  for (let page = 1; page <= toolkit.getPageCount(); page += 1) {
+  const pages = toolkit.getPageCount();
+  const grey = "#444444";
+  for (let page = 1; page <= pages; page += 1) {
     if (page > 1) doc.addPage();
     SVGtoPDF(doc, svgForPdf(toolkit.renderToSVG(page)), 0, 0, { width: 595.28, height: 841.89, preserveAspectRatio: "xMidYMin meet" });
-    doc.font("Times-Roman").fontSize(8).fillColor("#555").text(`Opus Libre — partition libre (${licence}) — page ${page}/${toolkit.getPageCount()}`, 0, 812, { width: 595.28, align: "center" });
+    // Credit block: full on the first page, one line on the others.
+    const top = page === 1 ? 774 : 804;
+    doc.save().moveTo(28, top).lineTo(567.28, top).lineWidth(0.5).strokeColor("#999999").stroke().restore();
+    SVGtoPDF(doc, logo, 28, top + 7, { width: page === 1 ? 22 : 15, height: page === 1 ? 22 : 15 });
+    const x = page === 1 ? 58 : 50;
+    const width = 467;
+    if (page === 1) {
+      doc.font("Times-Bold").fontSize(7.6).fillColor("#111111").text(c.title, x, top + 6, { width, continued: true, lineGap: 1.2 })
+        .font("Times-Roman").fillColor(grey).text(` · ${c.details}`);
+      doc.text(c.source, { width, lineGap: 1.2 });
+      doc.font("Times-Bold").fillColor("#111111").text(`${c.licence} `, { width, continued: true, lineGap: 1.2 })
+        .font("Times-Roman").fillColor(grey).text(`${c.licenceText} ${c.url}`);
+    } else {
+      doc.font("Times-Roman").fontSize(7.4).fillColor(grey).text(c.short, x, top + 10, { width });
+    }
+    doc.font("Times-Roman").fontSize(8).fillColor("#111111").text(`${page} / ${pages}`, 520, top + (page === 1 ? 14 : 10), { width: 47.28, align: "right" });
   }
   doc.end();
   return done;
@@ -112,6 +132,7 @@ function renderPreview(toolkit) {
 }
 
 const tk = new VerovioToolkit(await createVerovioModule());
+const logo = await readFile(path.join(root, "public/favicon.svg"), "utf8");
 const manifest = {};
 const slugs = (await readdir(scoresDir, { withFileTypes: true })).filter((d) => d.isDirectory()).map((d) => d.name).sort();
 const problems = [];
@@ -129,7 +150,7 @@ for (const slug of slugs) {
   const source = await readFile(path.join(dir, "score.musicxml"), "utf8");
   const annotationsPath = path.join(dir, "annotations.json");
   const annotationsText = existsSync(annotationsPath) ? await readFile(annotationsPath, "utf8") : "[]";
-  const key = createHash("sha256").update(PIPELINE_VERSION).update(source).update(annotationsText).digest("hex").slice(0, 16);
+  const key = createHash("sha256").update(PIPELINE_VERSION).update(JSON.stringify(meta)).update(source).update(annotationsText).digest("hex").slice(0, 16);
   const out = path.join(outFiles, "p", slug, key);
   await mkdir(out, { recursive: true });
 
@@ -138,7 +159,12 @@ for (const slug of slugs) {
   if (!tk.loadData(source)) { problems.push(`${slug} : MusicXML illisible par Verovio.`); continue; }
   const mei = tk.getMEI({});
   tk.loadData(mei);
-  const midi = Buffer.from(tk.renderToMIDI(), "base64");
+  const c = credit(meta, composers[meta.artiste], slug);
+  // MIDI: copyright and source in the header (ASCII: MIDI text has no declared encoding).
+  const midiDoc = new Midi(Buffer.from(tk.renderToMIDI(), "base64"));
+  midiDoc.header.meta.push({ type: "copyrightNotice", text: ascii(`${c.licence} - Opus Libre, ${c.url}`), ticks: 0 });
+  midiDoc.header.meta.push({ type: "text", text: ascii(`${c.title}. ${c.source} ${c.licenceText}`), ticks: 0 });
+  const midi = Buffer.from(midiDoc.toArray());
 
   // Musical addresses: measure rank (1 = first, pickup included) + offset in quarter notes from the bar start.
   const notes = meiNotes(mei);
@@ -167,13 +193,13 @@ for (const slug of slugs) {
 
   await writeFile(path.join(out, "score.mei"), mei);
   await writeFile(path.join(out, "score.mid"), midi);
-  await writeFile(path.join(out, "score.pdf"), await renderPdf(tk, meta.titre, meta.licence));
+  await writeFile(path.join(out, "score.pdf"), await renderPdf(tk, c, logo));
   await mkdir(outPreviews, { recursive: true });
   await writeFile(path.join(outPreviews, `${slug}.svg`), renderPreview(tk));
-  await copyFile(path.join(dir, "score.musicxml"), path.join(out, "score.musicxml"));
+  await writeFile(path.join(out, "score.musicxml"), musicxmlWithCredit(source, c));
   await writeFile(path.join(out, "anchors.json"), JSON.stringify(anchors));
   await writeFile(path.join(out, "annotations.json"), JSON.stringify(resolved));
-  manifest[slug] = { key, base: `/p/${slug}/${key}/`, meta, staves: Math.max(...anchors.map((a) => a.staff)), annotations: resolved.length };
+  manifest[slug] = { key, base: `/p/${slug}/${key}/`, meta, credit: c, staves: Math.max(...anchors.map((a) => a.staff)), annotations: resolved.length };
   console.log(`✓ ${slug} (${key}) — ${anchors.length} notes, ${resolved.length} annotation(s)`);
 }
 

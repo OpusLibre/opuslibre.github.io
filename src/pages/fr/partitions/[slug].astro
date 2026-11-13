@@ -24,9 +24,13 @@ const subtitle = [entry.composer.dates ? `${entry.composer.name} (${entry.compos
   </header>
 
   <nav class="versions" aria-label="Versions de cette œuvre">
-    {versions.map((v) => v.slug === entry.slug
-      ? <span aria-current="page"><span class="long">{short(v.level).label}</span><span class="abbr">{short(v.level).short}</span></span>
-      : <a href={`/fr/partitions/${v.slug}/`}><span class="long">{short(v.level).label}</span><span class="abbr">{short(v.level).short}</span></a>)}
+    {versions.map((v) => {
+      const long = v.versionLabel;
+      const abbr = long === short(v.level).label ? short(v.level).short : long.replace(/\s*\(.*\)$/, "");
+      return v.slug === entry.slug
+        ? <span aria-current="page"><span class="long">{long}</span><span class="abbr">{abbr}</span></span>
+        : <a href={`/fr/partitions/${v.slug}/`}><span class="long">{long}</span><span class="abbr">{abbr}</span></a>;
+    })}
     <span class="facts">{instrumentLabel(entry.instrument)}</span>
   </nav>
 
@@ -70,8 +74,12 @@ const subtitle = [entry.composer.dates ? `${entry.composer.name} (${entry.compos
           </ul>
         </section>
         <section>
-          <h2 class="eyebrow">Source</h2>
-          <p class="source">{entry.source}<br />Transcription : {entry.transcriber}<br />Licence {entry.licence} : vous pouvez l’imprimer, la copier et la jouer en public.</p>
+          <h2 class="eyebrow">Origine et licence</h2>
+          <div class="cartouche">
+            <p class="cartouche-titre"><strong>{entry.credit.title}</strong><br />{entry.credit.details}</p>
+            <p>{entry.credit.source}</p>
+            <p><a class="cartouche-licence" href={entry.credit.licenceUrl} rel="license">{entry.credit.licence}</a> {entry.credit.licenceText}</p>
+          </div>
         </section>
       </aside>
     </div>
@@ -91,6 +99,10 @@ const subtitle = [entry.composer.dates ? `${entry.composer.name} (${entry.compos
   .title { display: flex; justify-content: space-between; align-items: flex-end; gap: 1rem; margin-top: 1.2rem; }
   h1 { font-size: clamp(1.8rem, 4.5vw, 3rem); }
   .subtitle { color: var(--muted); margin: 0.6rem 0 0; font-size: 0.95rem; }
+  .cartouche { border-left: 2px solid var(--ink); padding-left: 0.8rem; font-size: 0.88rem; color: var(--muted); }
+  .cartouche p { margin: 0 0 0.5rem; }
+  .cartouche strong { color: var(--ink); }
+  .cartouche-licence { display: inline-block; border: 1px solid var(--ink); padding: 0 0.3rem; font-size: 0.75rem; font-weight: 600; color: var(--ink); text-decoration: none; margin-right: 0.2rem; }
   .licence { flex: none; border: 1px solid var(--ink); padding: 0.35rem 0.7rem; font-size: 0.78rem; font-weight: 600; margin: 0; }
   .versions { display: flex; flex-wrap: wrap; align-items: stretch; margin-top: 1.4rem; }
   .versions > a, .versions > span[aria-current] { border: 1px solid var(--rule); padding: 0.6rem 1.2rem; font-size: 0.92rem; text-decoration: none; color: var(--muted); margin-right: -1px; }

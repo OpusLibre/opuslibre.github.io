@@ -1,7 +1,7 @@
 {
   "au-clair-de-la-lune": {
-    "key": "a48739db78dbb85e",
-    "base": "/p/au-clair-de-la-lune/a48739db78dbb85e/",
+    "key": "051fe641e7493a48",
+    "base": "/p/au-clair-de-la-lune/051fe641e7493a48/",
     "meta": {
       "titre": "Au clair de la lune",
       "oeuvre": "au-clair-de-la-lune",
@@ -13,12 +13,23 @@
       "licence": "CC0-1.0",
       "transcripteur": "Opus Libre"
     },
+    "credit": {
+      "title": "Traditionnel — Au clair de la lune",
+      "details": "version Débutant",
+      "source": "Air traditionnel français (XVIIIe siècle), domaine public. Saisie : Opus Libre.",
+      "licence": "CC0 1.0",
+      "licenceText": "Partition libre : vous pouvez la copier, la jouer, la modifier et la diffuser sans autorisation.",
+      "licenceUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.fr",
+      "url": "opuslibre.github.io/fr/partitions/au-clair-de-la-lune/",
+      "version": "Débutant",
+      "short": "Traditionnel — Au clair de la lune · version Débutant · Opus Libre · CC0 1.0 partition libre · opuslibre.github.io"
+    },
     "staves": 1,
     "annotations": 0
   },
   "bach-bwv-846-preludio": {
-    "key": "8ab1002307ada08b",
-    "base": "/p/bach-bwv-846-preludio/8ab1002307ada08b/",
+    "key": "fb023c7c48fb38eb",
+    "base": "/p/bach-bwv-846-preludio/fb023c7c48fb38eb/",
     "meta": {
       "titre": "Prélude en ut majeur (mesures 1–8)",
       "oeuvre": "bach-bwv-846-preludio-in-do-maggiore",
@@ -32,12 +43,23 @@
       "licence": "CC0-1.0",
       "transcripteur": "Opus Libre"
     },
+    "credit": {
+      "title": "Johann Sebastian Bach (1685–1750) — Prélude en ut majeur (mesures 1–8)",
+      "details": "Le Clavier bien tempéré, livre I, BWV 846 · version Original",
+      "source": "Bach-Gesellschaft Ausgabe, Band 14 (1866), scan IMSLP. Saisie : Opus Libre.",
+      "licence": "CC0 1.0",
+      "licenceText": "Partition libre : vous pouvez la copier, la jouer, la modifier et la diffuser sans autorisation.",
+      "licenceUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.fr",
+      "url": "opuslibre.github.io/fr/partitions/bach-bwv-846-preludio/",
+      "version": "Original",
+      "short": "J. S. Bach — Prélude en ut majeur (mesures 1–8) · version Original · Opus Libre · CC0 1.0 partition libre · opuslibre.github.io"
+    },
     "staves": 2,
     "annotations": 7
   },
   "brahms-symphonie-3-poco-allegretto-avance": {
-    "key": "cb9943711eafdf0b",
-    "base": "/p/brahms-symphonie-3-poco-allegretto-avance/cb9943711eafdf0b/",
+    "key": "e61d7ca190a05645",
+    "base": "/p/brahms-symphonie-3-poco-allegretto-avance/e61d7ca190a05645/",
     "meta": {
       "titre": "Poco allegretto",
       "oeuvre": "brahms-symphonie-3-poco-allegretto",
@@ -51,12 +73,23 @@
       "licence": "CC0-1.0",
       "transcripteur": "Opus Libre"
     },
+    "credit": {
+      "title": "Johannes Brahms (1833–1897) — Poco allegretto",
+      "details": "Symphonie n° 3, III, op. 90 · version Avancé",
+      "source": "Arrangement Opus Libre d’après la réduction pour piano d’Otto Singer (Simrock) et la partition d’orchestre (Breitkopf & Härtel), domaine public.",
+      "licence": "CC0 1.0",
+      "licenceText": "Partition libre : vous pouvez la copier, la jouer, la modifier et la diffuser sans autorisation.",
+      "licenceUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.fr",
+      "url": "opuslibre.github.io/fr/partitions/brahms-symphonie-3-poco-allegretto-avance/",
+      "version": "Avancé",
+      "short": "J. Brahms — Poco allegretto · version Avancé · Opus Libre · CC0 1.0 partition libre · opuslibre.github.io"
+    },
     "staves": 2,
     "annotations": 0
   },
   "brahms-symphonie-3-poco-allegretto-debutant": {
-    "key": "2df3c22fafc0662b",
-    "base": "/p/brahms-symphonie-3-poco-allegretto-debutant/2df3c22fafc0662b/",
+    "key": "9a9b765bd1902209",
+    "base": "/p/brahms-symphonie-3-poco-allegretto-debutant/9a9b765bd1902209/",
     "meta": {
       "titre": "Poco allegretto",
       "oeuvre": "brahms-symphonie-3-poco-allegretto",
@@ -70,12 +103,23 @@
       "licence": "CC0-1.0",
       "transcripteur": "Opus Libre"
     },
+    "credit": {
+      "title": "Johannes Brahms (1833–1897) — Poco allegretto",
+      "details": "Symphonie n° 3, III, op. 90 · version Débutant",
+      "source": "Arrangement Opus Libre d’après la réduction pour piano d’Otto Singer (Simrock) et la partition d’orchestre (Breitkopf & Härtel), domaine public.",
+      "licence": "CC0 1.0",
+      "licenceText": "Partition libre : vous pouvez la copier, la jouer, la modifier et la diffuser sans autorisation.",
+      "licenceUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.fr",
+      "url": "opuslibre.github.io/fr/partitions/brahms-symphonie-3-poco-allegretto-debutant/",
+      "version": "Débutant",
+      "short": "J. Brahms — Poco allegretto · version Débutant · Opus Libre · CC0 1.0 partition libre · opuslibre.github.io"
+    },
     "staves": 2,
     "annotations": 0
   },
   "brahms-symphonie-3-poco-allegretto-intermediaire": {
-    "key": "39a9b5d807c7b9a7",
-    "base": "/p/brahms-symphonie-3-poco-allegretto-intermediaire/39a9b5d807c7b9a7/",
+    "key": "fbf86f8cf3ed01be",
+    "base": "/p/brahms-symphonie-3-poco-allegretto-intermediaire/fbf86f8cf3ed01be/",
     "meta": {
       "titre": "Poco allegretto",
       "oeuvre": "brahms-symphonie-3-poco-allegretto",
@@ -89,17 +133,29 @@
       "licence": "CC0-1.0",
       "transcripteur": "Opus Libre"
     },
+    "credit": {
+      "title": "Johannes Brahms (1833–1897) — Poco allegretto",
+      "details": "Symphonie n° 3, III, op. 90 · version Intermédiaire",
+      "source": "Arrangement Opus Libre d’après la réduction pour piano d’Otto Singer (Simrock) et la partition d’orchestre (Breitkopf & Härtel), domaine public.",
+      "licence": "CC0 1.0",
+      "licenceText": "Partition libre : vous pouvez la copier, la jouer, la modifier et la diffuser sans autorisation.",
+      "licenceUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.fr",
+      "url": "opuslibre.github.io/fr/partitions/brahms-symphonie-3-poco-allegretto-intermediaire/",
+      "version": "Intermédiaire",
+      "short": "J. Brahms — Poco allegretto · version Intermédiaire · Opus Libre · CC0 1.0 partition libre · opuslibre.github.io"
+    },
     "staves": 2,
     "annotations": 0
   },
   "brahms-symphonie-3-poco-allegretto-original": {
-    "key": "31d94ab9624e3066",
-    "base": "/p/brahms-symphonie-3-poco-allegretto-original/31d94ab9624e3066/",
+    "key": "ab20b5a62fcf94ca",
+    "base": "/p/brahms-symphonie-3-poco-allegretto-original/ab20b5a62fcf94ca/",
     "meta": {
       "titre": "Poco allegretto",
       "oeuvre": "brahms-symphonie-3-poco-allegretto",
       "artiste": "brahms",
       "niveau": "original",
+      "version": "Réduction (Singer)",
       "formation": "piano",
       "reference": "op. 90",
       "recueil": "Symphonie n° 3, III",
@@ -107,6 +163,17 @@
       "source": "Réduction pour piano d’Otto Singer, Simrock (domaine public, IMSLP)",
       "licence": "CC0-1.0",
       "transcripteur": "Opus Libre"
+    },
+    "credit": {
+      "title": "Johannes Brahms (1833–1897) — Poco allegretto",
+      "details": "Symphonie n° 3, III, op. 90 · Réduction (Singer)",
+      "source": "Réduction pour piano d’Otto Singer, Simrock (domaine public, IMSLP). Saisie : Opus Libre.",
+      "licence": "CC0 1.0",
+      "licenceText": "Partition libre : vous pouvez la copier, la jouer, la modifier et la diffuser sans autorisation.",
+      "licenceUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.fr",
+      "url": "opuslibre.github.io/fr/partitions/brahms-symphonie-3-poco-allegretto-original/",
+      "version": "Réduction (Singer)",
+      "short": "J. Brahms — Poco allegretto · Réduction (Singer) · Opus Libre · CC0 1.0 partition libre · opuslibre.github.io"
     },
     "staves": 2,
     "annotations": 0

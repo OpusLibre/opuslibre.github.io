@@ -3,6 +3,7 @@ titre: "Poco allegretto"
 oeuvre: brahms-symphonie-3-poco-allegretto
 artiste: brahms
 niveau: original
+version: "Réduction (Singer)"
 formation: piano
 reference: op. 90
 recueil: "Symphonie n° 3, III"
