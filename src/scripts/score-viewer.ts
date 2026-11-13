@@ -12,8 +12,6 @@ import { HQ, LIGHT, layerOf, perform, samplerUrls, type PerformedNote, type Samp
 
 type Annotation = { id: string; layer: string; level: string; text: string; title?: Record<string, string>; ids: string[] };
 
-const SALAMANDER = "https://tonejs.github.io/audio/salamander/";
-const SAMPLE_NOTES = ["A0", "C1", "D#1", "F#1", "A1", "C2", "D#2", "F#2", "A2", "C3", "D#3", "F#3", "A3", "C4", "D#4", "F#4", "A4", "C5", "D#5", "F#5", "A5", "C6", "D#6", "F#6", "A6", "C7", "D#7", "F#7", "A7", "C8"];
 
 export async function mountViewer(root: HTMLElement): Promise<void> {
   const base = root.dataset.base!;
@@ -88,9 +86,7 @@ export async function mountViewer(root: HTMLElement): Promise<void> {
 
   // ---------- Playback ----------
   let Tone: typeof import("tone") | undefined;
-  let sampler: import("tone").Sampler | undefined;
-  // New sound (?son=nouveau): Salamander with 3 velocity layers, dynamics and pedal.
-  const expressive = new URLSearchParams(location.search).get("son") === "nouveau";
+  // Salamander Grand Piano (samples served by the site), dynamics and pedal: see ./expressive.ts.
   let layers: import("tone").Sampler[] = [];
   let performance: PerformedNote[] = [];
   let sampleSet: SampleSet = HQ;
@@ -107,21 +103,6 @@ export async function mountViewer(root: HTMLElement): Promise<void> {
   root.querySelectorAll('input[name="mains"]').forEach((i) => i.addEventListener("change", () => playing && restart()));
 
   async function ensureSound(): Promise<void> {
-    if (expressive) return ensureExpressive();
-    if (sampler) return;
-    status.textContent = "Chargement du piano (Salamander Grand Piano, CC BY 3.0)…";
-    Tone = await import("tone");
-    await Tone.start();
-    sampler = new Tone.Sampler({
-      urls: Object.fromEntries(SAMPLE_NOTES.map((n) => [n, `${n.replace("#", "s")}.mp3`])),
-      baseUrl: SALAMANDER,
-      release: 1,
-    }).toDestination();
-    await Tone.loaded();
-    status.textContent = "";
-  }
-
-  async function ensureExpressive(): Promise<void> {
     if (layers.length > 0) return;
     status.textContent = "Chargement du piano (Salamander Grand Piano, Alexander Holm, CC BY 3.0)…";
     Tone = await import("tone");
@@ -161,8 +142,9 @@ export async function mountViewer(root: HTMLElement): Promise<void> {
     status.textContent = "";
   }
 
-  function scheduleExpressive(): void {
+  function schedule(): void {
     const T = Tone!;
+    T.getTransport().cancel();
     const r = rate();
     for (const n of performance) {
       if (hands() === "right" && n.track !== 0) continue;
@@ -171,25 +153,6 @@ export async function mountViewer(root: HTMLElement): Promise<void> {
       const gain = 0.55 + 0.45 * (n.velocity / 127);
       T.getTransport().schedule((time) => layer.triggerAttackRelease(n.name, n.duration / r, time, gain), n.time / r);
     }
-    T.getTransport().scheduleOnce(() => stop(), midi.duration / r + 0.5);
-  }
-
-  function schedule(): void {
-    const T = Tone!;
-    if (expressive) {
-      T.getTransport().cancel();
-      return scheduleExpressive();
-    }
-    T.getTransport().cancel();
-    const r = rate();
-    midi.tracks.forEach((track, i) => {
-      // Track i = staff i + 1 (Verovio writes one MIDI track per staff): 1 = right hand, 2 = left hand.
-      if (hands() === "right" && i !== 0) return;
-      if (hands() === "left" && i !== 1) return;
-      for (const n of track.notes) {
-        T.getTransport().schedule((time) => sampler!.triggerAttackRelease(n.name, n.duration / r, time, n.velocity), n.time / r);
-      }
-    });
     T.getTransport().scheduleOnce(() => stop(), midi.duration / r + 0.5);
   }
 
@@ -217,7 +180,6 @@ export async function mountViewer(root: HTMLElement): Promise<void> {
     if (!Tone) return;
     Tone.getTransport().stop();
     Tone.getTransport().cancel();
-    sampler?.releaseAll();
     layers.forEach((l) => l.releaseAll());
     playing = false;
     cancelAnimationFrame(frame);
