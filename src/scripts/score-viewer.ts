@@ -8,7 +8,7 @@
 import createVerovioModule from "verovio/wasm";
 import { VerovioToolkit } from "verovio/esm";
 import { Midi } from "@tonejs/midi";
-import { LAYERS, SAMPLE_BASE, layerOf, perform, samplerUrls, type PerformedNote } from "./expressive";
+import { HQ, LIGHT, layerOf, perform, samplerUrls, type PerformedNote, type SampleSet } from "./expressive";
 
 type Annotation = { id: string; layer: string; level: string; text: string; title?: Record<string, string>; ids: string[] };
 
@@ -93,6 +93,7 @@ export async function mountViewer(root: HTMLElement): Promise<void> {
   const expressive = new URLSearchParams(location.search).get("son") === "nouveau";
   let layers: import("tone").Sampler[] = [];
   let performance: PerformedNote[] = [];
+  let sampleSet: SampleSet = HQ;
   let playing = false;
   let frame = 0;
   let startedAt = 0;
@@ -127,15 +128,35 @@ export async function mountViewer(root: HTMLElement): Promise<void> {
     await Tone.start();
     performance = perform(midi, mei, tk);
     if (new URLSearchParams(location.search).has("debug")) {
-      const layersCount = [0, 0, 0];
-      for (const n of performance) layersCount[layerOf(n.velocity)]! += 1;
+      const layersCount = HQ.layers.map(() => 0);
+      for (const n of performance) layersCount[layerOf(n.velocity, HQ)]! += 1;
       console.info("performance", { notes: performance.length, couches: layersCount, premieres: performance.slice(0, 6).map((n) => `${n.name}@${n.time.toFixed(2)} v${n.velocity} d${n.duration.toFixed(2)}`) });
     }
-    const urls = samplerUrls(performance);
-    // The soft layer (most of a p/pp piece) is much quieter than the demo samples: louder output, limited.
-    const out = new Tone.Gain(1.6).connect(new Tone.Limiter(-1).toDestination());
-    const reverb = new Tone.Reverb({ decay: 2.2, wet: 0.16 }).connect(out);
-    layers = LAYERS.map((_, i) => new Tone.Sampler({ urls: urls[i]!, baseUrl: SAMPLE_BASE, release: 0.9, attack: 0 }).connect(reverb));
+    const T = Tone;
+    // Decodes a set, each sample trimmed of its leading silence (codec delay, pre-onset)
+    // so that attacks stay in time with the highlighted notes.
+    const load = async (set: SampleSet) =>
+      Promise.all(samplerUrls(performance, set).map(async (layer) => Object.fromEntries(await Promise.all(Object.entries(layer).map(async ([note, url]) => {
+        const buffer = await T.ToneAudioBuffer.fromUrl(url);
+        const data = buffer.getChannelData(0);
+        let i = 0;
+        while (i < data.length && Math.abs(data[i]!) < 0.002) i += 1;
+        const start = Math.max(0, i - Math.round(buffer.sampleRate * 0.002)) / buffer.sampleRate;
+        return [note, start > 0 ? buffer.slice(start) : buffer] as const;
+      })))));
+    let buffers;
+    try {
+      buffers = await load(HQ);
+      sampleSet = HQ;
+    } catch {
+      buffers = await load(LIGHT);
+      sampleSet = LIGHT;
+    }
+    if (new URLSearchParams(location.search).has("debug")) console.info("echantillons", sampleSet.base, buffers.map((l) => Object.keys(l).length));
+    // The soft layers (most of a p/pp piece) are much quieter than the demo samples: louder output, limited.
+    const out = new Tone.Gain(1.5).connect(new Tone.Limiter(-1).toDestination());
+    const reverb = new Tone.Reverb({ decay: 2.2, wet: 0.14 }).connect(out);
+    layers = buffers.map((urls) => new T.Sampler({ urls, release: 0.9, attack: 0 }).connect(reverb));
     await Tone.loaded();
     status.textContent = "";
   }
@@ -146,7 +167,7 @@ export async function mountViewer(root: HTMLElement): Promise<void> {
     for (const n of performance) {
       if (hands() === "right" && n.track !== 0) continue;
       if (hands() === "left" && n.track !== 1) continue;
-      const layer = layers[layerOf(n.velocity)]!;
+      const layer = layers[layerOf(n.velocity, sampleSet)]!;
       const gain = 0.55 + 0.45 * (n.velocity / 127);
       T.getTransport().schedule((time) => layer.triggerAttackRelease(n.name, n.duration / r, time, gain), n.time / r);
     }

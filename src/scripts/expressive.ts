@@ -9,14 +9,24 @@
  * - Pedal: an automatic "harmonic" pedal, changed at each new bass note of the
  *   left hand: notes ring until the next change (the scores carry no pedal marks).
  *
- * Samples: Salamander Grand Piano V3 (Alexander Holm, CC BY 3.0), 3 velocity
- * layers, one sample every minor third, mono 24 kHz, served by the site
- * (public/audio/salamander/). Only the samples a score needs are loaded.
+ * Samples: Salamander Grand Piano V3 (Alexander Holm, CC BY 3.0), one sample
+ * every minor third, served by the site. Two sets: Opus stereo 48 kHz with 4
+ * velocity layers (public/audio/salamander-hq/), and a WAV mono 24 kHz set
+ * with 3 layers (public/audio/salamander/) for browsers that cannot decode
+ * Opus in WebM. Only the samples a score needs are loaded.
  */
 import type { Midi } from "@tonejs/midi";
 
-export const SAMPLE_BASE = "/audio/salamander/";
-export const LAYERS = [5, 10, 15] as const;
+export interface SampleSet {
+  base: string;
+  ext: string;
+  /** Salamander velocity layers, softest first. */
+  layers: number[];
+  /** Upper MIDI velocity of each layer but the last. */
+  limits: number[];
+}
+export const HQ: SampleSet = { base: "/audio/salamander-hq/", ext: "webm", layers: [4, 8, 12, 15], limits: [42, 62, 88] };
+export const LIGHT: SampleSet = { base: "/audio/salamander/", ext: "wav", layers: [5, 10, 15], limits: [52, 82] };
 const SAMPLE_NOTES = ["A0", "C1", "D#1", "F#1", "A1", "C2", "D#2", "F#2", "A2", "C3", "D#3", "F#3", "A3", "C4", "D#4", "F#4", "A4", "C5", "D#5", "F#5", "A5", "C6", "D#6", "F#6", "A6", "C7", "D#7", "F#7", "A7", "C8"];
 const NAMES = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"];
 const midiOf = (name: string): number => {
@@ -38,9 +48,10 @@ export interface PerformedNote {
 type TimemapEntry = { tstamp: number; qstamp: number; measureOn?: string };
 type Toolkit = { renderToTimemap(options?: object): TimemapEntry[] };
 
-/** Velocity layer (index in LAYERS) for a MIDI velocity. */
-export function layerOf(velocity: number): number {
-  return velocity < 52 ? 0 : velocity < 82 ? 1 : 2;
+/** Velocity layer (index in set.layers) for a MIDI velocity. */
+export function layerOf(velocity: number, set: SampleSet): number {
+  const i = set.limits.findIndex((limit) => velocity < limit);
+  return i === -1 ? set.layers.length - 1 : i;
 }
 
 /** Sample note (key of the sampler) closest to a MIDI pitch. */
@@ -50,11 +61,11 @@ export function nearestSample(midi: number): string {
   return SAMPLE_NOTES[best]!;
 }
 
-/** Sampler urls (per layer) restricted to the samples these notes need. */
-export function samplerUrls(notes: PerformedNote[]): Record<string, string>[] {
-  const needed = LAYERS.map(() => new Set<string>());
-  for (const n of notes) needed[layerOf(n.velocity)]!.add(nearestSample(n.midi));
-  return LAYERS.map((v, i) => Object.fromEntries([...needed[i]!].map((s) => [s, `${s.replace("#", "s")}v${v}.wav`])));
+/** Sample urls (per layer) restricted to the samples these notes need. */
+export function samplerUrls(notes: PerformedNote[], set: SampleSet): Record<string, string>[] {
+  const needed = set.layers.map(() => new Set<string>());
+  for (const n of notes) needed[layerOf(n.velocity, set)]!.add(nearestSample(n.midi));
+  return set.layers.map((v, i) => Object.fromEntries([...needed[i]!].map((s) => [s, `${set.base}${s.replace("#", "s")}v${v}.${set.ext}`])));
 }
 
 type Mark = { ms: number; vel: number };
