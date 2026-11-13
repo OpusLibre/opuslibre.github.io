@@ -8,6 +8,7 @@
 import createVerovioModule from "verovio/wasm";
 import { VerovioToolkit } from "verovio/esm";
 import { Midi } from "@tonejs/midi";
+import { LAYERS, SAMPLE_BASE, layerOf, perform, samplerUrls, type PerformedNote } from "./expressive";
 
 type Annotation = { id: string; layer: string; level: string; text: string; title?: Record<string, string>; ids: string[] };
 
@@ -88,6 +89,10 @@ export async function mountViewer(root: HTMLElement): Promise<void> {
   // ---------- Playback ----------
   let Tone: typeof import("tone") | undefined;
   let sampler: import("tone").Sampler | undefined;
+  // New sound (?son=nouveau): Salamander with 3 velocity layers, dynamics and pedal.
+  const expressive = new URLSearchParams(location.search).get("son") === "nouveau";
+  let layers: import("tone").Sampler[] = [];
+  let performance: PerformedNote[] = [];
   let playing = false;
   let frame = 0;
   let startedAt = 0;
@@ -101,6 +106,7 @@ export async function mountViewer(root: HTMLElement): Promise<void> {
   root.querySelectorAll('input[name="mains"]').forEach((i) => i.addEventListener("change", () => playing && restart()));
 
   async function ensureSound(): Promise<void> {
+    if (expressive) return ensureExpressive();
     if (sampler) return;
     status.textContent = "Chargement du piano (Salamander Grand Piano, CC BY 3.0)…";
     Tone = await import("tone");
@@ -114,8 +120,45 @@ export async function mountViewer(root: HTMLElement): Promise<void> {
     status.textContent = "";
   }
 
+  async function ensureExpressive(): Promise<void> {
+    if (layers.length > 0) return;
+    status.textContent = "Chargement du piano (Salamander Grand Piano, Alexander Holm, CC BY 3.0)…";
+    Tone = await import("tone");
+    await Tone.start();
+    performance = perform(midi, mei, tk);
+    if (new URLSearchParams(location.search).has("debug")) {
+      const layersCount = [0, 0, 0];
+      for (const n of performance) layersCount[layerOf(n.velocity)]! += 1;
+      console.info("performance", { notes: performance.length, couches: layersCount, premieres: performance.slice(0, 6).map((n) => `${n.name}@${n.time.toFixed(2)} v${n.velocity} d${n.duration.toFixed(2)}`) });
+    }
+    const urls = samplerUrls(performance);
+    // The soft layer (most of a p/pp piece) is much quieter than the demo samples: louder output, limited.
+    const out = new Tone.Gain(1.6).connect(new Tone.Limiter(-1).toDestination());
+    const reverb = new Tone.Reverb({ decay: 2.2, wet: 0.16 }).connect(out);
+    layers = LAYERS.map((_, i) => new Tone.Sampler({ urls: urls[i]!, baseUrl: SAMPLE_BASE, release: 0.9, attack: 0 }).connect(reverb));
+    await Tone.loaded();
+    status.textContent = "";
+  }
+
+  function scheduleExpressive(): void {
+    const T = Tone!;
+    const r = rate();
+    for (const n of performance) {
+      if (hands() === "right" && n.track !== 0) continue;
+      if (hands() === "left" && n.track !== 1) continue;
+      const layer = layers[layerOf(n.velocity)]!;
+      const gain = 0.55 + 0.45 * (n.velocity / 127);
+      T.getTransport().schedule((time) => layer.triggerAttackRelease(n.name, n.duration / r, time, gain), n.time / r);
+    }
+    T.getTransport().scheduleOnce(() => stop(), midi.duration / r + 0.5);
+  }
+
   function schedule(): void {
     const T = Tone!;
+    if (expressive) {
+      T.getTransport().cancel();
+      return scheduleExpressive();
+    }
     T.getTransport().cancel();
     const r = rate();
     midi.tracks.forEach((track, i) => {
@@ -154,6 +197,7 @@ export async function mountViewer(root: HTMLElement): Promise<void> {
     Tone.getTransport().stop();
     Tone.getTransport().cancel();
     sampler?.releaseAll();
+    layers.forEach((l) => l.releaseAll());
     playing = false;
     cancelAnimationFrame(frame);
     scoreEl.querySelectorAll(".joue").forEach((n) => n.classList.remove("joue"));
