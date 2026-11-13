@@ -34,5 +34,81 @@
     },
     "staves": 2,
     "annotations": 7
+  },
+  "brahms-symphonie-3-poco-allegretto-avance": {
+    "key": "cb9943711eafdf0b",
+    "base": "/p/brahms-symphonie-3-poco-allegretto-avance/cb9943711eafdf0b/",
+    "meta": {
+      "titre": "Poco allegretto",
+      "oeuvre": "brahms-symphonie-3-poco-allegretto",
+      "artiste": "brahms",
+      "niveau": "avance",
+      "formation": "piano",
+      "reference": "op. 90",
+      "recueil": "Symphonie n° 3, III",
+      "ajout": "2026-11-13",
+      "source": "Arrangement d’après la réduction pour piano d’Otto Singer (Simrock) et la partition d’orchestre (Breitkopf & Härtel), domaine public",
+      "licence": "CC0-1.0",
+      "transcripteur": "Opus Libre"
+    },
+    "staves": 2,
+    "annotations": 0
+  },
+  "brahms-symphonie-3-poco-allegretto-debutant": {
+    "key": "2df3c22fafc0662b",
+    "base": "/p/brahms-symphonie-3-poco-allegretto-debutant/2df3c22fafc0662b/",
+    "meta": {
+      "titre": "Poco allegretto",
+      "oeuvre": "brahms-symphonie-3-poco-allegretto",
+      "artiste": "brahms",
+      "niveau": "debutant",
+      "formation": "piano",
+      "reference": "op. 90",
+      "recueil": "Symphonie n° 3, III",
+      "ajout": "2026-11-13",
+      "source": "Arrangement d’après la réduction pour piano d’Otto Singer (Simrock) et la partition d’orchestre (Breitkopf & Härtel), domaine public",
+      "licence": "CC0-1.0",
+      "transcripteur": "Opus Libre"
+    },
+    "staves": 2,
+    "annotations": 0
+  },
+  "brahms-symphonie-3-poco-allegretto-intermediaire": {
+    "key": "39a9b5d807c7b9a7",
+    "base": "/p/brahms-symphonie-3-poco-allegretto-intermediaire/39a9b5d807c7b9a7/",
+    "meta": {
+      "titre": "Poco allegretto",
+      "oeuvre": "brahms-symphonie-3-poco-allegretto",
+      "artiste": "brahms",
+      "niveau": "intermediaire",
+      "formation": "piano",
+      "reference": "op. 90",
+      "recueil": "Symphonie n° 3, III",
+      "ajout": "2026-11-13",
+      "source": "Arrangement d’après la réduction pour piano d’Otto Singer (Simrock) et la partition d’orchestre (Breitkopf & Härtel), domaine public",
+      "licence": "CC0-1.0",
+      "transcripteur": "Opus Libre"
+    },
+    "staves": 2,
+    "annotations": 0
+  },
+  "brahms-symphonie-3-poco-allegretto-original": {
+    "key": "31d94ab9624e3066",
+    "base": "/p/brahms-symphonie-3-poco-allegretto-original/31d94ab9624e3066/",
+    "meta": {
+      "titre": "Poco allegretto",
+      "oeuvre": "brahms-symphonie-3-poco-allegretto",
+      "artiste": "brahms",
+      "niveau": "original",
+      "formation": "piano",
+      "reference": "op. 90",
+      "recueil": "Symphonie n° 3, III",
+      "ajout": "2026-11-13",
+      "source": "Réduction pour piano d’Otto Singer, Simrock (domaine public, IMSLP)",
+      "licence": "CC0-1.0",
+      "transcripteur": "Opus Libre"
+    },
+    "staves": 2,
+    "annotations": 0
   }
 }
